@@ -16,6 +16,7 @@ def main():
 def challenge_one():
     
     print("Challenge One")
+    print("-------------------------")
     
     for num in range(2, 101, 2):
         print(num, end=", ")
@@ -25,6 +26,7 @@ def challenge_one():
 def challenge_two():
     
     print("Challenge Two")
+    print("-------------------------")
     
     word = "KABOOM"
 
@@ -40,6 +42,7 @@ def challenge_two():
 def challenge_three():
     
     print("Challenge Three") 
+    print("-------------------------")
     
     gibberish = "askaliceithinkshe'llknow"
 
@@ -51,21 +54,33 @@ def challenge_three():
 def challenge_four():
     
     print("Challenge Four")
+    print("-------------------------")
     
-    for number in range(1, 5):
-        print(number)
-        for num in range(5,8):
-            print(num)
+    for num in range(1,5):
+        for number in range(5,8):
+            mult = num * number
+            print(num, "|", number, "|", mult)
     
     print("\n")
     
 def challenge_five():
     
     print("Challenge Five")
+    print("-------------------------")
     
+    listoflists = [['mn', 'pa', 'ut'], ['b','p','c'], ['echo', 'charlie', 'tango']]
+    labels = {"state":"US State Abbr: ", "element":"Chemical Element: ", "alpha": "Phonetic Call: "}
+
+    for item in listoflists[0]:
+        print(labels.get("state"), item.upper())
+    
+    for item in listoflists[1]:
+        print(labels.get("element"), item.upper())
+    
+    for item in listoflists[2]:
+        print(labels.get("alpha"), item.upper())
+        
     print("\n")
-    
-    
-    
+     
 if __name__ == "__main__":
     main()
