@@ -3,7 +3,7 @@
 Joe Holleran
 Python 2
 Mini-Program: Dictionary
-09/15/2019
+09/18/2019
 """
 
 # Source for menu structure of program:  
@@ -51,8 +51,8 @@ def main():
             
 def get_menu_choice():
     
-    print()
-    print("NBA Player Statistics")
+    print("Dataset of NBA Player Statistics")
+    print("** User Can Add, Modify, & Delete NBA Players & their Statistics**")
     print("---------------------------")
     print("1. Display Player Statistics")
     print("2. Add New Statistic")
@@ -151,7 +151,7 @@ def newplayer(nba):
     print("")
     add_choice = input("Would you like to add statistics to " + player + "? ")
     
-    if add_choice == "Y" or add_choice == "Yes" or add_choice == "y":
+    if add_choice == "Y" or add_choice == "Yes" or add_choice == "y" or add_choice == "yes":
         
         print("Add statistics to " + player)
         
