@@ -7,13 +7,22 @@ data = {"1": {"A": "100", "B": "200"},
         "2": {"C": "300", "D": "400"},
         "3": {"E": "500", "F": "600"}}
 
+change_dict = input("What dict to change? ")
+
+change_value = input("What value to change? ")
+
+change_key = input("What key to change? ")
+
+data[change_dict][change_value] = change_value
+
+for key, value in data.items():
+    print(key, value)
+
 ## Display all dictionaries
 
 for key, value in data.items():
     print(key)
-
-
-
+    
 ## Display dictionaries
 
 for key, value in data.items():
