@@ -1,114 +1,66 @@
 """
 In-Class Practice
-
 """
 
-data = {"1": {"A": "100", "B": "200"},
-        "2": {"C": "300", "D": "400"},
-        "3": {"E": "500", "F": "600"}}
-
-change_dict = input("What dict to change? ")
-
-change_value = input("What value to change? ")
-
-change_key = input("What key to change? ")
-
-data[change_dict][change_value] = change_value
-
-for key, value in data.items():
-    print(key, value)
-
-## Display all dictionaries
-
-for key, value in data.items():
-    print(key)
+import csv
+import json
+def main():
     
-## Display dictionaries
-
-for key, value in data.items():
-    print(key, value)
-    
-select = input("Pick a dictionary: ")
-
-for key, value in data[select].items():
-    print(key, value)
-    
-## Add to dictionary key & value
-    
-sel_dictionary = input("Pick dictionary to ADD: ")
-
-for key, value in data[sel_dictionary].items():
-    print(key, value)
-    
-new_key = input("New Key: ")
-new_value = input("New Value: ")
-
-if new_key not in data[sel_dictionary]:
-    data[sel_dictionary][new_key] = new_value
-else:
-    print("That entry already exists.")
-    
-for key, value in data.items():
-    print(key, value)
-    
-## Add new dictionary
-    
-ss_dictionary = input("Enter new dictionary: ")
-
-new_key = input("Enter new key: ")
-new_value = input("Enter new value: ")
-
-data[ss_dictionary] = {new_key : new_value}
-
-for key, value in data.items():
-    print(key, value)
-        
-## Change dictionary
-    
-    
-se_dictionary = input("Pick dictionary to CHANGE: ")
-
-for key, value in data[se_dictionary].items():
-    print(key, value)
-    
-change_key = input("Change Key: ")
-    
-if change_key in data[se_dictionary]:
-    
-    change_value = input("New Value: ")
-    data[se_dictionary][change_key] = change_value
-
-else:
-    print("That key not found.")
-
-for key, value in data.items():
-    print(key, value)
-
-    
-## Delete from dictionary
-    
-s_dictionary = input("Pick dictionary to DELETE: ")  
-
-for key, value in data[s_dictionary].items():
-    print(key, value)
-    
-delete_key = input("Delete Key: ")
-
-if len(data[s_dictionary]) == 1:
-    print("Sorry cannot remove last key/value pair")
-elif delete_key in data[s_dictionary]:
-    
-    del data[s_dictionary][delete_key]
-    
-else:
-    print("Key not found")
-    
-for key, value in data.items():
-    print(key, value)   
+    csv_practice()
+    json_practice()    
     
 
+def csv_practice():
+    # Question : Does the racial make up of the Allegheny County Jail
+    # reflect the makeup of Allegheny County at large?
+
+    # Keys available: _id	date	gender	race	agebook	agecurr
+
+    file = open('jail.csv', newline='')
+
+    reader = csv.DictReader(file)
+
+    totBlack = 0
+    totWhite = 0
+    censusDate = '2018-01-01'
+
+    for row in reader:
+        if row['date'] == censusDate:
+            if row['race'] == 'B':
+                totBlack = totBlack + 1
+            elif row['race'] == 'W':
+                totWhite = totWhite + 1
+            
+    print("Date: ", censusDate)
+    print("Total Black: ", totBlack)
+    percent_black = totBlack / (totBlack + totWhite)
+    print("Percent Black: ", percent_black)
+    print("Total White: ", totWhite)
+    percent_white = totWhite / (totWhite + totBlack)
+    print("Percent White: ", percent_white)
+            
+    file.close()
+    
+def json_practice():
+
+    # json dumps
+    
+    # Simplest example of encoding python objects in JSON and 
+    # writing to file
+    file = open('writeranges2.txt', 'w')
+    file.write(json.dumps({'student-count':12, 'teacher-count':1}))
+    file.close()
+    
+    # json loads
+    
+    # Simplest example of reading in JSON to python objects
+    
+    json.loads()
+    
     
 
+if __name__ == "__main__":
+    main()
 
 
 

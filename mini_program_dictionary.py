@@ -24,9 +24,9 @@ QUIT = 8
 
 def main():
     
-    nba = {"LeBron James": {"PPG": "27.4", "RPG": "8.5"},
-        "Stephen Curry": {"PPG": "27.3", "RPG": "5.3"},
-        "James Harden": {"PPG": "36.1", "RPG": "6.6"}}
+    nba = {"LeBron James": {"PPG:": "27.4", "RPG:": "8.5"},
+        "Stephen Curry": {"PPG:": "27.3", "RPG:": "5.3"},
+        "James Harden": {"PPG:": "36.1", "RPG:": "6.6"}}
     
     choice = 0
     
@@ -222,7 +222,7 @@ def modifystat(nba):
     print("Modify Stat of NBA Player")
     print("")
     
-    print("UNDER CONSTRUCTION")
+    print("***UNDER CONSTRUCTION***")
     
 if __name__ == "__main__":
     main()
