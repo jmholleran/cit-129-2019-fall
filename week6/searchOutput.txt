@@ -1,0 +1,21 @@
+id: 1489184615
+name: FACILITY IMPROVEMENTS - PUBLIC SAFETY FACILITIES
+task_description: Public Safety Facility - Backup Generators
+area: Facility Improvement
+budgeted_amount: 125000
+status: In Progress
+asset_id: 
+asset_type: Non-Asset
+fiscal_year: 2018
+start_date: 11/16/2018
+inactive: 
+neighborhood: 
+council_district: 
+ward: 
+tract: 
+public_works_division: 
+pli_division: 
+police_zone: 
+fire_zone: 
+latitude: 0
+longitude: 0
