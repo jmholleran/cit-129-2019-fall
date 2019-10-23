@@ -4,6 +4,9 @@ Beautiful Soup - Basketball Reference - Team Stats
 10/22/2019
 Python 2
 """
+# Pandas DataFrame: Text Book Chapter 07 & https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html
+# Pandas To_Excel: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html
+
 import urllib.request
 import bs4
 import pandas as pd
@@ -31,7 +34,7 @@ def main():
         for ths in soup.find_all('th'):
             teamStatHeaders += [ths.text]
     
-    # Slice column headers      
+    # Slice column headers     
     headers = teamStatHeaders[5:18]
     
     # Create dictionary to hold teams (keys) and stats (values)
@@ -52,15 +55,6 @@ def main():
     print(tsdf.T)
     #Create excel file based on the data frame
     tsdf.T.to_excel('team_stats_dataframe.xlsx')
-    
-    # Per source (below) use pandas and dataframe only to scrap
-    # basketball-reference.com table of team stats
-    # https://lfbueno.com/2019-02-19-scrape-bb/
-    pandaOnlyTable = soup.find(name='table', attrs={'id':'ratings'})
-    html_str = str(pandaOnlyTable)
-    panda_only_df = pd.read_html(html_str)[0]
-    panda_only_df.to_excel('panda_only_team_stats.xlsx')
-    
 
 if __name__=='__main__':
     main()
