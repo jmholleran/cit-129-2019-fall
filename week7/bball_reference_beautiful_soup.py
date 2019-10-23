@@ -1,11 +1,12 @@
 """
 Joe Holleran
 Beautiful Soup - Basketball Reference - Team Stats
-10/16/2019
+10/22/2019
 Python 2
 """
 import urllib.request
 import bs4
+import pandas as pd
 
 def getSearchURL(term):
     
@@ -24,19 +25,44 @@ def main():
     pageText = getHTMLPageText(getSearchURL('2019'))
     soup = bs4.BeautifulSoup(pageText, 'html.parser')
     
-    team_stats = ""
+    # Scrap the column headers into a list
+    for hRow in soup.find_all('thead'):
+        teamStatHeaders = []
+        if hRow.find('th') == None:
+            continue
+        for ths in soup.find_all('th'):
+            teamStatHeaders += [ths.text]
     
-    for i in soup.findAll('tr'):
-        stats = ""
-        for j in i.findAll('td'):
-            stats = stats+","+j.text
-        team_stats = team_stats + "\n" + stats[1:]
+    # Slice column headers      
+    headers = teamStatHeaders[5:18]
     
-    header = "Team, Conf, Div, W, L, W/L%, MOV, ORtg, DRtg, NRtg, MOV/A, ORtg/A, DRtg/A, NRtg/A"      
-    file = open("team_stats.csv", "w")
-    file.write(header)
-    file.write(team_stats)
-    file.close()
+    # Create dictionary to hold teams (keys) and stats (values)
+    leagueStats = {}
     
+    # Scrap the rows of team stats into a dictionary    
+    for row in soup.find_all('tr'):
+        teamStatData = []
+        if row.find('td') == None:
+            continue        
+        for td in row.find_all('td'):
+            teamStatData += [td.text]
+        leagueStats[teamStatData[0]] = teamStatData[1:]
+        
+    #Create pandas dataframe (Ch 07) using headers as row labels    
+    tsdf = pd.DataFrame(leagueStats, index = headers)
+    #Print dataframe (transposed) due to the dictionary setup
+    print(tsdf.T)
+    #Create excel file based on the data frame
+    tsdf.T.to_excel('team_stats_dataframe.xlsx')
+    
+    # Per source (below) use pandas and dataframe only to scrap
+    # basketball-reference.com table of team stats
+    # https://lfbueno.com/2019-02-19-scrape-bb/
+    pandaOnlyTable = soup.find(name='table', attrs={'id':'ratings'})
+    html_str = str(pandaOnlyTable)
+    panda_only_df = pd.read_html(html_str)[0]
+    panda_only_df.to_excel('panda_only_team_stats.xlsx')
+    
+
 if __name__=='__main__':
     main()
