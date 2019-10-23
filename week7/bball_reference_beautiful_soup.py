@@ -28,8 +28,6 @@ def main():
     # Scrap the column headers into a list
     for hRow in soup.find_all('thead'):
         teamStatHeaders = []
-        if hRow.find('th') == None:
-            continue
         for ths in soup.find_all('th'):
             teamStatHeaders += [ths.text]
     
