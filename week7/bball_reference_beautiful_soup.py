@@ -36,7 +36,7 @@ def main():
     
     # Slice column headers     
     headers = teamStatHeaders[5:18]
-    
+        
     # Create dictionary to hold teams (keys) and stats (values)
     leagueStats = {}
     
@@ -49,12 +49,13 @@ def main():
             teamStatData += [td.text]
         leagueStats[teamStatData[0]] = teamStatData[1:]
         
-    #Create pandas dataframe (Ch 07) using headers as row labels    
+    print("***** NBA Team Stats Table *****")
+    #Create pandas dataframe (Ch 07) using headers as column labels    
     tsdf = pd.DataFrame(leagueStats, index = headers)
     #Print dataframe (transposed) due to the dictionary setup
     print(tsdf.T)
     #Create excel file based on the data frame
-    tsdf.T.to_excel('team_stats_dataframe.xlsx')
-
+    tsdf.T.to_excel('team_stats_dataframe.xlsx')    
+    
 if __name__=='__main__':
     main()

@@ -23,8 +23,7 @@ def main():
     nbaTeamStatsTable = pd.DataFrame(dfs)
     
     # Print DataFrame without default row index
-    print(nbaTeamStatsTable.to_string(index=False)) 
-
-
+    print(nbaTeamStatsTable.to_string(index=False))
+    
 if __name__=='__main__':
     main()
