@@ -8,6 +8,6 @@ def convertmltodec(line):
         dec_odds = (line / 100) + 1
         return dec_odds
     else:
-        dec_odds = ((line * -1) / 100) + 1
+        dec_odds = (100 / (line * -1)) + 1
         return dec_odds
         
