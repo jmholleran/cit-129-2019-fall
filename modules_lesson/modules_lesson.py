@@ -1,7 +1,12 @@
 """
 Modules Lesson
-10/31/2019
+10/30/2019
 """
+from boo import happyHalloween
+from netwins import win_percent
+from mltodec import convertmltodec as cmd
+from kelly import oneKelly, halfKelly, twoKelly
+
 
 def main():
     
@@ -14,11 +19,8 @@ def main():
     #kellyCriterion_example()
     #print("************\n\n")
     #tryYourOwnModule()
-
     
 def boo_example():
-    
-    from boo import happyHalloween
 
     print(happyHalloween())
     
@@ -26,8 +28,7 @@ def netwins_example():
     
     # Determine expected wins over 82-games for NBA team using Net Rating
 
-    from netwins import win_percent
-
+    # Los Angeles Lakers current (10/30) Net Rating
     net_rate = 11.1
 
     exp_win_percent = win_percent(net_rate)
@@ -40,11 +41,9 @@ def mlToDecOdds_example():
 
     # Convert moneyline odds to decimal odds
     # Positive moneyline is payout on $100 bet
-    # Negative moneyline is amount to bet to win $100
-
-    from mltodec import convertmltodec as cmd
+    # Negative moneyline is amount you would need to bet to win $100
     
-    # Memphis Grizzlies at Los Angeles Lakers on 10/30/2019
+    # Memphis Grizzlies at Los Angeles Lakers on 10/29/2019
     away_team_ml = 575
     home_team_ml = -850
     
@@ -61,7 +60,6 @@ def kellyCriterion_example():
 
     # Input probability and decimal odds to return Kelly Criterion
     # Kelly Criterion negative is unfavorable bet; Kelly Criterion positive is amount of bankroll to bet
-    from kelly import oneKelly, halfKelly, twoKelly
 
     # Away team prob = 100 / (575 + 100)
     away_team_prob = .1481
