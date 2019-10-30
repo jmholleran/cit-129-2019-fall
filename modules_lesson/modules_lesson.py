@@ -28,10 +28,12 @@ def netwins_example():
 
     from netwins import win_percent
 
-    net_rate = 2.4
+    net_rate = 11.1
 
-    exp_wins = win_percent(net_rate)
+    exp_win_percent = win_percent(net_rate)
+    exp_wins = exp_win_percent * 82
 
+    print("Expected Win Percentage: ", exp_win_percent)
     print("Expected Wins: ", exp_wins)
     
 def mlToDecOdds_example():
@@ -59,7 +61,7 @@ def kellyCriterion_example():
 
     # Input probability and decimal odds to return Kelly Criterion
     # Kelly Criterion negative is unfavorable bet; Kelly Criterion positive is amount of bankroll to bet
-    from kelly import oneKelly, halfKelly, twoKelly as K1, KH, K2
+    from kelly import oneKelly, halfKelly, twoKelly
 
     # Away team prob = 100 / (575 + 100)
     away_team_prob = .1481
@@ -68,18 +70,18 @@ def kellyCriterion_example():
 
     # oneKelly ; halfKelly ; twoKelly
 
-    away_kelly = K1(away_team_prob, away_dec_odds)
+    away_kelly = oneKelly(away_team_prob, away_dec_odds)
     print("Away Team Kelly Criterion: ", away_kelly)
-    away_halfKelly = KH(away_team_prob, away_dec_odds)
+    away_halfKelly = halfKelly(away_team_prob, away_dec_odds)
     print("Away Team 1/2 Kelly Criterion: ", away_halfKelly)
-    away_twoKelly = K2(away_team_prob, away_dec_odds)
+    away_twoKelly = twoKelly(away_team_prob, away_dec_odds)
     print("Away Team 2 Kelly Criterion: ", away_twoKelly)
     print("*********************************************")
-    home_kelly = K1(home_team_prob, home_dec_odds)
+    home_kelly = oneKelly(home_team_prob, home_dec_odds)
     print("Home Team Kelly Criterion: ", home_kelly)
-    home_halfKelly = KH(home_team_prob, home_dec_odds)
+    home_halfKelly = halfKelly(home_team_prob, home_dec_odds)
     print("Home Team 1/2 Kelly Criterion: ", home_halfKelly)
-    home_twoKelly = K2(home_team_prob, home_dec_odds)
+    home_twoKelly = twoKelly(home_team_prob, home_dec_odds)
     print("Home Team 2 Kelly Criterion: ", home_twoKelly)
     
 def tryYourOwnModule():
