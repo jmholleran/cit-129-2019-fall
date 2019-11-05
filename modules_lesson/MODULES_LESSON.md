@@ -35,7 +35,7 @@ When a module is imported the interpreter searches for a built-in module with th
 
 ## Compiled Python Files
 
-Python will caches the compiled version of each module in __pycache__ directory
+Python will caches the compiled version of each module in \__pycache__\ directory
 
 ## dir() Function
 
@@ -49,7 +49,7 @@ Packages are collections of modules
 
 * Create a directory (directory name will be the package name)
 * Put the modules in the package directory
-* Create a __init__.py file in the directory (__intit__.py lets Python know it is a package directory)
+* Create a \__init\__.py file in the directory (\__intit\__.py lets Python know it is a package directory)
 
 * from package file name import module file name
 * Or PackageName.ModuleName()

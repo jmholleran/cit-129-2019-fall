@@ -7,18 +7,17 @@ from netwins import win_percent
 from mltodec import convertmltodec as cmd
 from kelly import oneKelly, halfKelly, twoKelly
 
-
 def main():
     
-    #boo_example()
-    #print("************\n\n")
-    #netwins_example()
-    #print("************\n\n")
-    #mlToDecOdds_example()
-    #print("************\n\n")
-    #kellyCriterion_example()
-    #print("************\n\n")
-    #tryYourOwnModule()
+    boo_example()
+    print("************\n\n")
+    netwins_example()
+    print("************\n\n")
+    mlToDecOdds_example()
+    print("************\n\n")
+    kellyCriterion_example()
+    print("************\n\n")
+    tryYourOwnModule()
     
 def boo_example():
 
@@ -86,12 +85,10 @@ def tryYourOwnModule():
     
     print("\nBuild your own module using one of the following criteria:\n")
     print("1. Create a module using code you have already written\n")
-    print("2. Create a module to modify a string, such as:\n"
-          "\n\ta. Take in a string and change any instance of 'you' to 'yinz'")
+    print("2. Create a module to modify a modify a string")
     print("\n3. Create a module to apply an equation or run a calculation, such as:\n"
-          "\n\ta. Equations similar to previous examples (Kelly Criterion, Moneyline to Decimal Odds)\n"
-          "\tb. Grade Criteria Module: Take in Average/Mean Grade and output Letter Grade"
-          "\n\tc. Calculation or equation of your choosing")
+          "\n\ta. Grade Criteria Module: Take in Average/Mean Grade and output Letter Grade"
+          "\n\tb. Calculation or equation of your choosing")
 
 if __name__=='__main__':
     main()
