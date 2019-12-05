@@ -49,7 +49,7 @@ def checkDateIntegrity(proj):
     for date in split_date:
         date_acc += (len(date))
         
-    if date_acc < 8 or date_acc > 8:
+    if date_acc != 8:
         return False
     else:
         return True
@@ -62,14 +62,52 @@ def applyProjectFilter(proj):
     
     with open(SEARCH_CRIT) as searchFile:
         search = json.load(searchFile)
-    
+ 
     for key, value in search.items():
+        print("project key ", proj[key])
+        print("search key ", search[key])
         if value != "":
             if proj[key] == search[key]:
                 return True
             else:
                 return False
     
+    
+"""
+    with open(SEARCH_CRIT) as searchFile:
+        search = json.load(searchFile)
+        
+    crit_list = []
+        
+    for crit in search:
+        crit_list.append(checkSearchCriteria(search[crit], proj))
+        
+    if all(crit_list):
+        printProjectToConsole(proj)
+    else:
+        searchFile.close()
+"""
+
+"""
+def checkSearchCriteria(crit, proj):
+
+    
+    f_list = []
+    
+    for i in range(0, len(crit)):
+        if crit[i] in proj.values():
+            f_list.append(True)
+        elif crit[i] == "":
+            f_list.append(True)
+        else:
+            f_list.append(False)
+            
+    if any(f_list):
+        return True
+    else:
+        return False
+"""
+
 def recordOutputProject(proj):
     
     printProjectToConsole(proj)
