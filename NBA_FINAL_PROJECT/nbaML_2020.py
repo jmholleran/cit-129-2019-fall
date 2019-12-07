@@ -7,7 +7,7 @@ Web Scrap NBA Stats to Evaluate ML Probabilities
 import pandas as pd
 import numpy as np
 import datetime as dt
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from mltodec import convertmltodec as cmd
 from kelly import oneKelly, halfKelly, fourthKelly
 
@@ -30,9 +30,10 @@ def main():
         print("1.) NBA Matchups Tonight")
         print("2.) Analysis: NBA Matchups Tonights")
         print("3.) EXIT" + "\n")
-    
+        
+        print("*********************************************************" + "\n")
         user_select = int(input("Please choose one of the options above: "))
-        print()
+        print("\n" + "*********************************************************" + "\n")
         
         # Call functions if user selects from menu; ask again if user selects
         # option outside 1-7
@@ -45,29 +46,56 @@ def main():
             today_matchups = getTodayMatchups()
             
             for home, away in today_matchups.items():
+                
+                print(home, " vs. ", away, "\n")
+                print("------------------------------------------")
+                
                 homeTeam = home
                 awayTeam = away
                 
-                homeSym = convertTeamNameToSym(homeTeam)
-                awaySym = convertTeamNameToSym(awayTeam)
+                matchupAnalysisGraph(homeTeam, awayTeam)
                 
-                homeURL = buildTeamStatsURL(homeSym)
-                awayURL = buildTeamStatsURL(awaySym)
-                
-                homeDF = buildTeamStatsDataFrame(homeURL)
-                awayDF = buildTeamStatsDataFrame(awayURL)
-                
-                homeDF_1 = homeDF.loc[homeDF['Unnamed: 3'].isnull()]
-                awayDF_1 = awayDF.loc[awayDF['Unnamed: 3'].isin(['@'])]
-                
-                print(home, homeDF_1['Tm'])
-                print(away, awayDF_1['Tm'])
+                # Ask Moneyline -- Conversions -- Kelly Criterion
+            
+               
                 
                 
                 
 
+                # Filtered DataFrames by Home/Away for Monte Carlo Simulation
+                
+                homeDF = getTeamStatsDataFrame(homeTeam)
+                awayDF = getTeamStatsDataFrame(awayTeam)
+                                
+                homeDF_filter = filterHomeTeamStatsDF(homeDF)
+                awayDF_filter = filterAwayTeamStatsDF(awayDF)
+                
+                # Filtered Mean/Std Dev for Monte Carlo Simulation
+                
+                homeTeamPts_mu = getHomeTeamMeanPts(homeDF_filter)
+                homeTeamPts_std = getHomeTeamStdDevPts(homeDF_filter)
+                homeTeamOpp_mu = getHomeTeamOppMeanPts(homeDF_filter)
+                homeTeamOpp_std = getHomeTeamOppStdDevPts(homeDF_filter)
+                
+                awayTeamPts_mu = getAwayTeamMeanPts(awayDF_filter)
+                awayTeamPts_std = getAwayTeamStdDevPts(awayDF_filter)
+                awayTeamOpp_mu = getAwayTeamOppMeanPts(awayDF_filter)
+                awayTeamOpp_std = getAwayTeamOppStdDevPts(awayDF_filter)
+                
+                # Monte Carlo Simulation -- Output Probabilities
+                
+                
+                # Take ML Dec Odds, Simulation Probability and Convert to 
+                # Kelly Criterion
+                
+                # Ask User if they would like to adjust the probability?
+                # Use Bayesian Module
+                
+                # Output Adjusted Probability
+                # Output Adjusted Kelly Criterion
+                
+
         else:
-            print("Thanks and have a nice day!")   
             print("------------EXIT--------------")
             break
          
@@ -76,8 +104,199 @@ def main():
         
         if go_to_main == " ":
             main()   
+            
+def matchupAnalysisGraph(homeTeam, awayTeam):
+    
+    homeDF = getTeamStatsDataFrame(homeTeam)
+    awayDF = getTeamStatsDataFrame(awayTeam)
+                
+    home_graph_tm_pts = getHomeGraphTmPts(homeDF)
+    home_graph_opp_pts = getHomeGraphOppPts(homeDF)
+    home_graph_game_num = getHomeGraphGmNum(homeDF)
+    displayGraph(homeTeam, home_graph_game_num, home_graph_tm_pts, 
+                 home_graph_opp_pts)                
+                
+    away_graph_tm_pts = getAwayGraphTmPts(awayDF)
+    away_graph_opp_pts = getAwayGraphOppPts(awayDF)
+    away_graph_game_num = getHomeGraphGmNum(awayDF)
+    displayGraph(awayTeam, away_graph_game_num, away_graph_tm_pts, 
+                 away_graph_opp_pts)   
 
-def getTodayMatchups():
+def displayGraph(teamName, gameNum, teamPts, oppPts):
+    
+    plt.plot(gameNum, teamPts, color='black', label=teamName + ' Points')
+    plt.plot(gameNum, oppPts, color='gray', label='Opponent Points')
+    plt.xticks(range(0, (len(gameNum) + 2), 1))
+    plt.yticks(range(80, 150, 5))
+    plt.xlabel('Games 1 to ' + (str(len(gameNum))))
+    plt.ylabel('Total Points Scored')
+    plt.title(teamName + ' Previous ' + str(len(gameNum)) + ' Games')
+    plt.legend()
+    plt.show()
+
+def getHomeGraphTmPts(homeDF):
+    
+    homeDF_1 = homeDF['Tm']
+    
+    homeGraphTmPtsDF = pd.to_numeric(homeDF_1, errors='coerce')
+    
+    homeGraphTmPtsDF = homeGraphTmPtsDF.dropna()
+
+    return homeGraphTmPtsDF
+    
+def getHomeGraphOppPts(homeDF): 
+    
+    homeDF_1 = homeDF['Opp.1']
+    
+    homeGraphOppPtsDF = pd.to_numeric(homeDF_1, errors='coerce')
+    
+    homeGraphOppPtsDF = homeGraphOppPtsDF.dropna()
+    
+    return homeGraphOppPtsDF
+
+def getHomeGraphGmNum(homeDF):
+    
+    homeDF_1 = homeDF['G']
+
+    homeGraphGameNum = pd.to_numeric(homeDF_1, errors='coerce')
+    
+    homeGraphGameNum = homeGraphGameNum.dropna()
+    
+    return homeGraphGameNum
+
+def getAwayGraphTmPts(awayDF):
+    
+    awayDF_1 = awayDF['Tm']
+    
+    awayGraphTmPtsDF = pd.to_numeric(awayDF_1, errors='coerce') 
+    
+    awayGraphTmPtsDF = awayGraphTmPtsDF.dropna()
+    
+    return awayGraphTmPtsDF
+
+def getAwayGraphOppPts(awayDF):
+    
+    awayDF_1 = awayDF['Opp.1']
+    
+    awayGraphOppPtsDF = pd.to_numeric(awayDF_1, errors='coerce')
+    
+    awayGraphOppPtsDF = awayGraphOppPtsDF.dropna()
+    
+    return awayGraphOppPtsDF
+
+def getAwayGraphGmNum(awayDF):
+    
+    awayDF_1 = awayDF['G']
+    
+    awayGraphGameNum = pd.to_numeric(awayDF_1, errors='coerce')
+    
+    awayGraphGameNum = awayGraphGameNum.dropna()
+    
+    return awayGraphGameNum
+
+def getHomeTeamMeanPts(filteredHomeDF):
+    
+    filteredHomeDF_1 = filteredHomeDF['Tm']
+    
+    removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
+    
+    homeTeamPtsMu = removeStringDF.mean()
+    
+    return homeTeamPtsMu
+    
+def getHomeTeamStdDevPts(filteredHomeDF):
+    
+    filteredHomeDF_1 = filteredHomeDF['Tm']
+    
+    removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
+    
+    homeTeamStdDevPts = removeStringDF.std()
+
+    return homeTeamStdDevPts
+    
+def getHomeTeamOppMeanPts(filteredHomeDF):
+    
+    filteredHomeDF_1 = filteredHomeDF['Opp.1']
+    
+    removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
+    
+    homeTeamOppMeanPts = removeStringDF.mean()
+    
+    return homeTeamOppMeanPts
+    
+def getHomeTeamOppStdDevPts(filteredHomeDF):
+    
+    filteredHomeDF_1 = filteredHomeDF['Opp.1']
+    
+    removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
+    
+    homeTeamOppStdDevPts = removeStringDF.std()
+    
+    return homeTeamOppStdDevPts
+    
+def getAwayTeamMeanPts(filteredAwayDF):
+    
+    filteredAwayDF_1 = filteredAwayDF['Tm']
+    
+    removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
+    
+    awayTeamPtsMu = removeStringDF.mean()
+    
+    return awayTeamPtsMu
+    
+def getAwayTeamStdDevPts(filteredAwayDF):
+    
+    filteredAwayDF_1 = filteredAwayDF['Tm']
+    
+    removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
+    
+    awayTeamPtsMu = removeStringDF.std()
+    
+    return awayTeamPtsMu
+    
+def getAwayTeamOppMeanPts(filteredAwayDF):
+    
+    filteredAwayDF_1 = filteredAwayDF['Opp.1']
+    
+    removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
+    
+    awayTeamPtsMu = removeStringDF.mean()
+    
+    return awayTeamPtsMu
+    
+def getAwayTeamOppStdDevPts(filteredAwayDF): 
+    
+    filteredAwayDF_1 = filteredAwayDF['Opp.1']
+    
+    removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
+    
+    awayTeamPtsMu = removeStringDF.std()
+    
+    return awayTeamPtsMu    
+
+def filterHomeTeamStatsDF(homeDF):
+    
+    homeDF_filter = homeDF.loc[homeDF['Unnamed: 3'].isnull()]
+    
+    return homeDF_filter
+    
+def filterAwayTeamStatsDF(awayDF):
+    
+    awayDF_filter = awayDF.loc[awayDF['Unnamed: 3'].isin(['@'])]
+    
+    return awayDF_filter
+    
+def getTeamStatsDataFrame(team):
+    
+    teamSym = convertTeamNameToSym(team)
+    
+    teamURL = buildTeamStatsURL(teamSym)
+    
+    teamDF = buildTeamStatsDataFrame(teamURL)
+    
+    return teamDF
+    
+def getTodayMatchups():    
     
     urlMonth = getMonthURL()
     schedURL = buildScheduleURL(urlMonth)
@@ -213,6 +432,7 @@ def buildTeamStatsDataFrame(url):
     df = pd.DataFrame(dfs[0])
     
     return df
+
 
 if __name__=='__main__':
     main()
