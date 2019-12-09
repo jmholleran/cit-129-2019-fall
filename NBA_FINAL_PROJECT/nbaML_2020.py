@@ -2,7 +2,7 @@
 Joe Holleran
 11/28/2019
 Python 2 - Final Project
-Web Scrap NBA Stats to Evaluate ML Probabilities
+Web Scrap NBA Statistics to Evaluate ML Probabilities
 """
 import pandas as pd
 import numpy as np
@@ -10,6 +10,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 from mltodec import convertmltodec as cmd
 from kelly import oneKelly, halfKelly, fourthKelly
+from mlToImpliedProbability import convertMLtoProb as cmprob
+from monteCarlo import gameSim, gamesSimulator 
 
 teamAbbrev = {'Atlanta Hawks': 'ATL', 'Boston Celtics': 'BOS', 'Brooklyn Nets': 'BRK',
               'Charlotte Hornets': 'CHO', 'Chicago Bulls': 'CHI', 'Cleveland Cavaliers': 'CLE',
@@ -29,16 +31,23 @@ def main():
         print("*********************** MAIN MENU ***********************" + "\n")
         print("1.) NBA Matchups Tonight")
         print("2.) Analysis: NBA Matchups Tonights")
+        print("X.) Analysis: Enter Your Own Matchup")
         print("3.) EXIT" + "\n")
         
         print("*********************************************************" + "\n")
-        user_select = int(input("Please choose one of the options above: "))
-        print("\n" + "*********************************************************" + "\n")
         
+        try:
+            user_select = int(input("Please choose one of the options above: "))
+        except ValueError:
+            user_select = int(input("Please choose one of the options above: "))
+            
         # Call functions if user selects from menu; ask again if user selects
         # option outside 1-7
         if user_select < 1 or user_select > 3:
             user_select = int(input("Please choose one of the options above: "))
+            if user_select == 3:
+                print("------------EXIT--------------")
+                break
         elif user_select == 1:
             today_matchups = getTodayMatchups()
             printTodayMatchups(today_matchups)
@@ -47,30 +56,31 @@ def main():
             
             for home, away in today_matchups.items():
                 
-                print(home, " vs. ", away, "\n")
-                print("------------------------------------------")
+                print(home, " vs. ", away)
+                print("--------------------------------------------------" + "\n")
                 
                 homeTeam = home
                 awayTeam = away
                 
-                matchupAnalysisGraph(homeTeam, awayTeam)
+                matchupAnalysisGraph(homeTeam, awayTeam)                
                 
-                # Ask Moneyline -- Conversions -- Kelly Criterion
-            
-               
+                # Code Needed for implied Probabilities & Kelly Criterion
                 
+                homeML, awayML = getMoneyLines(homeTeam, awayTeam)
+                homeDecOdd = cmd(homeML)
+                awayDecOdd = cmd(awayML)
+                homeImpliedProb = cmprob(homeML)
+                awayImpliedProb = cmprob(awayML)
                 
+                displayImpliedProbs(homeTeam, awayTeam, homeImpliedProb, awayImpliedProb)
                 
-
-                # Filtered DataFrames by Home/Away for Monte Carlo Simulation
+                # Monte Carlo Simulation DataFrames and data filtered by Home/Away
                 
                 homeDF = getTeamStatsDataFrame(homeTeam)
                 awayDF = getTeamStatsDataFrame(awayTeam)
                                 
                 homeDF_filter = filterHomeTeamStatsDF(homeDF)
                 awayDF_filter = filterAwayTeamStatsDF(awayDF)
-                
-                # Filtered Mean/Std Dev for Monte Carlo Simulation
                 
                 homeTeamPts_mu = getHomeTeamMeanPts(homeDF_filter)
                 homeTeamPts_std = getHomeTeamStdDevPts(homeDF_filter)
@@ -81,29 +91,113 @@ def main():
                 awayTeamPts_std = getAwayTeamStdDevPts(awayDF_filter)
                 awayTeamOpp_mu = getAwayTeamOppMeanPts(awayDF_filter)
                 awayTeamOpp_std = getAwayTeamOppStdDevPts(awayDF_filter)
+                                
+                homeSimProb, awaySimProb = gamesSimulator(10000, homeTeamPts_mu, homeTeamPts_std, homeTeamOpp_mu, homeTeamOpp_std, awayTeamPts_mu, awayTeamPts_std, awayTeamOpp_mu, awayTeamOpp_std)
                 
-                # Monte Carlo Simulation -- Output Probabilities
+                displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb)
                 
+                homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(homeDecOdd, awayDecOdd, homeSimProb, awaySimProb)
                 
-                # Take ML Dec Odds, Simulation Probability and Convert to 
-                # Kelly Criterion
-                
+                outputKellyCriterion(homeTeam, awayTeam, homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly)
+
                 # Ask User if they would like to adjust the probability?
                 # Use Bayesian Module
-                
                 # Output Adjusted Probability
                 # Output Adjusted Kelly Criterion
                 
+
+                go_to_main = input("Press enter to continue to next matchup..." + "\n")
+
 
         else:
             print("------------EXIT--------------")
             break
          
         # Go back to main function after viewing section by pressing enter
-        go_to_main = input("Press enter to continue... ")
+        go_to_main = input("Press enter to continue to return to MAIN MENU... ")
         
         if go_to_main == " ":
             main()   
+            
+def calcKellyCriterion(homeDecOdd, awayDecOdd, homeSimProb, awaySimProb):
+
+    homeOneKelly = oneKelly(homeSimProb, homeDecOdd)
+    homeHalfKelly = halfKelly(homeSimProb, homeDecOdd)
+    homeFourthKelly = fourthKelly(homeSimProb, homeDecOdd)
+    
+    awayOneKelly = oneKelly(awaySimProb, homeDecOdd)
+    awayHalfKelly = halfKelly(awaySimProb, homeDecOdd)
+    awayFourthKelly = fourthKelly(awaySimProb, homeDecOdd)
+    
+    return homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly
+                    
+def outputKellyCriterion(homeTeam, awayTeam, homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly):
+    
+    print(homeTeam + " One Kelly: " + str(round(homeOneKelly, 4)))
+    print(homeTeam + " Half Kelly: " + str(round(homeHalfKelly, 4)))
+    print(homeTeam + " Fourth Kelly: " + str(round(homeFourthKelly, 4)) + "\n")
+    print(awayTeam + " One Kelly: " + str(round(awayOneKelly, 4)))
+    print(awayTeam + " Half Kelly: " + str(round(awayHalfKelly, 4)))
+    print(awayTeam + " Fourth Kelly: " + str(round(awayFourthKelly, 4)))
+    
+def displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb):
+    
+    print("The Simulation Probabilities are: " + "\n")
+    
+    homeSimProb = homeSimProb * 100
+    awaySimProb = awaySimProb * 100
+    
+    print(homeTeam + " " + str(round(homeSimProb, 2)) + "%")
+    print(awayTeam + " " + str(round(awaySimProb, 2)) + "%" + "\n")
+            
+def displayImpliedProbs(homeTeam, awayTeam, homeProb, awayProb):
+    
+    print("\n" + "The Moneyline Implied Probabilities are: " + "\n")
+    
+    homeProb = homeProb * 100
+    awayProb = awayProb * 100
+    
+    print(homeTeam + " " + str(round(homeProb, 3)) + "%")
+    print(awayTeam + " " + str(round(awayProb, 3)) + "%" + "\n")
+            
+def getMoneyLines(homeTeam, awayTeam):
+    
+    while True:
+        
+        try:
+            homeML = int(input("Enter " + homeTeam + " Moneyline: "))
+    
+            if homeML < -1000000 or homeML > 1000000:
+                homeML = int(input("Enter " + homeTeam + " Moneyline: "))
+        except ValueError:
+         
+            homeML = int(input("Enter " + homeTeam + " Moneyline: "))
+    
+            if homeML < -1000000 or homeML > 1000000:
+                homeML = int(input("Enter " + homeTeam + " Moneyline: "))
+    
+        try:
+            awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+    
+            if awayML < -1000000 or awayML > 1000000:
+                homeML = int(input("Enter " + awayTeam + " Moneyline: "))
+        except ValueError:
+         
+            awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+    
+            if awayML < -1000000 or awayML > 1000000:
+                awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+                
+        print("\n" + "You Entered the Following Moneylines: " + "\n" + homeTeam + ": " + str(homeML) + "\n" + awayTeam + ": " + str(awayML))
+        
+        checkML = input("Are those the correct Moneylines? (Y/N): ")
+        
+        if checkML.upper() == "Y":
+            break
+        else:
+            continue
+        
+    return homeML, awayML
             
 def matchupAnalysisGraph(homeTeam, awayTeam):
     
@@ -113,12 +207,14 @@ def matchupAnalysisGraph(homeTeam, awayTeam):
     home_graph_tm_pts = getHomeGraphTmPts(homeDF)
     home_graph_opp_pts = getHomeGraphOppPts(homeDF)
     home_graph_game_num = getHomeGraphGmNum(homeDF)
+    
     displayGraph(homeTeam, home_graph_game_num, home_graph_tm_pts, 
                  home_graph_opp_pts)                
                 
     away_graph_tm_pts = getAwayGraphTmPts(awayDF)
     away_graph_opp_pts = getAwayGraphOppPts(awayDF)
     away_graph_game_num = getHomeGraphGmNum(awayDF)
+    
     displayGraph(awayTeam, away_graph_game_num, away_graph_tm_pts, 
                  away_graph_opp_pts)   
 
