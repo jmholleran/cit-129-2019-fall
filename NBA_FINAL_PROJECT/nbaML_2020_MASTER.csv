@@ -1,0 +1,5 @@
+date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,away_win
+"Tue, Dec 10, 2019",Charlotte Hornets,Washington Wizards,100,-120,0.2944,0.7056,,
+"Tue, Dec 10, 2019",Miami Heat,Atlanta Hawks,-380,305,0.4394,0.5606,,
+"Tue, Dec 10, 2019",Philadelphia 76ers,Denver Nuggets,-220,190,0.5916,0.4084,,
+"Tue, Dec 10, 2019",Portland Trail Blazers,New York Knicks,-475,375,0.8224,0.1776,,

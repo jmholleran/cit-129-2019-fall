@@ -1,18 +1,22 @@
 """
 Joe Holleran
-11/28/2019
+12/11/2019
 Python 2 - Final Project
 Web Scrap NBA Statistics to Evaluate ML Probabilities
 """
+# Import modules
 import pandas as pd
-import numpy as np
 import datetime as dt
 import matplotlib.pyplot as plt
 from mltodec import convertmltodec as cmd
 from kelly import oneKelly, halfKelly, fourthKelly
 from mlToImpliedProbability import convertMLtoProb as cmprob
-from monteCarlo import gameSim, gamesSimulator 
+from monteCarlo import gamesSimulator 
+from bayesian import adjustProbability
+import csv
+##############################################################################
 
+# Team Abbreviations for Display and URL's
 teamAbbrev = {'Atlanta Hawks': 'ATL', 'Boston Celtics': 'BOS', 'Brooklyn Nets': 'BRK',
               'Charlotte Hornets': 'CHO', 'Chicago Bulls': 'CHI', 'Cleveland Cavaliers': 'CLE',
               'Dallas Mavericks': 'DAL', 'Denver Nuggets': 'DEN', 'Detroit Pistons': 'DET',
@@ -26,121 +30,302 @@ teamAbbrev = {'Atlanta Hawks': 'ATL', 'Boston Celtics': 'BOS', 'Brooklyn Nets': 
 
 def main():
     
+    # Main Menu Loop
+    
     while True:
         
+        # User has Four Options within the program: View NBA matchups today,
+        # Analyze all of the matchups to be played today, Analyze an individual
+        # matchup or EXIT
         print("*********************** MAIN MENU ***********************" + "\n")
         print("1.) NBA Matchups Tonight")
         print("2.) Analysis: NBA Matchups Tonights")
-        print("X.) Analysis: Enter Your Own Matchup")
-        print("3.) EXIT" + "\n")
+        print("3.) Analysis: Enter Your Own NBA Matchup")
+        print("4.) EXIT" + "\n")
         
         print("*********************************************************" + "\n")
         
+        # Input Validation 
         try:
             user_select = int(input("Please choose one of the options above: "))
         except ValueError:
             user_select = int(input("Please choose one of the options above: "))
             
         # Call functions if user selects from menu; ask again if user selects
-        # option outside 1-7
-        if user_select < 1 or user_select > 3:
+        if user_select < 1 or user_select > 4:
             user_select = int(input("Please choose one of the options above: "))
             if user_select == 3:
                 print("------------EXIT--------------")
                 break
         elif user_select == 1:
+            # Prints out the NBA Matchups Today using the getTodayMatchups function
             today_matchups = getTodayMatchups()
             printTodayMatchups(today_matchups)
         elif user_select == 2:
+            # Get today's matchups from getTodayMatchups function
             today_matchups = getTodayMatchups()
             
+            # Iterate through the getTodayMatchups dictionary
             for home, away in today_matchups.items():
                 
+                # Display the individual matchup to be analyzed
                 print(home, " vs. ", away)
                 print("--------------------------------------------------" + "\n")
                 
-                homeTeam = home
-                awayTeam = away
+                # Run matchup analysis function - See Function Description Below
+                runMatchupAnalysis(home, away)
                 
-                matchupAnalysisGraph(homeTeam, awayTeam)                
+                # Give User the Option to continue through analysis or Exit after each matchup
+                continue_analysis = input("Press enter to continue to next matchup... (X to Exit)" + "\n")
+                if continue_analysis == "x" or continue_analysis == "X":
+                    break
                 
-                # Code Needed for implied Probabilities & Kelly Criterion
-                
-                homeML, awayML = getMoneyLines(homeTeam, awayTeam)
-                homeDecOdd = cmd(homeML)
-                awayDecOdd = cmd(awayML)
-                homeImpliedProb = cmprob(homeML)
-                awayImpliedProb = cmprob(awayML)
-                
-                displayImpliedProbs(homeTeam, awayTeam, homeImpliedProb, awayImpliedProb)
-                
-                # Monte Carlo Simulation DataFrames and data filtered by Home/Away
-                
-                homeDF = getTeamStatsDataFrame(homeTeam)
-                awayDF = getTeamStatsDataFrame(awayTeam)
-                                
-                homeDF_filter = filterHomeTeamStatsDF(homeDF)
-                awayDF_filter = filterAwayTeamStatsDF(awayDF)
-                
-                homeTeamPts_mu = getHomeTeamMeanPts(homeDF_filter)
-                homeTeamPts_std = getHomeTeamStdDevPts(homeDF_filter)
-                homeTeamOpp_mu = getHomeTeamOppMeanPts(homeDF_filter)
-                homeTeamOpp_std = getHomeTeamOppStdDevPts(homeDF_filter)
-                
-                awayTeamPts_mu = getAwayTeamMeanPts(awayDF_filter)
-                awayTeamPts_std = getAwayTeamStdDevPts(awayDF_filter)
-                awayTeamOpp_mu = getAwayTeamOppMeanPts(awayDF_filter)
-                awayTeamOpp_std = getAwayTeamOppStdDevPts(awayDF_filter)
-                                
-                homeSimProb, awaySimProb = gamesSimulator(10000, homeTeamPts_mu, homeTeamPts_std, homeTeamOpp_mu, homeTeamOpp_std, awayTeamPts_mu, awayTeamPts_std, awayTeamOpp_mu, awayTeamOpp_std)
-                
-                displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb)
-                
-                homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(homeDecOdd, awayDecOdd, homeSimProb, awaySimProb)
-                
-                outputKellyCriterion(homeTeam, awayTeam, homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly)
-
-                # Ask User if they would like to adjust the probability?
-                # Use Bayesian Module
-                # Output Adjusted Probability
-                # Output Adjusted Kelly Criterion
-                
-
-                go_to_main = input("Press enter to continue to next matchup..." + "\n")
-
-
+        elif user_select == 3:
+            
+            # Ask user to input an individual matchup using the getIndividualMatchup function
+            home, away = getIndividualMatchup()
+            
+            # Display the individual matchup
+            print(home, " vs. ", away)
+            print("--------------------------------------------------" + "\n")
+            
+            # Run matchup analysis using individual matchup
+            runMatchupAnalysis(home, away)
+            
         else:
             print("------------EXIT--------------")
             break
-         
+
         # Go back to main function after viewing section by pressing enter
-        go_to_main = input("Press enter to continue to return to MAIN MENU... ")
+        go_to_main = input("Press enter to continue to MAIN MENU... " + "\n")
         
         if go_to_main == " ":
             main()   
             
-def calcKellyCriterion(homeDecOdd, awayDecOdd, homeSimProb, awaySimProb):
+def writeMatchupDataToExcel(home_team, away_team, homeML, awayML, homeSimProb, awaySimProb):
+    
+    # Function purpose: to write analysis data to excel
+    
+    # Create Date variable - gets today's date in basketball reference format
+    date = getTodaySchedSearch()   
+   
+    # Use Pandas to read CSV file and create variables for values to check in CSV file before appending
+    check_file = pd.read_csv('nbaML_2020_MASTER.csv', header=0)
+    df = pd.DataFrame(check_file)
+    date_col = df['date']
+    home_col = df['home_team']
+    away_col = df['away_team']
+    
+    while True:
+        
+        # Initialize check count
+        check_count = 0
+    
+        # Loop through the date, home team, and away team columns
+        # If all three items are already found in the CSV file then do not write to file
+        for date_check in date_col:
+            if date_check == date:
+                check_count += 1
+    
+        for home_check in home_col:
+            if home_check == home_team:
+                check_count += 1
+            
+        for away_check in away_col:
+            if away_check == away_team:
+                check_count += 1
+    
+        if check_count == 3:
+            print("The matchup was previously uploaded to Excel.")
+            break
+        else:
+            # Write to Excel file if the check count does not equal 3
+            with open('nbaML_2020_MASTER.csv', 'a') as writeFile:
+                writeMatchupData = csv.writer(writeFile)
+                writeMatchupData.writerow([date, home_team, away_team, homeML, awayML, homeSimProb, awaySimProb])
+            break
 
-    homeOneKelly = oneKelly(homeSimProb, homeDecOdd)
-    homeHalfKelly = halfKelly(homeSimProb, homeDecOdd)
-    homeFourthKelly = fourthKelly(homeSimProb, homeDecOdd)
+def getIndividualMatchup():
     
-    awayOneKelly = oneKelly(awaySimProb, homeDecOdd)
-    awayHalfKelly = halfKelly(awaySimProb, homeDecOdd)
-    awayFourthKelly = fourthKelly(awaySimProb, homeDecOdd)
+    # Function Purpose: allow user to input individual matchup
     
-    return homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly
+    # Display for user all Team Names and Symbols    
+    print("\n" + "Team Name" + "\t" + "Symbol")
+    for key, value in teamAbbrev.items():
+        print(key, ":", value)
+    
+    # Ask User to input either a team name or symbol
+    # If the user inputs a symbol (length = 3) then pass to getTeamNameFromSym function
+    while True:
+        try:
+            home = input("Enter Home Team Name or Symbol: ")
+            
+            if type(home) != str:
+               home = input("Enter Home Team Name or Symbol: ")
+               break
+            elif len(home) == 3:
+                home = getTeamNameFromSym(home)
+                break
+        except ValueError:
+            print("Please enter a valid Team Name or Symbol.")
+            
+    while True:
+        try:
+            away = input("Enter Away Team Name or Symbol: ")
+            
+            if type(away) != str:
+                away = input("Enter Away Team Name or Symbol: ")
+                break
+            elif len(away) == 3:
+                away = getTeamNameFromSym(away)
+                break
+        except ValueError:
+            print("Please enter a valid Team Name or Symbol.")
+            
+    # Return home and away team names for matchup analysis
+    
+    return home, away
+
+def getTeamNameFromSym(symbol):
+    
+    # For individual matchup analysis
+    # If user inputs a symbol then the key is returned from TeamAbbrev dictionary
+    
+    try:
+        
+        for key, value in teamAbbrev.items():
+            if symbol == value:
+                teamName = key
+
+    except ValueError:
+        print("Please enter a valid team symbol.")
+        
+    # Return team name for matchup analysis        
+    return teamName
+
+def runMatchupAnalysis(home, away):
+    
+    # Main Matchup Analysis Function
+    
+    # Assign team names to variables homeTeam and awayTeam    
+    homeTeam = home
+    awayTeam = away
+    
+    # Display Matchup Analysis Graph
+    matchupAnalysisGraph(homeTeam, awayTeam)         
+     
+    # Get home team and away team moneylines, convert to decimal odds, and
+    # display the implied probabilities of the moneylines
+    homeML, awayML = getMoneyLines(homeTeam, awayTeam)
+    homeDecOdd = cmd(homeML)
+    awayDecOdd = cmd(awayML)
+    homeImpliedProb = cmprob(homeML)
+    awayImpliedProb = cmprob(awayML)                
+    displayImpliedProbs(homeTeam, awayTeam, homeImpliedProb, awayImpliedProb)
+    
+    # Assign the home and away Team Stats DataFrames to variable                
+    homeDF = getTeamStatsDataFrame(homeTeam)
+    awayDF = getTeamStatsDataFrame(awayTeam)
+    
+    # Filter the home and away dataframes for home or away status                                
+    homeDF_filter = filterHomeTeamStatsDF(homeDF)
+    awayDF_filter = filterAwayTeamStatsDF(awayDF)
+    
+    # Assign the variables for home/away team pts/opp pts mean and standard deviation
+    # for the monte carlo simulation
+    homeTeamPts_mu = getHomeTeamMeanPts(homeDF_filter)
+    homeTeamPts_std = getHomeTeamStdDevPts(homeDF_filter)
+    homeTeamOpp_mu = getHomeTeamOppMeanPts(homeDF_filter)
+    homeTeamOpp_std = getHomeTeamOppStdDevPts(homeDF_filter)
+                
+    awayTeamPts_mu = getAwayTeamMeanPts(awayDF_filter)
+    awayTeamPts_std = getAwayTeamStdDevPts(awayDF_filter)
+    awayTeamOpp_mu = getAwayTeamOppMeanPts(awayDF_filter)
+    awayTeamOpp_std = getAwayTeamOppStdDevPts(awayDF_filter)
+    
+    # Assign the variables for the Monte Carlo simulation - using mean/standard deviation and number of simulations                           
+    homeSimProb, awaySimProb = gamesSimulator(10000, homeTeamPts_mu, homeTeamPts_std, homeTeamOpp_mu, homeTeamOpp_std, awayTeamPts_mu, awayTeamPts_std, awayTeamOpp_mu, awayTeamOpp_std)
+    
+    # Display the results of the Monte Carlo simulation
+    displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb)
+    
+    # Assign the variables for the Kelly Criterion calculations                
+    homeOneKelly, homeHalfKelly, homeFourthKelly = calcKellyCriterion(homeTeam, homeDecOdd, homeSimProb)
+    awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(awayTeam, awayDecOdd, homeSimProb) 
+    outputKellyCriterion(homeTeam, homeOneKelly, homeHalfKelly, homeFourthKelly)
+    outputKellyCriterion(awayTeam, awayOneKelly, awayHalfKelly, awayFourthKelly)    
+                
+    # Ask user if they would like to Adjust the model probabilities
+    adjModelProbability(homeTeam, homeSimProb)
+    adjModelProbability(awayTeam, awaySimProb)
+    
+    # Write matchup data to CSV
+    writeMatchupDataToExcel(homeTeam, awayTeam, homeML, awayML, homeSimProb, awaySimProb)
+    
+def adjModelProbability(team, prob):
+    
+    # Function purpose is to ask the user if they would like to adjust the Monte Carlo
+    # Simulation probability based on prior data held in the CSV file
+    
+    while True:
+        try:
+            user_input = input("Would you like to adjust " + team + " probability of " + str(round((prob * 100), 3)) + "? (Y/N): ")
+            if user_input == "Y" or user_input == "y":
+                print(team + " Model Probability is: " + str(prob * 100))
+                pastProb = getPastProb(team)
+                pastProb = pastProb / 100
+                print(team + " Prior Probability is: " + str(pastProb * 100))
+                adjProb = adjustProbability(prob, pastProb)
+                print(team + " Adjusted Probability is: " + str(adjProb* 100))
+                break
+                return adjProb
+            if user_input == "N" or user_input == "n":
+                break
+        except ValueError:
+            print("Sorry, that is not a valid input.  Please select Y or N.")
+
+
+def getPastProb(team):
+    
+   # Function purpose is to collect the prior probabilities input by the user 
+   # to be adjusted using the Bayesian module
+    
+    while True:
+        try:
+            pastProb = input("Enter the Prior Probability for " + team + "(0 to 100): ")
+            pastProb = float(pastProb)
+            if pastProb < 0 or pastProb > 100:
+               pastProb = input("Enter the Prior Probability for " + team + " (0 to 100): ")
+               pastProb = int(pastProb)
+        except ValueError:
+            print("That is not a valid probability.  Please enter a value between 0 and 100.")
+        else:
+            break
+        
+    return pastProb
+            
+def calcKellyCriterion(teamName, teamDecOdd, teamSimProb):
+    
+    # Function purpose is to take in the decimal odds and probability and 
+    # output the Kelly Criterion and a fraction of the Kelly Criterion 
+
+    teamOneKelly = oneKelly(teamSimProb, teamDecOdd)
+    teamHalfKelly = halfKelly(teamSimProb, teamDecOdd)
+    teamFourthKelly = fourthKelly(teamSimProb, teamDecOdd)
+    
+    return teamOneKelly, teamHalfKelly, teamFourthKelly
                     
-def outputKellyCriterion(homeTeam, awayTeam, homeOneKelly, homeHalfKelly, homeFourthKelly, awayOneKelly, awayHalfKelly, awayFourthKelly):
+def outputKellyCriterion(teamName, teamOneKelly, teamHalfKelly, teamFourthKelly):
     
-    print(homeTeam + " One Kelly: " + str(round(homeOneKelly, 4)))
-    print(homeTeam + " Half Kelly: " + str(round(homeHalfKelly, 4)))
-    print(homeTeam + " Fourth Kelly: " + str(round(homeFourthKelly, 4)) + "\n")
-    print(awayTeam + " One Kelly: " + str(round(awayOneKelly, 4)))
-    print(awayTeam + " Half Kelly: " + str(round(awayHalfKelly, 4)))
-    print(awayTeam + " Fourth Kelly: " + str(round(awayFourthKelly, 4)))
+    # Function puprose is to display the Kelly Criterions
+    
+    print(teamName + " One Kelly: " + str(round(teamOneKelly, 4)))
+    print(teamName + " Half Kelly: " + str(round(teamHalfKelly, 4)))
+    print(teamName + " Fourth Kelly: " + str(round(teamFourthKelly, 4)) + "\n")
     
 def displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb):
+    
+    # Function purpose is to display the Monte Carlo Simulation results
     
     print("The Simulation Probabilities are: " + "\n")
     
@@ -152,6 +337,8 @@ def displaySimulationProbs(homeTeam, awayTeam, homeSimProb, awaySimProb):
             
 def displayImpliedProbs(homeTeam, awayTeam, homeProb, awayProb):
     
+    # Function purpose is to display the Implied Probabilities
+    
     print("\n" + "The Moneyline Implied Probabilities are: " + "\n")
     
     homeProb = homeProb * 100
@@ -162,36 +349,35 @@ def displayImpliedProbs(homeTeam, awayTeam, homeProb, awayProb):
             
 def getMoneyLines(homeTeam, awayTeam):
     
+    # Function puprose is to collect the Moneylines for each team (home & away)
+    # User is asked to enter the Moneyline and then is given option to review
+    # and re-enter the Moneylines if needed
+    
     while True:
-        
-        try:
-            homeML = int(input("Enter " + homeTeam + " Moneyline: "))
     
-            if homeML < -1000000 or homeML > 1000000:
+        while True:
+            try:
                 homeML = int(input("Enter " + homeTeam + " Moneyline: "))
-        except ValueError:
-         
-            homeML = int(input("Enter " + homeTeam + " Moneyline: "))
-    
-            if homeML < -1000000 or homeML > 1000000:
-                homeML = int(input("Enter " + homeTeam + " Moneyline: "))
-    
-        try:
-            awayML = int(input("Enter " + awayTeam + " Moneyline: "))
-    
-            if awayML < -1000000 or awayML > 1000000:
-                homeML = int(input("Enter " + awayTeam + " Moneyline: "))
-        except ValueError:
-         
-            awayML = int(input("Enter " + awayTeam + " Moneyline: "))
-    
-            if awayML < -1000000 or awayML > 1000000:
-                awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+                if homeML < -1000000 or homeML > 1000000:
+                    homeML = int(input("Enter " + homeTeam + " Moneyline: "))
+            except ValueError:
+                print("Sorry, that is not a Moneyline.")
+            else:
+                break
                 
+        while True:
+            try:
+                awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+                if awayML < -1000000 or awayML > 1000000:
+                    awayML = int(input("Enter " + awayTeam + " Moneyline: "))
+            except ValueError:
+                print("Sorry, that is not a Moneyline.")
+            else:
+                break
+
         print("\n" + "You Entered the Following Moneylines: " + "\n" + homeTeam + ": " + str(homeML) + "\n" + awayTeam + ": " + str(awayML))
         
         checkML = input("Are those the correct Moneylines? (Y/N): ")
-        
         if checkML.upper() == "Y":
             break
         else:
@@ -200,6 +386,9 @@ def getMoneyLines(homeTeam, awayTeam):
     return homeML, awayML
             
 def matchupAnalysisGraph(homeTeam, awayTeam):
+    
+    # Function purpose is to run the matchup analysis graph 
+    # The DataFrames are used to display all prior games played of the season so far
     
     homeDF = getTeamStatsDataFrame(homeTeam)
     awayDF = getTeamStatsDataFrame(awayTeam)
@@ -220,6 +409,8 @@ def matchupAnalysisGraph(homeTeam, awayTeam):
 
 def displayGraph(teamName, gameNum, teamPts, oppPts):
     
+    # Function purpose is to display the matchup analysis graph
+    
     plt.plot(gameNum, teamPts, color='black', label=teamName + ' Points')
     plt.plot(gameNum, oppPts, color='gray', label='Opponent Points')
     plt.xticks(range(0, (len(gameNum) + 2), 1))
@@ -232,6 +423,9 @@ def displayGraph(teamName, gameNum, teamPts, oppPts):
 
 def getHomeGraphTmPts(homeDF):
     
+    # Function collects the Home Team Graph Team Points and removes any 
+    # rows with NaN values
+    
     homeDF_1 = homeDF['Tm']
     
     homeGraphTmPtsDF = pd.to_numeric(homeDF_1, errors='coerce')
@@ -241,6 +435,9 @@ def getHomeGraphTmPts(homeDF):
     return homeGraphTmPtsDF
     
 def getHomeGraphOppPts(homeDF): 
+    
+    # Function collects the Home Team Graph Opp Points and removes any
+    # rows with NaN values
     
     homeDF_1 = homeDF['Opp.1']
     
@@ -252,6 +449,9 @@ def getHomeGraphOppPts(homeDF):
 
 def getHomeGraphGmNum(homeDF):
     
+    # Function collecs the Home Team number of games and removes any 
+    # rows with NaN values
+    
     homeDF_1 = homeDF['G']
 
     homeGraphGameNum = pd.to_numeric(homeDF_1, errors='coerce')
@@ -261,6 +461,9 @@ def getHomeGraphGmNum(homeDF):
     return homeGraphGameNum
 
 def getAwayGraphTmPts(awayDF):
+    
+    # Function collects the Away Team Graph Team Points and removes any 
+    # rows with NaN values
     
     awayDF_1 = awayDF['Tm']
     
@@ -272,6 +475,9 @@ def getAwayGraphTmPts(awayDF):
 
 def getAwayGraphOppPts(awayDF):
     
+    # Function collects the Away Team Graph Opp Points and removes any
+    # rows with NaN values
+    
     awayDF_1 = awayDF['Opp.1']
     
     awayGraphOppPtsDF = pd.to_numeric(awayDF_1, errors='coerce')
@@ -281,6 +487,9 @@ def getAwayGraphOppPts(awayDF):
     return awayGraphOppPtsDF
 
 def getAwayGraphGmNum(awayDF):
+    
+    # Function collects the Away Team Graph Team Points and removes any 
+    # rows with NaN values
     
     awayDF_1 = awayDF['G']
     
@@ -292,6 +501,9 @@ def getAwayGraphGmNum(awayDF):
 
 def getHomeTeamMeanPts(filteredHomeDF):
     
+    # Function gets the mean value of the Home Team Pts column and removes any
+    # strings from rows
+    
     filteredHomeDF_1 = filteredHomeDF['Tm']
     
     removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
@@ -301,6 +513,9 @@ def getHomeTeamMeanPts(filteredHomeDF):
     return homeTeamPtsMu
     
 def getHomeTeamStdDevPts(filteredHomeDF):
+    
+    # Function gets the standard deviation value of the Home Team Pts column and 
+    # removes any strings from rows    
     
     filteredHomeDF_1 = filteredHomeDF['Tm']
     
@@ -312,6 +527,8 @@ def getHomeTeamStdDevPts(filteredHomeDF):
     
 def getHomeTeamOppMeanPts(filteredHomeDF):
     
+    # Function gets the mean of the Home Team Opp Pts column and removes any strings from rows
+    
     filteredHomeDF_1 = filteredHomeDF['Opp.1']
     
     removeStringDF = pd.to_numeric(filteredHomeDF_1, errors='coerce')
@@ -321,6 +538,9 @@ def getHomeTeamOppMeanPts(filteredHomeDF):
     return homeTeamOppMeanPts
     
 def getHomeTeamOppStdDevPts(filteredHomeDF):
+    
+    # Function gets the standard deviation of the Home Team Opp Pts column and 
+    # removes any strings from rows
     
     filteredHomeDF_1 = filteredHomeDF['Opp.1']
     
@@ -332,6 +552,9 @@ def getHomeTeamOppStdDevPts(filteredHomeDF):
     
 def getAwayTeamMeanPts(filteredAwayDF):
     
+    # Function gets the mean value of the Away Team Points column and removes 
+    # any strings from rows
+    
     filteredAwayDF_1 = filteredAwayDF['Tm']
     
     removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
@@ -342,35 +565,46 @@ def getAwayTeamMeanPts(filteredAwayDF):
     
 def getAwayTeamStdDevPts(filteredAwayDF):
     
+    # Function gets the standard deviation value of the Away Team Points column and
+    # removes any strings from rows
+    
     filteredAwayDF_1 = filteredAwayDF['Tm']
     
     removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
     
-    awayTeamPtsMu = removeStringDF.std()
+    awayTeamPtsStdDev = removeStringDF.std()
     
-    return awayTeamPtsMu
+    return awayTeamPtsStdDev
     
 def getAwayTeamOppMeanPts(filteredAwayDF):
     
+    # Function gets the mean value of the Away Team Opp points column and 
+    # removes any strings from rows
+    
     filteredAwayDF_1 = filteredAwayDF['Opp.1']
     
     removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
     
-    awayTeamPtsMu = removeStringDF.mean()
+    awayTeamOppPtsMu = removeStringDF.mean()
     
-    return awayTeamPtsMu
+    return awayTeamOppPtsMu
     
 def getAwayTeamOppStdDevPts(filteredAwayDF): 
     
+    # Function gets the standard deviation value of the Away Team Opp points column
+    # and removes any strings from rows
+    
     filteredAwayDF_1 = filteredAwayDF['Opp.1']
     
     removeStringDF = pd.to_numeric(filteredAwayDF_1, errors='coerce')
     
-    awayTeamPtsMu = removeStringDF.std()
+    awayTeamOppStdDevPts = removeStringDF.std()
     
-    return awayTeamPtsMu    
+    return awayTeamOppStdDevPts  
 
 def filterHomeTeamStatsDF(homeDF):
+    
+    # Function filters the Home Team dataframe to include only rows of Home Games
     
     homeDF_filter = homeDF.loc[homeDF['Unnamed: 3'].isnull()]
     
@@ -378,12 +612,17 @@ def filterHomeTeamStatsDF(homeDF):
     
 def filterAwayTeamStatsDF(awayDF):
     
+    # Function filters the Away Team dataframe to include only rows of Away Games
+    
     awayDF_filter = awayDF.loc[awayDF['Unnamed: 3'].isin(['@'])]
     
     return awayDF_filter
     
 def getTeamStatsDataFrame(team):
     
+    # Function creates a DataFrame for Team Name
+    
+    # Convert Team Name to Symbol, build URL, and create DataFrame
     teamSym = convertTeamNameToSym(team)
     
     teamURL = buildTeamStatsURL(teamSym)
@@ -394,6 +633,10 @@ def getTeamStatsDataFrame(team):
     
 def getTodayMatchups():    
     
+    # Function to build today's matchups
+
+    # Get the URL month, build the schedule URL, create schedule dataframe,
+    # search the schedule DataFrame and create matchup dictionary     
     urlMonth = getMonthURL()
     schedURL = buildScheduleURL(urlMonth)
     schedDF = buildSchedDataFrame(schedURL)
@@ -444,8 +687,10 @@ def getTodaySchedSearch():
     
     weekDay = today.strftime('%a')
     month = today.strftime('%b')
-    day = today.strftime('%d')
+    day = today.strftime('%#d')
+    """
     day = day.lstrip('0').replace('0', '')
+    """
     year = today.strftime('%Y')
     
     todaySearch = str(weekDay + ', ' + month + ' ' + day + ', ' + year)
@@ -453,6 +698,9 @@ def getTodaySchedSearch():
     return todaySearch
 
 def getHomeTeams(today, df):
+    
+    # Function purpose is to build a list of home teams from the schedule
+    # DataFrame
     
     try:
     
@@ -472,6 +720,9 @@ def getHomeTeams(today, df):
 
 def getAwayTeams(today, df):
     
+    # Function purpose is to build a list of away teams from the schedule
+    # DataFrame
+    
     try:
     
         dfsearch = df.loc[[today], ['Visitor/Neutral']]
@@ -489,6 +740,8 @@ def getAwayTeams(today, df):
         
 def getTodayMatchupDict(homeTeams, awayTeams):
     
+    # Function purpose is to build a dictionary of the home and away teams
+    
     matchups = {}
     
     for home in homeTeams:
@@ -501,6 +754,8 @@ def getTodayMatchupDict(homeTeams, awayTeams):
 
 def printTodayMatchups(matchups):
     
+    # Function purpose is to display the matchups today in the matchups dictionary
+    
     count = 1
     
     for home, away in matchups.items():
@@ -511,11 +766,15 @@ def printTodayMatchups(matchups):
         
 def convertTeamNameToSym(teamName):
     
+    # Function will convert a team name to a team symbol using the TeamAbbrev dictionary
+    
     teamSym = teamAbbrev[teamName]
 
     return teamSym
 
 def buildTeamStatsURL(teamSym):
+    
+    # URL for the individual team Game Log - Team Symbol is needed to build URL
     
     url = 'https://www.basketball-reference.com/teams/' + str(teamSym) + '/2020/gamelog/'
     
@@ -524,6 +783,7 @@ def buildTeamStatsURL(teamSym):
 def buildTeamStatsDataFrame(url):
     
     # Function Purpose: Generic Function to Build a DataFrame when given a URL
+    
     dfs = pd.read_html(url, header = 1)
     df = pd.DataFrame(dfs[0])
     
