@@ -12,7 +12,6 @@ from mltodec import convertmltodec as cmd
 from kelly import oneKelly, halfKelly, fourthKelly
 from mlToImpliedProbability import convertMLtoProb as cmprob
 from monteCarlo import gamesSimulator 
-from bayesian import adjustProbability
 import csv
 ##############################################################################
 
@@ -38,8 +37,8 @@ def main():
         # Analyze all of the matchups to be played today, Analyze an individual
         # matchup or EXIT
         print("*********************** MAIN MENU ***********************" + "\n")
-        print("1.) NBA Matchups Tonight")
-        print("2.) Analysis: NBA Matchups Tonights")
+        print("1.) NBA Matchups Tonight: " + str(getTodaySchedSearch()))
+        print("2.) Analysis: NBA Matchups Tonight: " + str(getTodaySchedSearch()))
         print("3.) Analysis: Enter Your Own NBA Matchup")
         print("4.) EXIT" + "\n")
         
@@ -117,6 +116,13 @@ def writeMatchupDataToExcel(home_team, away_team, homeML, awayML, homeSimProb, a
     away_col = df['away_team']
     
     while True:
+        
+        excel_choice = input("Do you want to output this matchup data to Excel? (Y/N): ")
+        
+        if excel_choice == "Y" or excel_choice == "y":
+            continue
+        else:
+            break
         
         # Initialize check count
         check_count = 0
@@ -256,53 +262,52 @@ def runMatchupAnalysis(home, away):
     outputKellyCriterion(awayTeam, awayOneKelly, awayHalfKelly, awayFourthKelly)    
                 
     # Ask user if they would like to Adjust the model probabilities
-    adjModelProbability(homeTeam, homeSimProb)
-    adjModelProbability(awayTeam, awaySimProb)
+    adjModelProbability(homeTeam, homeSimProb, homeDecOdd)
+    adjModelProbability(awayTeam, awaySimProb, awayDecOdd)
     
     # Write matchup data to CSV
     writeMatchupDataToExcel(homeTeam, awayTeam, homeML, awayML, homeSimProb, awaySimProb)
     
-def adjModelProbability(team, prob):
+def adjModelProbability(team, prob, teamDecOdd):
     
     # Function purpose is to ask the user if they would like to adjust the Monte Carlo
-    # Simulation probability based on prior data held in the CSV file
+    # Simulation probability based on data held in the CSV file
     
     while True:
         try:
             user_input = input("Would you like to adjust " + team + " probability of " + str(round((prob * 100), 3)) + "? (Y/N): ")
             if user_input == "Y" or user_input == "y":
                 print(team + " Model Probability is: " + str(prob * 100))
-                pastProb = getPastProb(team)
-                pastProb = pastProb / 100
-                print(team + " Prior Probability is: " + str(pastProb * 100))
-                adjProb = adjustProbability(prob, pastProb)
-                print(team + " Adjusted Probability is: " + str(adjProb* 100))
+                newProb = getNewProb(team)
+                newProb = newProb / 100
+                print(team + " New Probability is: " + str(newProb * 100) + "\n")
+                print("Kelly Criterion for New Probability: " + "\n")
+                teamOneKelly, teamHalfKelly, teamFourthKelly = calcKellyCriterion(team, teamDecOdd, newProb)
+                outputKellyCriterion(team, teamOneKelly, teamHalfKelly, teamFourthKelly)
                 break
-                return adjProb
             if user_input == "N" or user_input == "n":
                 break
         except ValueError:
             print("Sorry, that is not a valid input.  Please select Y or N.")
 
 
-def getPastProb(team):
+def getNewProb(team):
     
-   # Function purpose is to collect the prior probabilities input by the user 
-   # to be adjusted using the Bayesian module
+   # Function purpose is to collect the new probability input by the user 
     
     while True:
         try:
-            pastProb = input("Enter the Prior Probability for " + team + "(0 to 100): ")
-            pastProb = float(pastProb)
-            if pastProb < 0 or pastProb > 100:
-               pastProb = input("Enter the Prior Probability for " + team + " (0 to 100): ")
-               pastProb = int(pastProb)
+            newProb = input("Enter the New Probability for " + team + "(0 to 100): ")
+            newProb = float(newProb)
+            if newProb < 0 or newProb > 100:
+               newProb = input("Enter the New Probability for " + team + " (0 to 100): ")
+               newProb = int(newProb)
         except ValueError:
             print("That is not a valid probability.  Please enter a value between 0 and 100.")
         else:
             break
         
-    return pastProb
+    return newProb
             
 def calcKellyCriterion(teamName, teamDecOdd, teamSimProb):
     
@@ -757,6 +762,8 @@ def printTodayMatchups(matchups):
     # Function purpose is to display the matchups today in the matchups dictionary
     
     count = 1
+    
+    print("\n" + "NBA Games Tonight: " + str(getTodaySchedSearch()) + "\n")
     
     for home, away in matchups.items():
         print('GAME ', count)
