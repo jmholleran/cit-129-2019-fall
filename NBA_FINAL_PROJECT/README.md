@@ -1,29 +1,28 @@
 # Joe Holleran		Python 2		Final Project		Fall 2019
 
-## GitHub
+## Python Program to Simulate NBA Games in order to Evaluate Simulation Probabilities in Comparison to Offered Moneyline Probabilities
 
-The projects in this GitHub are Joe Holleran's portfolio from Python 2 at CCAC (Fall 2019).
+The program will scrape NBA daily matchups and NBA team statistics from basketball-reference.com.  
 
-## Projects GitHub for Python 2
+The program displays a 'dashboard' like output to view each team's prior game results and then allows the user to enter the Moneylines for the matchup.
 
-**To Be Determined**
+The program then displays the Moneylines implied probability and outputs the simulation probabilities.  The simulation is a Monte Carlo simulation of the matchup run 10,000 times.
 
-## Goals in Python 2
-My goal in Python 2 is to learn useful skills in Python to help with my job and future learning endeavors.
+The Kelly Criterion is displayed which takes in the decimal odds (based on moneyline) and the simulation probability.  The Kelly Criterion allows a bettor to determine
+if the payoff is worth risk (chance of losing vs. chance of winning).
 
-I have taken courses in Data Analytics, Python 1 and Java, as of Fall 2019, and would like to further my programming skills.
+The user is then allowed to 'adjust' the probability to display a new Kelly Criterion output.  The user could determine a Bayesian probability or mathematical expectation
+from prior results of the simulation.
 
-I'd like to learn more with web scraping and data analytics, such as NumPy, BeautifulSoup, and other modules I'm not aware of currently.
+The user is finally asked if they would like to output the data to an Excel file.
 
-## Projects in Python 2
+## Other Options
 
-**To Be Determined**
+The program will output all of the NBA matchups today
 
-## Academic and Career Background
+The program allows the user to input their own matchup and display an analysis described above.
 
-I graduated from Grove City College in Spring 2010 with a major in Finance.
 
-I currently work for a property & casualty insurance company as a Senior Auditor in the western Pennsylvania and northeast Ohio territory.
 
-My academic goals are mainly professional with an eye towards applying for the MISM program at Carnegie Mellon to start in Fall 2020.
+
 
