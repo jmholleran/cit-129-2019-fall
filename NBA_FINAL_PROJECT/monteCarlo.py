@@ -10,6 +10,7 @@ import numpy as np
 # Single Game Simulation Function - Take in Home Team & Away Team Pts & Opp Mu, Std
 def gameSim(homePts_mu, homePts_std, homeOpp_mu, homeOpp_std, awayPts_mu, awayPts_std, awayOpp_mu, awayOpp_std):
     
+    # While loop to continue simulation in the event of a tie
     while True:
         
         # Create variables for Home/Away Pts & Opp Pts

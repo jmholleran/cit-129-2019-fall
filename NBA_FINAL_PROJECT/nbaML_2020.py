@@ -120,35 +120,33 @@ def writeMatchupDataToExcel(home_team, away_team, homeML, awayML, homeSimProb, a
         excel_choice = input("Do you want to output this matchup data to Excel? (Y/N): ")
         
         if excel_choice == "Y" or excel_choice == "y":
-            continue
-        else:
-            break
-        
-        # Initialize check count
-        check_count = 0
-    
-        # Loop through the date, home team, and away team columns
-        # If all three items are already found in the CSV file then do not write to file
-        for date_check in date_col:
-            if date_check == date:
-                check_count += 1
-    
-        for home_check in home_col:
-            if home_check == home_team:
-                check_count += 1
+            # Initialize check count
+            check_count = 0
             
-        for away_check in away_col:
-            if away_check == away_team:
-                check_count += 1
+            # Loop through the date, home team, and away team columns
+            # If all three items are already found in the CSV file then do not write to file
+            for date_check in date_col:
+                if date_check == date:
+                    check_count += 1
     
-        if check_count == 3:
-            print("The matchup was previously uploaded to Excel.")
-            break
+            for home_check in home_col:
+                if home_check == home_team:
+                    check_count += 1
+            
+            for away_check in away_col:
+                if away_check == away_team:
+                    check_count += 1
+    
+            if check_count == 3:
+                print("The matchup was previously uploaded to Excel.")
+                break
+            else:
+                # Write to Excel file if the check count does not equal 3
+                with open('nbaML_2020_MASTER.csv', 'a', newline='') as writeFile:
+                    writeMatchupData = csv.writer(writeFile)
+                    writeMatchupData.writerow([date, home_team, away_team, homeML, awayML, homeSimProb, awaySimProb])
+                    break
         else:
-            # Write to Excel file if the check count does not equal 3
-            with open('nbaML_2020_MASTER.csv', 'a') as writeFile:
-                writeMatchupData = csv.writer(writeFile)
-                writeMatchupData.writerow([date, home_team, away_team, homeML, awayML, homeSimProb, awaySimProb])
             break
 
 def getIndividualMatchup():

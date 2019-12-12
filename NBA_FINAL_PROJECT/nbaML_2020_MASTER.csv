@@ -1,25 +1,25 @@
-date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,away_win,fav_win,dog_win,,
-"Mon, Dec 9, 2019",Cleveland Cavaliers,Boston Celtics,775,-1300,0.7014,0.2986,1,0,1,0,,
-"Mon, Dec 9, 2019",Los Angeles Clippers,Indiana Pacers,122,-142,0.6624,0.3376,0,1,0,1,,
-"Mon, Dec 9, 2019",Detroit Pistons,New Orleans Pelicans,-112,-108,0.7766,0.2234,0,1,0,1,,fav_win_prob
-"Mon, Dec 9, 2019",Toronto Raptors,Chicago Bulls,-260,220,0.4991,0.5009,0,1,1,0,,0.461538462
-"Mon, Dec 9, 2019",Sacramento Kings,Houston Rockets,625,-950,0.8176,0.1824,0,1,0,1,,dog_win_prob
-"Mon, Dec 9, 2019",Orlando Magic ,Milwaukee Bucks,700,-1100,0.8932,0.1068,1,0,1,0,,0.538461538
-"Mon, Dec 9, 2019",Minnesota Timberwolves,Phoenix Suns,162,-182,0.4207,0.5793,1,0,0,1,,
-"Mon, Dec 9, 2019",Oklahoma City Thunder,Utah Jazz,315,-400,0.63,0.37,0,1,0,1,,
-"Mon, Dec 9, 2019",Memphis Grizzlies,Golden State Warriors,134,-154,0.4967,0.5033,0,1,1,0,,
-"Tue, Dec 10, 2019",Washington Wizards,Charlotte Hornets,-120,100,0.2792,0.7208,1,0,0,1,,
-"Tue, Dec 10, 2019",Denver Nuggets,Philadelphia 76ers,190,-220,0.5827,0.4173,1,0,1,0,,
-"Tue, Dec 10, 2019",Atlanta Hawks,Miami Heat,305,-380,0.43,0.57,1,0,0,1,,
-"Tue, Dec 10, 2019",New York Knicks,Portland Trail Blazers,347,-432,0.8175,0.1825,1,0,1,0,,
-"Wed, Dec 11, 2019",Houston Rockets,Cleveland Cavaliers,-800,550,,,,,,,,
-"Wed, Dec 11, 2019",Los Angeles Lakers,Orlando Magic,-375,300,,,,,,,,
-"Wed, Dec 11, 2019",Boston Celtics,Indiana Pacers,-115,-105,,,,,,,,
-"Wed, Dec 11, 2019",Los Angeles Clippers,Toronto Raptors,-145,125,,,,,,,,
-"Wed, Dec 11, 2019",Charlotte Hornets,Brooklyn Nets,380,-500,,,,,,,,
-"Wed, Dec 11, 2019",Atlanta Hawks,Chicago Bulls,175,-205,,,,,,,,
-"Wed, Dec 11, 2019",Utah Jazz,Minnesota Timberwolves,-120,100,,,,,,,,
-"Wed, Dec 11, 2019",Memphis Grizzlies,Phoenix Suns,240,-300,,,,,,,,
-"Wed, Dec 11, 2019",New Orleans Pelicans,Milwaukee Bucks,650,-1000,,,,,,,,
-"Wed, Dec 11, 2019",Oklahoma City Thunder,Sacramento Kings,105,-125,,,,,,,,
-"Wed, Dec 11, 2019",New York Knicks,Golden State Warriors,175,-205,,,,,,,,
+date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,away_win,fav_win,dog_win
+"Mon, Dec 9, 2019",Cleveland Cavaliers,Boston Celtics,775,-1300,0.7014,0.2986,1,0,1,0
+"Mon, Dec 9, 2019",Los Angeles Clippers,Indiana Pacers,122,-142,0.6624,0.3376,0,1,0,1
+"Mon, Dec 9, 2019",Detroit Pistons,New Orleans Pelicans,-112,-108,0.7766,0.2234,0,1,0,1
+"Mon, Dec 9, 2019",Toronto Raptors,Chicago Bulls,-260,220,0.4991,0.5009,0,1,1,0
+"Mon, Dec 9, 2019",Sacramento Kings,Houston Rockets,625,-950,0.8176,0.1824,0,1,0,1
+"Mon, Dec 9, 2019",Orlando Magic ,Milwaukee Bucks,700,-1100,0.8932,0.1068,1,0,1,0
+"Mon, Dec 9, 2019",Minnesota Timberwolves,Phoenix Suns,162,-182,0.4207,0.5793,1,0,0,1
+"Mon, Dec 9, 2019",Oklahoma City Thunder,Utah Jazz,315,-400,0.63,0.37,0,1,0,1
+"Mon, Dec 9, 2019",Memphis Grizzlies,Golden State Warriors,134,-154,0.4967,0.5033,0,1,1,0
+"Tue, Dec 10, 2019",Washington Wizards,Charlotte Hornets,-120,100,0.2792,0.7208,1,0,0,1
+"Tue, Dec 10, 2019",Denver Nuggets,Philadelphia 76ers,190,-220,0.5827,0.4173,1,0,1,0
+"Tue, Dec 10, 2019",Atlanta Hawks,Miami Heat,305,-380,0.43,0.57,1,0,0,1
+"Tue, Dec 10, 2019",New York Knicks,Portland Trail Blazers,347,-432,0.8175,0.1825,1,0,1,0
+"Wed, Dec 11, 2019",Cleveland Cavaliers,Houston Rockets,550,-800,0.2149,0.7851,,,,
+"Wed, Dec 11, 2019",Indiana Pacers,Boston Celtics,-105,-115,0.5575,0.4425,,,,
+"Wed, Dec 11, 2019",Orlando Magic,Los Angeles Lakers,300,-375,0.2073,0.7927,,,,
+"Wed, Dec 11, 2019",Toronto Raptors,Los Angeles Clippers,125,-145,0.5376,0.4624,,,,
+"Wed, Dec 11, 2019",Brooklyn Nets,Charlotte Hornets,-500,380,0.6668,0.3332,,,,
+"Wed, Dec 11, 2019",Chicago Bulls,Atlanta Hawks,-205,175,0.1922,0.8078,,,,
+"Wed, Dec 11, 2019",Minnesota Timberwolves,Utah Jazz,100,-120,0.7397,0.2603,,,,
+"Wed, Dec 11, 2019",Phoenix Suns,Memphis Grizzlies,-300,240,0.7113,0.2887,,,,
+"Wed, Dec 11, 2019",Milwaukee Bucks,New Orleans Pelicans,-1000,650,0.5596,0.4404,,,,
+"Wed, Dec 11, 2019",Sacramento Kings,Oklahoma City Thunder,-125,105,0.5635,0.4365,,,,
+"Wed, Dec 11, 2019",Golden State Warriors,New York Knicks,-205,175,0.6453,0.3547,,,,
