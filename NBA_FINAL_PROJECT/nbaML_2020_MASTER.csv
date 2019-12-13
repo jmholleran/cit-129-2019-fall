@@ -23,7 +23,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Dec 11, 2019",Milwaukee Bucks,New Orleans Pelicans,-1000,650,0.5596,0.4404,1,0
 "Wed, Dec 11, 2019",Sacramento Kings,Oklahoma City Thunder,-125,105,0.5635,0.4365,1,0
 "Wed, Dec 11, 2019",Golden State Warriors,New York Knicks,-205,175,0.6453,0.3547,0,1
-"Thu, Dec 12, 2019",Boston Celtics,Philadelphia 76ers,-117,-103,0.5825,0.4175,,
-"Thu, Dec 12, 2019",San Antonio Spurs,Cleveland Cavaliers,-800,550,0.7777,0.2223,,
-"Thu, Dec 12, 2019",Detroit Pistons,Dallas Mavericks,240,-290,0.2771,0.7229,,
-"Thu, Dec 12, 2019",Denver Nuggets,Portland Trail Blazers,-280,230,0.2485,0.7515,,
+"Thu, Dec 12, 2019",Boston Celtics,Philadelphia 76ers,-117,-103,0.5825,0.4175,0,1
+"Thu, Dec 12, 2019",San Antonio Spurs,Cleveland Cavaliers,-800,550,0.7777,0.2223,0,1
+"Thu, Dec 12, 2019",Detroit Pistons,Dallas Mavericks,240,-290,0.2771,0.7229,0,1
+"Thu, Dec 12, 2019",Denver Nuggets,Portland Trail Blazers,-280,230,0.2485,0.7515,1,0
+"Fri, Dec 13, 2019",Miami Heat,Los Angeles Lakers,200,-240,0.5642,0.4358,,
+"Fri, Dec 13, 2019",Philadelphia 76ers,New Orleans Pelicans,-380,305,0.247,0.753,,
+"Fri, Dec 13, 2019",Chicago Bulls,Charlotte Hornets,-255,215,0.4838,0.5162,,
+"Fri, Dec 13, 2019",Utah Jazz,Golden State Warriors,-1400,825,0.5263,0.4737,,
+"Fri, Dec 13, 2019",Minnesota Timberwolves,Los Angeles Clippers,190,-220,0.482,0.518,,
+"Fri, Dec 13, 2019",Sacramento Kings,New York Knicks,-410,325,0.4704,0.5296,,
+"Fri, Dec 13, 2019",Orlando Magic,Houston Rockets,220,-260,0.1569,0.8431,,
+"Fri, Dec 13, 2019",Atlanta Hawks,Indiana Pacers,220,-260,0.5782,0.4218,,
+"Fri, Dec 13, 2019",Memphis Grizzlies,Milwaukee Bucks,575,-850,0.4348,0.5652,,
