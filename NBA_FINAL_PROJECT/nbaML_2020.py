@@ -259,7 +259,7 @@ def runMatchupAnalysis(home, away):
     
     # Assign the variables for the Kelly Criterion calculations                
     homeOneKelly, homeHalfKelly, homeFourthKelly = calcKellyCriterion(homeTeam, homeDecOdd, homeSimProb)
-    awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(awayTeam, awayDecOdd, homeSimProb) 
+    awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(awayTeam, awayDecOdd, awaySimProb) 
     outputKellyCriterion(homeTeam, homeOneKelly, homeHalfKelly, homeFourthKelly)
     outputKellyCriterion(awayTeam, awayOneKelly, awayHalfKelly, awayFourthKelly)    
                 
@@ -279,10 +279,10 @@ def adjModelProbability(team, prob, teamDecOdd):
         try:
             user_input = input("Would you like to adjust " + team + " probability of " + str(round((prob * 100), 3)) + "%? (Y/N): ")
             if user_input == "Y" or user_input == "y":
-                print(team + " Model Probability is: " + str(prob * 100))
+                print(team + " Model Probability is: " + str(round((prob * 100), 3)))
                 newProb = getNewProb(team)
                 newProb = newProb / 100
-                print(team + " New Probability is: " + str(newProb * 100) + "%\n")
+                print(team + " New Probability is: " + str(round((newProb * 100), 3)) + "%\n")
                 print("Kelly Criterion for New Probability: " + "\n")
                 teamOneKelly, teamHalfKelly, teamFourthKelly = calcKellyCriterion(team, teamDecOdd, newProb)
                 outputKellyCriterion(team, teamOneKelly, teamHalfKelly, teamFourthKelly)
