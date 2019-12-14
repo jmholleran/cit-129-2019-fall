@@ -141,11 +141,15 @@ def writeMatchupDataToExcel(home_team, away_team, homeML, awayML, homeSimProb, a
                 print("The matchup was previously uploaded to Excel.")
                 break
             else:
-                # Write to Excel file if the check count does not equal 3
-                with open('nbaML_2020_MASTER.csv', 'a', newline='') as writeFile:
-                    writeMatchupData = csv.writer(writeFile)
-                    writeMatchupData.writerow([date, home_team, away_team, homeML, awayML, homeSimProb, awaySimProb])
-                    break
+                
+                try:
+                    # Write to Excel file if the check count does not equal 3
+                    with open('nbaML_2020_MASTER.csv', 'a', newline='') as writeFile:
+                        writeMatchupData = csv.writer(writeFile)
+                        writeMatchupData.writerow([date, home_team, away_team, homeML, awayML, homeSimProb, awaySimProb])
+                        break
+                except PermissionError:
+                        print("The CSV file is 'Open'. Please 'Close' and Try Again.")
         else:
             break
 
@@ -273,12 +277,12 @@ def adjModelProbability(team, prob, teamDecOdd):
     
     while True:
         try:
-            user_input = input("Would you like to adjust " + team + " probability of " + str(round((prob * 100), 3)) + "? (Y/N): ")
+            user_input = input("Would you like to adjust " + team + " probability of " + str(round((prob * 100), 3)) + "%? (Y/N): ")
             if user_input == "Y" or user_input == "y":
                 print(team + " Model Probability is: " + str(prob * 100))
                 newProb = getNewProb(team)
                 newProb = newProb / 100
-                print(team + " New Probability is: " + str(newProb * 100) + "\n")
+                print(team + " New Probability is: " + str(newProb * 100) + "%\n")
                 print("Kelly Criterion for New Probability: " + "\n")
                 teamOneKelly, teamHalfKelly, teamFourthKelly = calcKellyCriterion(team, teamDecOdd, newProb)
                 outputKellyCriterion(team, teamOneKelly, teamHalfKelly, teamFourthKelly)

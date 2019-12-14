@@ -27,12 +27,20 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Dec 12, 2019",San Antonio Spurs,Cleveland Cavaliers,-800,550,0.7777,0.2223,0,1
 "Thu, Dec 12, 2019",Detroit Pistons,Dallas Mavericks,240,-290,0.2771,0.7229,0,1
 "Thu, Dec 12, 2019",Denver Nuggets,Portland Trail Blazers,-280,230,0.2485,0.7515,1,0
-"Fri, Dec 13, 2019",Miami Heat,Los Angeles Lakers,200,-240,0.5642,0.4358,,
-"Fri, Dec 13, 2019",Philadelphia 76ers,New Orleans Pelicans,-380,305,0.247,0.753,,
-"Fri, Dec 13, 2019",Chicago Bulls,Charlotte Hornets,-255,215,0.4838,0.5162,,
-"Fri, Dec 13, 2019",Utah Jazz,Golden State Warriors,-1400,825,0.5263,0.4737,,
-"Fri, Dec 13, 2019",Minnesota Timberwolves,Los Angeles Clippers,190,-220,0.482,0.518,,
-"Fri, Dec 13, 2019",Sacramento Kings,New York Knicks,-410,325,0.4704,0.5296,,
-"Fri, Dec 13, 2019",Orlando Magic,Houston Rockets,220,-260,0.1569,0.8431,,
-"Fri, Dec 13, 2019",Atlanta Hawks,Indiana Pacers,220,-260,0.5782,0.4218,,
-"Fri, Dec 13, 2019",Memphis Grizzlies,Milwaukee Bucks,575,-850,0.4348,0.5652,,
+"Fri, Dec 13, 2019",Miami Heat,Los Angeles Lakers,200,-240,0.5642,0.4358,0,1
+"Fri, Dec 13, 2019",Philadelphia 76ers,New Orleans Pelicans,-380,305,0.247,0.753,1,0
+"Fri, Dec 13, 2019",Chicago Bulls,Charlotte Hornets,-255,215,0.4838,0.5162,0,1
+"Fri, Dec 13, 2019",Utah Jazz,Golden State Warriors,-1400,825,0.5263,0.4737,1,0
+"Fri, Dec 13, 2019",Minnesota Timberwolves,Los Angeles Clippers,190,-220,0.482,0.518,0,1
+"Fri, Dec 13, 2019",Sacramento Kings,New York Knicks,-410,325,0.4704,0.5296,0,1
+"Fri, Dec 13, 2019",Orlando Magic,Houston Rockets,220,-260,0.1569,0.8431,0,1
+"Fri, Dec 13, 2019",Atlanta Hawks,Indiana Pacers,220,-260,0.5782,0.4218,0,1
+"Fri, Dec 13, 2019",Memphis Grizzlies,Milwaukee Bucks,575,-850,0.4348,0.5652,0,1
+"Sat, Dec 14, 2019",Phoenix Suns,San Antonio Spurs,-136,116,0.597,0.403,,
+"Sat, Dec 14, 2019",Toronto Raptors,Brooklyn Nets,-325,255,0.505,0.495,,
+"Sat, Dec 14, 2019",Chicago Bulls,Los Angeles Clippers,158,-178,0.2678,0.7322,,
+"Sat, Dec 14, 2019",Memphis Grizzlies,Washington Wizards,-129,109,0.4087,0.5913,,
+"Sat, Dec 14, 2019",Dallas Mavericks,Miami Heat,-350,275,0.6568,0.3432,,
+"Sat, Dec 14, 2019",Milwaukee Bucks,Cleveland Cavaliers,-950,625,0.8351,0.1649,,
+"Sat, Dec 14, 2019",Denver Nuggets,Oklahoma City Thunder,-280,230,0.5692,0.4308,,
+"Sat, Dec 14, 2019",Houston Rockets,Detroit Pistons,-285,235,0.8225,0.1775,,
