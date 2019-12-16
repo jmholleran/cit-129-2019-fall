@@ -1,7 +1,6 @@
 """
 Joe Holleran
-12/11/2019
-Python 2 - Final Project
+Python 2 - Final Project (12/11/2019)
 Web Scrap NBA Statistics to Evaluate ML Probabilities
 """
 # Import modules
@@ -772,6 +771,8 @@ def printTodayMatchups(matchups):
         print('Home Team: ', home)
         print('Away Team: ', away, "\n")
         count += 1
+        
+    print("\n" + "There are " + str(count - 1) + " games tonight (" + str(getTodaySchedSearch()) + ").\n")
         
 def convertTeamNameToSym(teamName):
     
