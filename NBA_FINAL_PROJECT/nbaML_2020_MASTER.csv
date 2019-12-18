@@ -57,9 +57,18 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Dec 16, 2019",Milwaukee Bucks,Dallas Mavericks,-650,475,0.5191,0.4809,0,1
 "Mon, Dec 16, 2019",Oklahoma City Thunder,Chicago Bulls,-245,205,0.6018,0.3982,1,0
 "Mon, Dec 16, 2019",Phoenix Suns,Portland Trail Blazers,-112,-108,0.6416,0.3584,0,1
-"Tue, Dec 17, 2019",Charlotte Hornets,Sacramento Kings,167,-192,0.6204,0.3796,,
-"Tue, Dec 17, 2019",Indiana Pacers,Los Angeles Lakers,160,-180,0.3775,0.6225,,
-"Tue, Dec 17, 2019",New York Knicks,Atlanta Hawks,-127,107,0.1407,0.8593,,
-"Tue, Dec 17, 2019",New Orleans Pelicans,Brooklyn Nets,120,-140,0.5981,0.4019,,
-"Tue, Dec 17, 2019",Utah Jazz,Orlando Magic,-275,225,0.5909,0.4091,,
-"Tue, Dec 17, 2019",Los Angeles Clippers,Phoenix Suns,-1100,700,0.472,0.528,,
+"Tue, Dec 17, 2019",Charlotte Hornets,Sacramento Kings,167,-192,0.6204,0.3796,1,0
+"Tue, Dec 17, 2019",Indiana Pacers,Los Angeles Lakers,160,-180,0.3775,0.6225,1,0
+"Tue, Dec 17, 2019",New York Knicks,Atlanta Hawks,-127,107,0.1407,0.8593,1,0
+"Tue, Dec 17, 2019",New Orleans Pelicans,Brooklyn Nets,120,-140,0.5981,0.4019,0,1
+"Tue, Dec 17, 2019",Utah Jazz,Orlando Magic,-275,225,0.5909,0.4091,1,0
+"Tue, Dec 17, 2019",Los Angeles Clippers,Phoenix Suns,-1100,700,0.472,0.528,1,0
+"Wed, Dec 18, 2019",Cleveland Cavaliers,Charlotte Hornets,-130,110,0.6326,0.3674,,
+"Wed, Dec 18, 2019",Detroit Pistons,Toronto Raptors,105,-125,0.7173,0.2827,,
+"Wed, Dec 18, 2019",Philadelphia 76ers,Miami Heat,-325,255,0.4566,0.5434,,
+"Wed, Dec 18, 2019",Washington Wizards,Chicago Bulls,-117,-103,0.8305,0.1695,,
+"Wed, Dec 18, 2019",Minnesota Timberwolves,New Orleans Pelicans,-260,220,0.4278,0.5722,,
+"Wed, Dec 18, 2019",Oklahoma City Thunder,Memphis Grizzlies,-275,225,0.5678,0.4322,,
+"Wed, Dec 18, 2019",Denver Nuggets,Orlando Magic,-500,380,0.5286,0.4714,,
+"Wed, Dec 18, 2019",Dallas Mavericks,Boston Celtics,110,-130,0.7015,0.2985,,
+"Wed, Dec 18, 2019",Portland Trail Blazers,Golden State Warriors,-465,365,0.7105,0.2895,,
