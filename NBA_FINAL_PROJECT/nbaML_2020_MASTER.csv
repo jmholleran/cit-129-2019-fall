@@ -63,12 +63,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Dec 17, 2019",New Orleans Pelicans,Brooklyn Nets,120,-140,0.5981,0.4019,0,1
 "Tue, Dec 17, 2019",Utah Jazz,Orlando Magic,-275,225,0.5909,0.4091,1,0
 "Tue, Dec 17, 2019",Los Angeles Clippers,Phoenix Suns,-1100,700,0.472,0.528,1,0
-"Wed, Dec 18, 2019",Cleveland Cavaliers,Charlotte Hornets,-130,110,0.6326,0.3674,,
-"Wed, Dec 18, 2019",Detroit Pistons,Toronto Raptors,105,-125,0.7173,0.2827,,
-"Wed, Dec 18, 2019",Philadelphia 76ers,Miami Heat,-325,255,0.4566,0.5434,,
-"Wed, Dec 18, 2019",Washington Wizards,Chicago Bulls,-117,-103,0.8305,0.1695,,
-"Wed, Dec 18, 2019",Minnesota Timberwolves,New Orleans Pelicans,-260,220,0.4278,0.5722,,
-"Wed, Dec 18, 2019",Oklahoma City Thunder,Memphis Grizzlies,-275,225,0.5678,0.4322,,
-"Wed, Dec 18, 2019",Denver Nuggets,Orlando Magic,-500,380,0.5286,0.4714,,
-"Wed, Dec 18, 2019",Dallas Mavericks,Boston Celtics,110,-130,0.7015,0.2985,,
-"Wed, Dec 18, 2019",Portland Trail Blazers,Golden State Warriors,-465,365,0.7105,0.2895,,
+"Wed, Dec 18, 2019",Cleveland Cavaliers,Charlotte Hornets,-130,110,0.6326,0.3674,1,0
+"Wed, Dec 18, 2019",Detroit Pistons,Toronto Raptors,105,-125,0.7173,0.2827,0,1
+"Wed, Dec 18, 2019",Philadelphia 76ers,Miami Heat,-325,255,0.4566,0.5434,0,1
+"Wed, Dec 18, 2019",Washington Wizards,Chicago Bulls,-117,-103,0.8305,0.1695,0,1
+"Wed, Dec 18, 2019",Minnesota Timberwolves,New Orleans Pelicans,-260,220,0.4278,0.5722,0,1
+"Wed, Dec 18, 2019",Oklahoma City Thunder,Memphis Grizzlies,-275,225,0.5678,0.4322,1,0
+"Wed, Dec 18, 2019",Denver Nuggets,Orlando Magic,-500,380,0.5286,0.4714,1,0
+"Wed, Dec 18, 2019",Dallas Mavericks,Boston Celtics,110,-130,0.7015,0.2985,0,1
+"Wed, Dec 18, 2019",Portland Trail Blazers,Golden State Warriors,-465,365,0.7105,0.2895,1,0
+"Thu, Dec 19, 2019",Atlanta Hawks,Utah Jazz,225,-265,0.5823,0.4177,,
+"Thu, Dec 19, 2019",Milwaukee Bucks,Los Angeles Lakers,-183,163,0.7275,0.2725,,
+"Thu, Dec 19, 2019",San Antonio Spurs,Brooklyn Nets,-171,151,0.5227,0.4773,,
+"Thu, Dec 19, 2019",Los Angeles Clippers,Houston Rockets,-205,175,0.3549,0.6451,,
