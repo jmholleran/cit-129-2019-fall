@@ -72,7 +72,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Dec 18, 2019",Denver Nuggets,Orlando Magic,-500,380,0.5286,0.4714,1,0
 "Wed, Dec 18, 2019",Dallas Mavericks,Boston Celtics,110,-130,0.7015,0.2985,0,1
 "Wed, Dec 18, 2019",Portland Trail Blazers,Golden State Warriors,-465,365,0.7105,0.2895,1,0
-"Thu, Dec 19, 2019",Atlanta Hawks,Utah Jazz,225,-265,0.5823,0.4177,,
-"Thu, Dec 19, 2019",Milwaukee Bucks,Los Angeles Lakers,-183,163,0.7275,0.2725,,
-"Thu, Dec 19, 2019",San Antonio Spurs,Brooklyn Nets,-171,151,0.5227,0.4773,,
-"Thu, Dec 19, 2019",Los Angeles Clippers,Houston Rockets,-205,175,0.3549,0.6451,,
+"Thu, Dec 19, 2019",Atlanta Hawks,Utah Jazz,225,-265,0.5823,0.4177,0,1
+"Thu, Dec 19, 2019",Milwaukee Bucks,Los Angeles Lakers,-183,163,0.7275,0.2725,1,0
+"Thu, Dec 19, 2019",San Antonio Spurs,Brooklyn Nets,-171,151,0.5227,0.4773,1,0
+"Thu, Dec 19, 2019",Los Angeles Clippers,Houston Rockets,-205,175,0.3549,0.6451,0,1
+"Fri, Dec 20, 2019",Cleveland Cavaliers,Memphis Grizzlies,112,-132,0.3623,0.6377,,
+"Fri, Dec 20, 2019",Indiana Pacers,Sacramento Kings,-205,175,0.5432,0.4568,,
+"Fri, Dec 20, 2019",Boston Celtics,Detroit Pistons,-475,375,0.626,0.374,,
+"Fri, Dec 20, 2019",Toronto Raptors,Washington Wizards,-250,210,0.3962,0.6038,,
+"Fri, Dec 20, 2019",Miami Heat,New York Knicks,-500,380,0.7768,0.2232,,
+"Fri, Dec 20, 2019",Oklahoma City Thunder,Phoenix Suns,-190,165,0.4905,0.5095,,
+"Fri, Dec 20, 2019",Philadelphia 76ers,Dallas Mavericks,-405,320,0.1819,0.8181,,
+"Fri, Dec 20, 2019",Denver Nuggets,Minnesota Timberwolves,-600,440,0.105,0.895,,
+"Fri, Dec 20, 2019",Portland Trail Blazers,Orlando Magic,-165,145,0.7878,0.2122,,
+"Fri, Dec 20, 2019",Golden State Warriors,New Orleans Pelicans,100,-120,0.3271,0.6729,,
