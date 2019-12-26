@@ -45,15 +45,15 @@ def main():
         
         # Input Validation 
         try:
-            user_select = int(input("Please choose one of the options above: "))
+            user_select = int(input("Please choose one of the options above: " + "\n"))
         except ValueError:
-            user_select = int(input("Please choose one of the options above: "))
+            user_select = int(input("Please choose one of the options above: " + "\n"))
             
         # Call functions if user selects from menu; ask again if user selects
         if user_select < 1 or user_select > 4:
-            user_select = int(input("Please choose one of the options above: "))
+            user_select = int(input("Please choose one of the options above: " + "\n"))
             if user_select == 3:
-                print("------------EXIT--------------")
+                print("\n" + "------------EXIT--------------")
                 break
         elif user_select == 1:
             # Prints out the NBA Matchups Today using the getTodayMatchups function
@@ -420,7 +420,7 @@ def displayGraph(teamName, gameNum, teamPts, oppPts):
     plt.plot(gameNum, teamPts, color='black', label=teamName + ' Points')
     plt.plot(gameNum, oppPts, color='gray', label='Opponent Points')
     plt.xticks(range(0, (len(gameNum) + 2), 1))
-    plt.yticks(range(80, 150, 5))
+    plt.yticks(range(80, 160, 5))
     plt.xlabel('Games 1 to ' + (str(len(gameNum))))
     plt.ylabel('Total Points Scored')
     plt.title(teamName + ' Previous ' + str(len(gameNum)) + ' Games')

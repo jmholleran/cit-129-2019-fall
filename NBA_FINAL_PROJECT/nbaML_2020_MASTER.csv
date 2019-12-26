@@ -111,8 +111,14 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Dec 23, 2019",Portland Trail Blazers,New Orleans Pelicans,-255,215,0.5455,0.4545,0,1
 "Mon, Dec 23, 2019",Sacramento Kings,Houston Rockets,205,-245,0.1286,0.8714,0,1
 "Mon, Dec 23, 2019",Golden State Warriors,Minnesota Timberwolves,-102,-118,0.2456,0.7544,1,0
-"Wed, Dec 25, 2019",Toronto Raptors,Boston Celtics,164,-184,0.7236,0.2764,,
-"Wed, Dec 25, 2019",Philadelphia 76ers,Milwaukee Bucks,142,-162,0.2387,0.7613,,
-"Wed, Dec 25, 2019",Golden State Warriors,Houston Rockets,475,-650,0.2308,0.7692,,
-"Wed, Dec 25, 2019",Los Angeles Lakers,Los Angeles Clippers,111,-131,0.3789,0.6211,,
-"Wed, Dec 25, 2019",Denver Nuggets,New Orleans Pelicans,-450,350,0.271,0.729,,
+"Wed, Dec 25, 2019",Toronto Raptors,Boston Celtics,164,-184,0.7236,0.2764,0,1
+"Wed, Dec 25, 2019",Philadelphia 76ers,Milwaukee Bucks,142,-162,0.2387,0.7613,1,0
+"Wed, Dec 25, 2019",Golden State Warriors,Houston Rockets,475,-650,0.2308,0.7692,1,0
+"Wed, Dec 25, 2019",Los Angeles Lakers,Los Angeles Clippers,111,-131,0.3789,0.6211,0,1
+"Wed, Dec 25, 2019",Denver Nuggets,New Orleans Pelicans,-450,350,0.271,0.729,0,1
+"Thu, Dec 26, 2019",Detroit Pistons,Washington Wizards,-255,215,0.2941,0.7059,,
+"Thu, Dec 26, 2019",Brooklyn Nets,New York Knicks,-350,275,0.653,0.347,,
+"Thu, Dec 26, 2019",Dallas Mavericks,San Antonio Spurs,-360,285,0.455,0.545,,
+"Thu, Dec 26, 2019",Oklahoma City Thunder,Memphis Grizzlies,-255,215,0.5757,0.4243,,
+"Thu, Dec 26, 2019",Sacramento Kings,Minnesota Timberwolves,-210,180,0.1331,0.8669,,
+"Thu, Dec 26, 2019",Utah Jazz,Portland Trail Blazers,-215,185,0.3707,0.6293,,
