@@ -45,13 +45,15 @@ def main():
         
         # Input Validation 
         try:
-            user_select = int(input("Please choose one of the options above: " + "\n"))
+            user_select = int(input("Please choose one of the options above: "))
+            print("")
         except ValueError:
-            user_select = int(input("Please choose one of the options above: " + "\n"))
-            
+            user_select = int(input("Please choose one of the options above: "))
+            print("")
         # Call functions if user selects from menu; ask again if user selects
         if user_select < 1 or user_select > 4:
-            user_select = int(input("Please choose one of the options above: " + "\n"))
+            user_select = int(input("Please choose one of the options above: "))
+            print("")
             if user_select == 3:
                 print("\n" + "------------EXIT--------------")
                 break
