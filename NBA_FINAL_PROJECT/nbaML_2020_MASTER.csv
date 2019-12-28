@@ -122,9 +122,23 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Dec 26, 2019",Oklahoma City Thunder,Memphis Grizzlies,-255,215,0.5757,0.4243,0,1
 "Thu, Dec 26, 2019",Sacramento Kings,Minnesota Timberwolves,-210,180,0.1331,0.8669,0,1
 "Thu, Dec 26, 2019",Utah Jazz,Portland Trail Blazers,-215,185,0.3707,0.6293,1,0
-"Fri, Dec 27, 2019",Boston Celtics,Cleveland Cavaliers,-1500,875,0.6217,0.3783,,
-"Fri, Dec 27, 2019",Charlotte Hornets,Oklahoma City Thunder,-114,-106,0.7181,0.2819,,
-"Fri, Dec 27, 2019",Orlando Magic,Philadelphia 76ers,148,-168,0.3133,0.6867,,
-"Fri, Dec 27, 2019",Atlanta Hawks,Milwaukee Bucks,305,-380,0.2566,0.7434,,
-"Fri, Dec 27, 2019",Miami Heat,Indiana Pacers,-175,155,0.7701,0.2299,,
-"Fri, Dec 27, 2019",Golden State Warriors,Phoenix Suns,145,-165,0.3564,0.6436,,
+"Fri, Dec 27, 2019",Boston Celtics,Cleveland Cavaliers,-1500,875,0.6217,0.3783,1,0
+"Fri, Dec 27, 2019",Charlotte Hornets,Oklahoma City Thunder,-114,-106,0.7181,0.2819,0,1
+"Fri, Dec 27, 2019",Orlando Magic,Philadelphia 76ers,148,-168,0.3133,0.6867,1,0
+"Fri, Dec 27, 2019",Atlanta Hawks,Milwaukee Bucks,305,-380,0.2566,0.7434,0,1
+"Fri, Dec 27, 2019",Miami Heat,Indiana Pacers,-175,155,0.7701,0.2299,1,0
+"Fri, Dec 27, 2019",Golden State Warriors,Phoenix Suns,145,-165,0.3564,0.6436,1,0
+"Sat, Dec 28, 2019",Denver Nuggets,Memphis Grizzlies,-465,365,0.3303,0.6697,,
+"Sat, Dec 28, 2019",Boston Celtics,Toronto Raptors,-325,255,0.709,0.291,,
+"Sat, Dec 28, 2019",New Orleans Pelicans,Indiana Pacers,100,-120,0.7607,0.2393,,
+"Sat, Dec 28, 2019",Chicago Bulls,Atlanta Hawks,-500,380,0.1938,0.8062,,
+"Sat, Dec 28, 2019",Houston Rockets,Brooklyn Nets,-460,360,0.6522,0.3478,,
+"Sat, Dec 28, 2019",Miami Heat,Philadelphia 76ers,-132,112,0.7003,0.2997,,
+"Sat, Dec 28, 2019",Minnesota Timberwolves,Cleveland Cavaliers,-325,255,0.6379,0.3621,,
+"Sat, Dec 28, 2019",Washington Wizards,New York Knicks,130,-150,0.8524,0.1476,,
+"Sat, Dec 28, 2019",Golden State Warriors,Dallas Mavericks,475,-650,0.2527,0.7473,,
+"Sat, Dec 28, 2019",Milwaukee Bucks,Orlando Magic,-275,225,0.8283,0.1717,,
+"Sat, Dec 28, 2019",San Antonio Spurs,Detroit Pistons,-205,175,0.7376,0.2624,,
+"Sat, Dec 28, 2019",Sacramento Kings,Phoenix Suns,-140,120,0.2405,0.7595,,
+"Sat, Dec 28, 2019",Portland Trail Blazers,Los Angeles Lakers,185,-215,0.6112,0.3888,,
+"Sat, Dec 28, 2019",Los Angeles Clippers,Utah Jazz,-425,340,0.6734,0.3266,,
