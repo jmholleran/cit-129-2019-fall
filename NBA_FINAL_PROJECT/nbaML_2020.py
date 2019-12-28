@@ -419,8 +419,12 @@ def displayGraph(teamName, gameNum, teamPts, oppPts):
     
     # Function purpose is to display the matchup analysis graph
     
+    teamMeanLine, oppMeanLine = getGraphMeanLine(teamPts, oppPts)
+    
     plt.plot(gameNum, teamPts, color='black', label=teamName + ' Points')
     plt.plot(gameNum, oppPts, color='gray', label='Opponent Points')
+    plt.plot(gameNum,teamMeanLine, color='black', linestyle=':', label=teamName + ' Mean Points')
+    plt.plot(gameNum, oppMeanLine, color='gray', linestyle=':', label='Opp Mean Points')
     plt.xticks(range(0, (len(gameNum) + 2), 1))
     plt.yticks(range(80, 160, 5))
     plt.xlabel('Games 1 to ' + (str(len(gameNum))))
@@ -428,7 +432,51 @@ def displayGraph(teamName, gameNum, teamPts, oppPts):
     plt.title(teamName + ' Previous ' + str(len(gameNum)) + ' Games')
     plt.legend()
     plt.show()
+    
+    print(teamName)
+    print("Average Team Points: ", str(round((teamPts.mean()), 0)))
+    print("Average Opponent Points: ", str(round((oppPts.mean()), 0)))
+    tmMargin = teamPts.mean() - oppPts.mean()
+    print("Average Margin: ", str(round(tmMargin, 0)))
+    print("--------------------------------------------------")
+    
+def getGraphMeanLine(teamPts, oppPts):
+    
+    # Funciton purpose is to create a Line of the Mean Team Points
+    # and the Mean Opponent Points for the Analysis Graph
+    
+    teamPtTracker = 0
+    teamPtsList = []
+    teamMeanLine = []
+    
+    for tmPts in teamPts:
+        teamPtTracker += tmPts
+        teamPtsList.append(teamPtTracker)
 
+    tmGame = 1    
+
+    for tmPt in teamPtsList:
+        tmMean = tmPt / tmGame
+        teamMeanLine.append(tmMean)
+        tmGame += 1
+        
+    oppPtsTracker = 0
+    oppPtsList = []
+    oppMeanLine = []
+    
+    for oPts in oppPts:
+        oppPtsTracker += oPts
+        oppPtsList.append(oppPtsTracker)
+        
+    oppGame = 1
+    
+    for oPt in oppPtsList:
+        oppMean = oPt / oppGame
+        oppMeanLine.append(oppMean)
+        oppGame += 1
+    
+    return teamMeanLine, oppMeanLine
+    
 def getHomeGraphTmPts(homeDF):
     
     # Function collects the Home Team Graph Team Points and removes any 
