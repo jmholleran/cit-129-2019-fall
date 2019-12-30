@@ -1,6 +1,6 @@
 """
 Joe Holleran
-Python 2 - Final Project (12/11/2019)
+Python 2 - Final Project (12/29/2019)
 Web Scrap NBA Statistics to Evaluate ML Probabilities
 """
 # Import modules
@@ -406,7 +406,9 @@ def matchupAnalysisGraph(homeTeam, awayTeam):
     home_graph_game_num = getHomeGraphGmNum(homeDF)
     
     displayGraph(homeTeam, home_graph_game_num, home_graph_tm_pts, 
-                 home_graph_opp_pts)                
+                 home_graph_opp_pts)
+
+    getPriorMatchupDF(homeTeam, awayTeam)       
                 
     away_graph_tm_pts = getAwayGraphTmPts(awayDF)
     away_graph_opp_pts = getAwayGraphOppPts(awayDF)
@@ -414,36 +416,103 @@ def matchupAnalysisGraph(homeTeam, awayTeam):
     
     displayGraph(awayTeam, away_graph_game_num, away_graph_tm_pts, 
                  away_graph_opp_pts)   
+    
+    getPriorMatchupDF(awayTeam, homeTeam)
 
 def displayGraph(teamName, gameNum, teamPts, oppPts):
     
     # Function purpose is to display the matchup analysis graph
     
-    teamMeanLine, oppMeanLine = getGraphMeanLine(teamPts, oppPts)
+    teamMeanLine = getGraphMeanLine(teamPts)
+    oppMeanLine = getGraphMeanLine(oppPts)
+    teamSym = teamAbbrev[teamName]
     
-    plt.plot(gameNum, teamPts, color='black', label=teamName + ' Points')
-    plt.plot(gameNum, oppPts, color='gray', label='Opponent Points')
-    plt.plot(gameNum,teamMeanLine, color='black', linestyle=':', label=teamName + ' Mean Points')
-    plt.plot(gameNum, oppMeanLine, color='gray', linestyle=':', label='Opp Mean Points')
+    plt.plot(gameNum, teamPts, color='black', label=teamSym + ' Pts')
+    plt.plot(gameNum, oppPts, color='gray', label='Opp Pts')
+    plt.plot(gameNum,teamMeanLine, color='black', linestyle=':', label=teamSym + ' Mean Pts')
+    plt.plot(gameNum, oppMeanLine, color='gray', linestyle=':', label='Opp Mean Pts')
     plt.xticks(range(0, (len(gameNum) + 2), 1))
     plt.yticks(range(80, 160, 5))
     plt.xlabel('Games 1 to ' + (str(len(gameNum))))
     plt.ylabel('Total Points Scored')
     plt.title(teamName + ' Previous ' + str(len(gameNum)) + ' Games')
-    plt.legend()
+    plt.legend(loc='upper center', ncol=2)
     plt.show()
     
-    print(teamName)
-    print("Average Team Points: ", str(round((teamPts.mean()), 0)))
-    print("Average Opponent Points: ", str(round((oppPts.mean()), 0)))
-    tmMargin = teamPts.mean() - oppPts.mean()
-    print("Average Margin: ", str(round(tmMargin, 0)))
-    print("--------------------------------------------------")
+    teamWinPercent = getTeamWinPercentage(teamName, gameNum)
     
-def getGraphMeanLine(teamPts, oppPts):
+    displayGraphStats(teamName, teamPts, oppPts, teamWinPercent)
+    
+def getTeamWinPercentage(teamName, gameNum):
+    
+    # Function purpose is to calculate Team Win Percentage
+    
+    game_count = gameNum.count()
+    
+    df = getTeamStatsDataFrame(teamName)
+    
+    df_1 = df['W/L']
+    
+    win_count = 0
+
+    for win in df_1:
+        if win == 'W':
+            win = 1
+            win_count += win
+        
+    win_percent = win_count / game_count
+    win_percent = win_percent * 100
+    
+    return win_percent
+    
+def displayGraphStats(teamName, teamPts, oppPts, teamWinPercent):
+    
+    teamSym = teamAbbrev[teamName]
+    
+    print(teamName)
+    print(teamSym, "Mean Team Points: ", str(round((teamPts.mean()), 0)))
+    print(teamSym, "Mean Opp Points: ", str(round((oppPts.mean()), 0)))
+    tmMargin = teamPts.mean() - oppPts.mean()
+    print(teamSym, "Net Margin: ", str(round(tmMargin, 0)))
+    print(teamSym, "Win Percentage: ", str(round(teamWinPercent, 1)) + '%')
+    print("--------------------------------------------------")
+
+def getPriorMatchupDF(team, opponent):
+    
+    # Function purpose is to display prior matchup data between the 
+    # two opponents
+    
+    print("")
+    print("Prior Matchup(s) between " + team + " & " + opponent)
+    print("")
+    
+    oppSym = teamAbbrev[opponent]
+    teamSym = teamAbbrev[team]
+    
+    teamDF = getTeamStatsDataFrame(team)
+    
+    teamDF['Unnamed: 3'].fillna('Home', inplace=True)
+    teamDF['Unnamed: 3'].replace('@','Away',inplace=True)
+ 
+    df_filter = teamDF.loc[teamDF['Opp'].isin([oppSym])]
+    
+    if df_filter.empty == True:
+        print("There are no prior matchups between these teams.")
+        print("--------------------------------------------------")
+    else:
+
+        df_filter_col = df_filter[['Date', 'G', 'Unnamed: 3', 'W/L', 'Tm', 'Opp.1']]
+
+        df_filter_col.columns = ['Date', 'Game', 'Home/Away', 'W/L', str(teamSym), str(oppSym)]
+
+        df_filter_col.set_index(['Date'], inplace=True)
+
+        return print(df_filter_col)
+    
+def getGraphMeanLine(teamPts):
     
     # Funciton purpose is to create a Line of the Mean Team Points
-    # and the Mean Opponent Points for the Analysis Graph
+    # for the Analysis Graph
     
     teamPtTracker = 0
     teamPtsList = []
@@ -459,23 +528,8 @@ def getGraphMeanLine(teamPts, oppPts):
         tmMean = tmPt / tmGame
         teamMeanLine.append(tmMean)
         tmGame += 1
-        
-    oppPtsTracker = 0
-    oppPtsList = []
-    oppMeanLine = []
     
-    for oPts in oppPts:
-        oppPtsTracker += oPts
-        oppPtsList.append(oppPtsTracker)
-        
-    oppGame = 1
-    
-    for oPt in oppPtsList:
-        oppMean = oPt / oppGame
-        oppMeanLine.append(oppMean)
-        oppGame += 1
-    
-    return teamMeanLine, oppMeanLine
+    return teamMeanLine
     
 def getHomeGraphTmPts(homeDF):
     
