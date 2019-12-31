@@ -147,9 +147,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sun, Dec 29, 2019",Memphis Grizzlies,Charlotte Hornets,-148,128,0.8216,0.1784,1,0
 "Sun, Dec 29, 2019",New Orleans Pelicans,Houston Rockets,107,-127,0.3924,0.6076,1,0
 "Sun, Dec 29, 2019",Los Angeles Lakers,Dallas Mavericks,-155,135,0.264,0.736,1,0
-"Mon, Dec 30, 2019",Orlando Magic,Atlanta Hawks,-700,500,0.188,0.812
-"Mon, Dec 30, 2019",Washington Wizards,Miami Heat,325,-410,0.7531,0.2469
-"Mon, Dec 30, 2019",Chicago Bulls,Milwaukee Bucks,227,-277,0.2126,0.7874
-"Mon, Dec 30, 2019",Minnesota Timberwolves,Brooklyn Nets,119,-139,0.4492,0.5508
-"Mon, Dec 30, 2019",Utah Jazz,Detroit Pistons,-550,410,0.5405,0.4595
-"Mon, Dec 30, 2019",Portland Trail Blazers,Phoenix Suns,-180,160,0.5735,0.4265
+"Mon, Dec 30, 2019",Orlando Magic,Atlanta Hawks,-700,500,0.188,0.812,0,1
+"Mon, Dec 30, 2019",Washington Wizards,Miami Heat,325,-410,0.7531,0.2469,1,0
+"Mon, Dec 30, 2019",Chicago Bulls,Milwaukee Bucks,227,-277,0.2126,0.7874,0,1
+"Mon, Dec 30, 2019",Minnesota Timberwolves,Brooklyn Nets,119,-139,0.4492,0.5508,1,0
+"Mon, Dec 30, 2019",Utah Jazz,Detroit Pistons,-550,410,0.5405,0.4595,1,0
+"Mon, Dec 30, 2019",Portland Trail Blazers,Phoenix Suns,-180,160,0.5735,0.4265,0,1
+"Tue, Dec 31, 2019",Charlotte Hornets,Boston Celtics,260,-330,0.5821,0.4179,,
+"Tue, Dec 31, 2019",Indiana Pacers,Philadelphia 76ers,101,-121,0.4952,0.5048,,
+"Tue, Dec 31, 2019",Sacramento Kings,Los Angeles Clippers,255,-325,0.2381,0.7619,,
+"Tue, Dec 31, 2019",Houston Rockets,Denver Nuggets,-190,165,0.7824,0.2176,,
+"Tue, Dec 31, 2019",San Antonio Spurs,Golden State Warriors,-700,500,0.7049,0.2951,,
+"Tue, Dec 31, 2019",Toronto Raptors,Cleveland Cavaliers,-500,380,0.6772,0.3228,,
+"Tue, Dec 31, 2019",Oklahoma City Thunder,Dallas Mavericks,-110,-130,0.3827,0.6173,,
