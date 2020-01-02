@@ -1,13 +1,13 @@
 date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,away_win
-"Mon, Dec 9, 2019",Boston Celtics,Cleveland Cavaliers,775,-1300,0.7014,0.2986,1,0
-"Mon, Dec 9, 2019",Indiana Pacers,Los Angeles Clippers,122,-142,0.6624,0.3376,0,1
-"Mon, Dec 9, 2019",New Orleans Pelicans,Detroit Pistons,-112,-108,0.7766,0.2234,0,1
-"Mon, Dec 9, 2019",Chicago Bulls,Toronto Raptors,-260,220,0.4991,0.5009,0,1
-"Mon, Dec 9, 2019",Houston Rockets,Sacramento Kings,625,-950,0.8176,0.1824,0,1
-"Mon, Dec 9, 2019",Milwaukee Bucks,Orlando Magic ,700,-1100,0.8932,0.1068,1,0
-"Mon, Dec 9, 2019",Phoenix Suns,Minnesota Timberwolves,162,-182,0.4207,0.5793,1,0
-"Mon, Dec 9, 2019",Utah Jazz,Oklahoma City Thunder,315,-400,0.63,0.37,0,1
-"Mon, Dec 9, 2019",Golden State Warriors,Memphis Grizzlies,134,-154,0.4967,0.5033,0,1
+"Mon, Dec 9, 2019",Boston Celtics,Cleveland Cavaliers,-1300,775,0.7014,0.2986,1,0
+"Mon, Dec 9, 2019",Indiana Pacers,Los Angeles Clippers,-142,122,0.6624,0.3376,0,1
+"Mon, Dec 9, 2019",New Orleans Pelicans,Detroit Pistons,-108,-112,0.7766,0.2234,0,1
+"Mon, Dec 9, 2019",Chicago Bulls,Toronto Raptors,220,-260,0.4991,0.5009,0,1
+"Mon, Dec 9, 2019",Houston Rockets,Sacramento Kings,-950,625,0.8176,0.1824,0,1
+"Mon, Dec 9, 2019",Milwaukee Bucks,Orlando Magic ,-1100,700,0.8932,0.1068,1,0
+"Mon, Dec 9, 2019",Phoenix Suns,Minnesota Timberwolves,-182,162,0.4207,0.5793,1,0
+"Mon, Dec 9, 2019",Utah Jazz,Oklahoma City Thunder,-400,315,0.63,0.37,0,1
+"Mon, Dec 9, 2019",Golden State Warriors,Memphis Grizzlies,-154,134,0.4967,0.5033,0,1
 "Tue, Dec 10, 2019",Washington Wizards,Charlotte Hornets,-120,100,0.2792,0.7208,1,0
 "Tue, Dec 10, 2019",Denver Nuggets,Philadelphia 76ers,190,-220,0.5827,0.4173,1,0
 "Tue, Dec 10, 2019",Atlanta Hawks,Miami Heat,305,-380,0.43,0.57,1,0
@@ -160,7 +160,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Dec 31, 2019",San Antonio Spurs,Golden State Warriors,-700,500,0.7049,0.2951,1,0
 "Tue, Dec 31, 2019",Toronto Raptors,Cleveland Cavaliers,-500,380,0.6772,0.3228,1,0
 "Tue, Dec 31, 2019",Oklahoma City Thunder,Dallas Mavericks,-110,-130,0.3827,0.6173,1,0
-"Wed, Jan 1, 2020",Washington Wizards,Orlando Magic,140,-160,0.8305,0.1695,,
-"Wed, Jan 1, 2020",New York Knicks,Portland Trail Blazers,153,-173,0.334,0.666,,
-"Wed, Jan 1, 2020",Milwaukee Bucks,Minnesota Timberwolves,-5000,1550,0.4948,0.5052,,
-"Wed, Jan 1, 2020",Los Angeles Lakers,Phoenix Suns,-700,500,0.3793,0.6207,,
+"Wed, Jan 1, 2020",Washington Wizards,Orlando Magic,140,-160,0.8305,0.1695,0,1
+"Wed, Jan 1, 2020",New York Knicks,Portland Trail Blazers,153,-173,0.334,0.666,1,0
+"Wed, Jan 1, 2020",Milwaukee Bucks,Minnesota Timberwolves,-5000,1550,0.4948,0.5052,1,0
+"Wed, Jan 1, 2020",Los Angeles Lakers,Phoenix Suns,-700,500,0.3793,0.6207,1,0
+"Thu, Jan 2, 2020",Cleveland Cavaliers,Charlotte Hornets,-131,111,0.6468,0.3532,,
+"Thu, Jan 2, 2020",Indiana Pacers,Denver Nuggets,-105,-115,0.5771,0.4229,,
+"Thu, Jan 2, 2020",Miami Heat,Toronto Raptors,-210,180,0.7945,0.2055,,
+"Thu, Jan 2, 2020",Chicago Bulls,Utah Jazz,140,-160,0.4332,0.5668,,
+"Thu, Jan 2, 2020",Minnesota Timberwolves,Golden State Warriors,-161,141,0.5931,0.4069,,
+"Thu, Jan 2, 2020",Dallas Mavericks,Brooklyn Nets,-340,270,0.4983,0.5017,,
+"Thu, Jan 2, 2020",San Antonio Spurs,Oklahoma City Thunder,-142,122,0.8476,0.1524,,
+"Thu, Jan 2, 2020",Sacramento Kings,Memphis Grizzlies,-190,165,0.2703,0.7297,,
+"Thu, Jan 2, 2020",Los Angeles Clippers,Detroit Pistons,-1000,650,0.6655,0.3345,,
