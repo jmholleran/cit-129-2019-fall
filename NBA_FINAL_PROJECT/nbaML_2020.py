@@ -231,6 +231,11 @@ def runMatchupAnalysis(home, away):
     homeImpliedProb = cmprob(homeML)
     awayImpliedProb = cmprob(awayML)                
     displayImpliedProbs(homeTeam, awayTeam, homeImpliedProb, awayImpliedProb)
+    homeOneKellyImplied, homeHalfKellyImplied, homeFourthKellyImplied = calcKellyCriterion(homeTeam, homeDecOdd, (homeImpliedProb/100))
+    awayOneKellyImplied, awayHalfKellyImplied, awayFourthKellyImplied = calcKellyCriterion(awayTeam, awayDecOdd, (awayImpliedProb/100)) 
+    outputKellyCriterion(homeTeam, homeOneKellyImplied, homeHalfKellyImplied, homeFourthKellyImplied)
+    outputKellyCriterion(awayTeam, awayOneKellyImplied, awayHalfKellyImplied, awayFourthKellyImplied) 
+    
     
     # Assign the home and away Team Stats DataFrames to variable                
     homeDF = getTeamStatsDataFrame(homeTeam)
