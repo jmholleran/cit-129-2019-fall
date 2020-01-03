@@ -164,12 +164,18 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Jan 1, 2020",New York Knicks,Portland Trail Blazers,153,-173,0.334,0.666,1,0
 "Wed, Jan 1, 2020",Milwaukee Bucks,Minnesota Timberwolves,-5000,1550,0.4948,0.5052,1,0
 "Wed, Jan 1, 2020",Los Angeles Lakers,Phoenix Suns,-700,500,0.3793,0.6207,1,0
-"Thu, Jan 2, 2020",Cleveland Cavaliers,Charlotte Hornets,-131,111,0.6468,0.3532,,
-"Thu, Jan 2, 2020",Indiana Pacers,Denver Nuggets,-105,-115,0.5771,0.4229,,
-"Thu, Jan 2, 2020",Miami Heat,Toronto Raptors,-210,180,0.7945,0.2055,,
-"Thu, Jan 2, 2020",Chicago Bulls,Utah Jazz,140,-160,0.4332,0.5668,,
-"Thu, Jan 2, 2020",Minnesota Timberwolves,Golden State Warriors,-161,141,0.5931,0.4069,,
-"Thu, Jan 2, 2020",Dallas Mavericks,Brooklyn Nets,-340,270,0.4983,0.5017,,
-"Thu, Jan 2, 2020",San Antonio Spurs,Oklahoma City Thunder,-142,122,0.8476,0.1524,,
-"Thu, Jan 2, 2020",Sacramento Kings,Memphis Grizzlies,-190,165,0.2703,0.7297,,
-"Thu, Jan 2, 2020",Los Angeles Clippers,Detroit Pistons,-1000,650,0.6655,0.3345,,
+"Thu, Jan 2, 2020",Cleveland Cavaliers,Charlotte Hornets,-131,111,0.6468,0.3532,0,1
+"Thu, Jan 2, 2020",Indiana Pacers,Denver Nuggets,-105,-115,0.5771,0.4229,0,1
+"Thu, Jan 2, 2020",Miami Heat,Toronto Raptors,-210,180,0.7945,0.2055,1,0
+"Thu, Jan 2, 2020",Chicago Bulls,Utah Jazz,140,-160,0.4332,0.5668,0,1
+"Thu, Jan 2, 2020",Minnesota Timberwolves,Golden State Warriors,-161,141,0.5931,0.4069,1,0
+"Thu, Jan 2, 2020",Dallas Mavericks,Brooklyn Nets,-340,270,0.4983,0.5017,1,0
+"Thu, Jan 2, 2020",San Antonio Spurs,Oklahoma City Thunder,-142,122,0.8476,0.1524,0,1
+"Thu, Jan 2, 2020",Sacramento Kings,Memphis Grizzlies,-190,165,0.2703,0.7297,1,0
+"Thu, Jan 2, 2020",Los Angeles Clippers,Detroit Pistons,-1000,650,0.6655,0.3345,1,0
+"Fri, Jan 3, 2020",Boston Celtics,Atlanta Hawks,-625,465,0.827,0.173,,
+"Fri, Jan 3, 2020",Orlando Magic,Miami Heat,105,-125,0.5588,0.4412,,
+"Fri, Jan 3, 2020",Washington Wizards,Portland Trail Blazers,230,-280,0.5309,0.4691,,
+"Fri, Jan 3, 2020",Houston Rockets,Philadelphia 76ers,-195,170,0.6763,0.3237,,
+"Fri, Jan 3, 2020",Phoenix Suns,New York Knicks,-325,255,0.6714,0.3286,,
+"Fri, Jan 3, 2020",Los Angeles Lakers,New Orleans Pelicans,-650,475,0.7381,0.2619,,

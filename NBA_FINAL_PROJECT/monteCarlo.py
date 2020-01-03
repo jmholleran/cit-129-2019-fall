@@ -20,26 +20,18 @@ def gameSim(homePts_mu, homePts_std, homeOpp_mu, homeOpp_std, awayPts_mu, awayPt
         homeOpp = np.random.normal(homeOpp_mu, homeOpp_std)
         awayPts = np.random.normal(awayPts_mu, awayPts_std)
         awayOpp = np.random.normal(awayOpp_mu, awayOpp_std)
-    
-        # Home/Away Score Differential takes random sample of Pts Scored and
-        # Opp Pts Scored and returns either a positive or negative value
-        # Example: Home Team scores 115 and Opp Gives Up 125 
-        # Example: The 'differential' would be 10 ; accounts for playing
-        # teams with strong/weak defenses in theory
-        homeScoreDiff = (homePts) - (awayOpp)
-        awayScoreDiff = (awayPts) - (homeOpp)
         
-        # The Final Score (Home/Away Score) takes the random sample of the
-        # Home/Away Pts and applies the differential
-        homeScore = (homePts) + (homeScoreDiff)
-        awayScore = (awayPts) + (awayScoreDiff)
+        # Calculate Home & Away Score using the random value generated
+        # from the distribution of scores from home/away games
+        homeScore = ((homePts + awayOpp) / 2)
+        awayScore = ((awayPts + homeOpp) / 2)
         
         # If Home Score greater than Away Score then the home team wins
         # If Away Score greater than Home Score then the away team wins
-        if int(round(homeScore)) > int(round(awayScore)):
+        if (int(round(homeScore))) > (int(round(awayScore))):
             return 1
             break
-        elif int(round(homeScore)) < int(round(awayScore)):
+        elif (int(round(homeScore))) < (int(round(awayScore))):
             return -1
             break
         else:
@@ -67,8 +59,8 @@ def gamesSimulator(n, homePts_mu, homePts_std, homeOpp_mu, homeOpp_std, awayPts_
     
     # Calculate the Home/Away results from the Monte Carlo Simulation (Probability)
     # Based on 10,000 simulations of the game    
-    homeTeamSimProb = (homeTeamWins) / (awayTeamWins + homeTeamWins)
-    awayTeamSimProb = (awayTeamWins) / (awayTeamWins + homeTeamWins)
+    homeTeamSimProb = ((homeTeamWins) / (awayTeamWins + homeTeamWins))
+    awayTeamSimProb = ((awayTeamWins) / (awayTeamWins + homeTeamWins))
     
     # Return the results of the simulation - Home/Away Probability
     return homeTeamSimProb, awayTeamSimProb
