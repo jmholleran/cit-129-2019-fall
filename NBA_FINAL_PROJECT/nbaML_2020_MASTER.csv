@@ -173,9 +173,20 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Jan 2, 2020",San Antonio Spurs,Oklahoma City Thunder,-142,122,0.8476,0.1524,0,1
 "Thu, Jan 2, 2020",Sacramento Kings,Memphis Grizzlies,-190,165,0.2703,0.7297,1,0
 "Thu, Jan 2, 2020",Los Angeles Clippers,Detroit Pistons,-1000,650,0.6655,0.3345,1,0
-"Fri, Jan 3, 2020",Boston Celtics,Atlanta Hawks,-625,465,0.827,0.173,,
-"Fri, Jan 3, 2020",Orlando Magic,Miami Heat,105,-125,0.5588,0.4412,,
-"Fri, Jan 3, 2020",Washington Wizards,Portland Trail Blazers,230,-280,0.5309,0.4691,,
-"Fri, Jan 3, 2020",Houston Rockets,Philadelphia 76ers,-195,170,0.6763,0.3237,,
-"Fri, Jan 3, 2020",Phoenix Suns,New York Knicks,-325,255,0.6714,0.3286,,
-"Fri, Jan 3, 2020",Los Angeles Lakers,New Orleans Pelicans,-650,475,0.7381,0.2619,,
+"Fri, Jan 3, 2020",Boston Celtics,Atlanta Hawks,-625,465,0.827,0.173,1,0
+"Fri, Jan 3, 2020",Orlando Magic,Miami Heat,105,-125,0.5588,0.4412,1,0
+"Fri, Jan 3, 2020",Washington Wizards,Portland Trail Blazers,230,-280,0.5309,0.4691,0,1
+"Fri, Jan 3, 2020",Houston Rockets,Philadelphia 76ers,-195,170,0.6763,0.3237,1,0
+"Fri, Jan 3, 2020",Phoenix Suns,New York Knicks,-325,255,0.6714,0.3286,1,0
+"Fri, Jan 3, 2020",Los Angeles Lakers,New Orleans Pelicans,-650,475,0.7381,0.2619,1,0
+"Sat, Jan 4, 2020",Los Angeles Clippers,Memphis Grizzlies,-570,430,0.7547,0.2453,,
+"Sat, Jan 4, 2020",Brooklyn Nets,Toronto Raptors,-125,105,0.487,0.513,,
+"Sat, Jan 4, 2020",Orlando Magic,Utah Jazz,165,-190,0.5367,0.4633,,
+"Sat, Jan 4, 2020",Atlanta Hawks,Indiana Pacers,260,-330,0.4072,0.5928,,
+"Sat, Jan 4, 2020",Cleveland Cavaliers,Oklahoma City Thunder,230,-280,0.4411,0.5589,,
+"Sat, Jan 4, 2020",Chicago Bulls,Boston Celtics,-115,-105,0.3708,0.6292,,
+"Sat, Jan 4, 2020",Washington Wizards,Denver Nuggets,575,-850,0.3979,0.6021,,
+"Sat, Jan 4, 2020",Dallas Mavericks,Charlotte Hornets,-850,575,0.7706,0.2294,,
+"Sat, Jan 4, 2020",Golden State Warriors,Detroit Pistons,125,-145,0.5494,0.4506,,
+"Sat, Jan 4, 2020",Milwaukee Bucks,San Antonio Spurs,-850,575,0.7586,0.2414,,
+"Sat, Jan 4, 2020",Sacramento Kings,New Orleans Pelicans,-155,135,0.5993,0.4007,,

@@ -235,7 +235,7 @@ def runMatchupAnalysis(home, away):
     awayOneKellyImplied, awayHalfKellyImplied, awayFourthKellyImplied = calcKellyCriterion(awayTeam, awayDecOdd, (awayImpliedProb/100)) 
     outputKellyCriterion(homeTeam, homeOneKellyImplied, homeHalfKellyImplied, homeFourthKellyImplied)
     outputKellyCriterion(awayTeam, awayOneKellyImplied, awayHalfKellyImplied, awayFourthKellyImplied) 
-    
+    print("--------------------------------------------------")
     
     # Assign the home and away Team Stats DataFrames to variable                
     homeDF = getTeamStatsDataFrame(homeTeam)
@@ -268,7 +268,8 @@ def runMatchupAnalysis(home, away):
     awayOneKelly, awayHalfKelly, awayFourthKelly = calcKellyCriterion(awayTeam, awayDecOdd, awaySimProb) 
     outputKellyCriterion(homeTeam, homeOneKelly, homeHalfKelly, homeFourthKelly)
     outputKellyCriterion(awayTeam, awayOneKelly, awayHalfKelly, awayFourthKelly)    
-                
+    print("--------------------------------------------------")
+          
     # Ask user if they would like to Adjust the model probabilities
     adjModelProbability(homeTeam, homeSimProb, homeDecOdd)
     adjModelProbability(awayTeam, awaySimProb, awayDecOdd)
