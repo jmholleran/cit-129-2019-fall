@@ -179,14 +179,19 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Fri, Jan 3, 2020",Houston Rockets,Philadelphia 76ers,-195,170,0.6763,0.3237,1,0
 "Fri, Jan 3, 2020",Phoenix Suns,New York Knicks,-325,255,0.6714,0.3286,1,0
 "Fri, Jan 3, 2020",Los Angeles Lakers,New Orleans Pelicans,-650,475,0.7381,0.2619,1,0
-"Sat, Jan 4, 2020",Los Angeles Clippers,Memphis Grizzlies,-570,430,0.7547,0.2453,,
-"Sat, Jan 4, 2020",Brooklyn Nets,Toronto Raptors,-125,105,0.487,0.513,,
-"Sat, Jan 4, 2020",Orlando Magic,Utah Jazz,165,-190,0.5367,0.4633,,
-"Sat, Jan 4, 2020",Atlanta Hawks,Indiana Pacers,260,-330,0.4072,0.5928,,
-"Sat, Jan 4, 2020",Cleveland Cavaliers,Oklahoma City Thunder,230,-280,0.4411,0.5589,,
-"Sat, Jan 4, 2020",Chicago Bulls,Boston Celtics,-115,-105,0.3708,0.6292,,
-"Sat, Jan 4, 2020",Washington Wizards,Denver Nuggets,575,-850,0.3979,0.6021,,
-"Sat, Jan 4, 2020",Dallas Mavericks,Charlotte Hornets,-850,575,0.7706,0.2294,,
-"Sat, Jan 4, 2020",Golden State Warriors,Detroit Pistons,125,-145,0.5494,0.4506,,
-"Sat, Jan 4, 2020",Milwaukee Bucks,San Antonio Spurs,-850,575,0.7586,0.2414,,
-"Sat, Jan 4, 2020",Sacramento Kings,New Orleans Pelicans,-155,135,0.5993,0.4007,,
+"Sat, Jan 4, 2020",Los Angeles Clippers,Memphis Grizzlies,-570,430,0.7547,0.2453,0,1
+"Sat, Jan 4, 2020",Brooklyn Nets,Toronto Raptors,-125,105,0.487,0.513,0,1
+"Sat, Jan 4, 2020",Orlando Magic,Utah Jazz,165,-190,0.5367,0.4633,0,1
+"Sat, Jan 4, 2020",Atlanta Hawks,Indiana Pacers,260,-330,0.4072,0.5928,1,0
+"Sat, Jan 4, 2020",Cleveland Cavaliers,Oklahoma City Thunder,230,-280,0.4411,0.5589,0,1
+"Sat, Jan 4, 2020",Chicago Bulls,Boston Celtics,-115,-105,0.3708,0.6292,0,1
+"Sat, Jan 4, 2020",Washington Wizards,Denver Nuggets,575,-850,0.3979,0.6021,1,0
+"Sat, Jan 4, 2020",Dallas Mavericks,Charlotte Hornets,-850,575,0.7706,0.2294,0,1
+"Sat, Jan 4, 2020",Golden State Warriors,Detroit Pistons,125,-145,0.5494,0.4506,0,1
+"Sat, Jan 4, 2020",Milwaukee Bucks,San Antonio Spurs,-850,575,0.7586,0.2414,1,0
+"Sat, Jan 4, 2020",Sacramento Kings,New Orleans Pelicans,-155,135,0.5993,0.4007,0,1
+"Sun, Jan 5, 2020",Los Angeles Clippers,New York Knicks,-525,405,0.7662,0.2338,,
+"Sun, Jan 5, 2020",Miami Heat,Portland Trail Blazers,-255,215,0.7739,0.2261,,
+"Sun, Jan 5, 2020",Cleveland Cavaliers,Minnesota Timberwolves,154,-174,0.4239,0.5761,,
+"Sun, Jan 5, 2020",Phoenix Suns,Memphis Grizzlies,-260,220,0.6019,0.3981,,
+"Sun, Jan 5, 2020",Los Angeles Lakers,Detroit Pistons,-1600,900,0.7462,0.2538,,
