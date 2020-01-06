@@ -190,8 +190,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sat, Jan 4, 2020",Golden State Warriors,Detroit Pistons,125,-145,0.5494,0.4506,0,1
 "Sat, Jan 4, 2020",Milwaukee Bucks,San Antonio Spurs,-850,575,0.7586,0.2414,1,0
 "Sat, Jan 4, 2020",Sacramento Kings,New Orleans Pelicans,-155,135,0.5993,0.4007,0,1
-"Sun, Jan 5, 2020",Los Angeles Clippers,New York Knicks,-525,405,0.7662,0.2338,,
-"Sun, Jan 5, 2020",Miami Heat,Portland Trail Blazers,-255,215,0.7739,0.2261,,
-"Sun, Jan 5, 2020",Cleveland Cavaliers,Minnesota Timberwolves,154,-174,0.4239,0.5761,,
-"Sun, Jan 5, 2020",Phoenix Suns,Memphis Grizzlies,-260,220,0.6019,0.3981,,
-"Sun, Jan 5, 2020",Los Angeles Lakers,Detroit Pistons,-1600,900,0.7462,0.2538,,
+"Sun, Jan 5, 2020",Los Angeles Clippers,New York Knicks,-525,405,0.7662,0.2338,1,0
+"Sun, Jan 5, 2020",Miami Heat,Portland Trail Blazers,-255,215,0.7739,0.2261,1,0
+"Sun, Jan 5, 2020",Cleveland Cavaliers,Minnesota Timberwolves,154,-174,0.4239,0.5761,0,1
+"Sun, Jan 5, 2020",Phoenix Suns,Memphis Grizzlies,-260,220,0.6019,0.3981,0,1
+"Sun, Jan 5, 2020",Los Angeles Lakers,Detroit Pistons,-1600,900,0.7462,0.2538,1,0
+"Mon, Jan 6, 2020",Charlotte Hornets,Indiana Pacers,180,-210,0.4354,0.5646,,
+"Mon, Jan 6, 2020",Orlando Magic,Brooklyn Nets,-205,175,0.575,0.425,,
+"Mon, Jan 6, 2020",Philadelphia 76ers,Oklahoma City Thunder,-325,255,0.7096,0.2904,,
+"Mon, Jan 6, 2020",Washington Wizards,Boston Celtics,315,-400,0.3507,0.6493,,
+"Mon, Jan 6, 2020",Atlanta Hawks,Denver Nuggets,275,-350,0.3793,0.6207,,
+"Mon, Jan 6, 2020",New Orleans Pelicans,Utah Jazz,135,-155,0.4598,0.5402,,
+"Mon, Jan 6, 2020",Dallas Mavericks,Chicago Bulls,-550,410,0.6712,0.3288,,
+"Mon, Jan 6, 2020",San Antonio Spurs,Milwaukee Bucks,250,-310,0.2724,0.7276,,
+"Mon, Jan 6, 2020",Sacramento Kings,Golden State Warriors,-650,475,0.6673,0.3327,,
