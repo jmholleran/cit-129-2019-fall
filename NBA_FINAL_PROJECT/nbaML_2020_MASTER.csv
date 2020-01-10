@@ -219,7 +219,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Jan 8, 2020",New Orleans Pelicans,Chicago Bulls,-159,139,0.5137,0.4863,1,0
 "Wed, Jan 8, 2020",Utah Jazz,New York Knicks,-1400,825,0.7463,0.2537,1,0
 "Wed, Jan 8, 2020",Golden State Warriors,Milwaukee Bucks,775,-1300,0.2846,0.7154,0,1
-"Thu, Jan 9, 2020",Detroit Pistons,Cleveland Cavaliers,-300,240,0.6928,0.3072,,
-"Thu, Jan 9, 2020",Philadelphia 76ers,Boston Celtics,-118,-102,0.576,0.424,,
-"Thu, Jan 9, 2020",Minnesota Timberwolves,Portland Trail Blazers,-120,100,0.5012,0.4988,,
-"Thu, Jan 9, 2020",Oklahoma City Thunder,Houston Rockets,155,-175,0.5118,0.4882,,
+"Thu, Jan 9, 2020",Detroit Pistons,Cleveland Cavaliers,-300,240,0.6928,0.3072,0,1
+"Thu, Jan 9, 2020",Philadelphia 76ers,Boston Celtics,-118,-102,0.576,0.424,1,0
+"Thu, Jan 9, 2020",Minnesota Timberwolves,Portland Trail Blazers,-120,100,0.5012,0.4988,1,0
+"Thu, Jan 9, 2020",Oklahoma City Thunder,Houston Rockets,155,-175,0.5118,0.4882,1,0
+"Fri, Jan 10, 2020",Washington Wizards,Atlanta Hawks,100,-120,0.6479,0.3521,,
+"Fri, Jan 10, 2020",New York Knicks,New Orleans Pelicans,160,-180,0.5389,0.4611,,
+"Fri, Jan 10, 2020",Brooklyn Nets,Miami Heat,149,-169,0.5629,0.4371,,
+"Fri, Jan 10, 2020",Chicago Bulls,Indiana Pacers,130,-150,0.4775,0.5225,,
+"Fri, Jan 10, 2020",Memphis Grizzlies,San Antonio Spurs,-112,-108,0.4819,0.5181,,
+"Fri, Jan 10, 2020",Phoenix Suns,Orlando Magic,-160,140,0.5622,0.4378,,
+"Fri, Jan 10, 2020",Utah Jazz,Charlotte Hornets,-900,600,0.739,0.261,,
+"Fri, Jan 10, 2020",Dallas Mavericks,Los Angeles Lakers,-137,117,0.51,0.49,,
+"Fri, Jan 10, 2020",Sacramento Kings,Milwaukee Bucks,340,-425,0.2896,0.7104,,
+"Fri, Jan 10, 2020",Los Angeles Clippers,Golden State Warriors,-1400,825,0.765,0.235,,
