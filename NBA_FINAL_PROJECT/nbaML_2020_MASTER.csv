@@ -223,13 +223,20 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Jan 9, 2020",Philadelphia 76ers,Boston Celtics,-118,-102,0.576,0.424,1,0
 "Thu, Jan 9, 2020",Minnesota Timberwolves,Portland Trail Blazers,-120,100,0.5012,0.4988,1,0
 "Thu, Jan 9, 2020",Oklahoma City Thunder,Houston Rockets,155,-175,0.5118,0.4882,1,0
-"Fri, Jan 10, 2020",Washington Wizards,Atlanta Hawks,100,-120,0.6479,0.3521,,
-"Fri, Jan 10, 2020",New York Knicks,New Orleans Pelicans,160,-180,0.5389,0.4611,,
-"Fri, Jan 10, 2020",Brooklyn Nets,Miami Heat,149,-169,0.5629,0.4371,,
-"Fri, Jan 10, 2020",Chicago Bulls,Indiana Pacers,130,-150,0.4775,0.5225,,
-"Fri, Jan 10, 2020",Memphis Grizzlies,San Antonio Spurs,-112,-108,0.4819,0.5181,,
-"Fri, Jan 10, 2020",Phoenix Suns,Orlando Magic,-160,140,0.5622,0.4378,,
-"Fri, Jan 10, 2020",Utah Jazz,Charlotte Hornets,-900,600,0.739,0.261,,
-"Fri, Jan 10, 2020",Dallas Mavericks,Los Angeles Lakers,-137,117,0.51,0.49,,
-"Fri, Jan 10, 2020",Sacramento Kings,Milwaukee Bucks,340,-425,0.2896,0.7104,,
-"Fri, Jan 10, 2020",Los Angeles Clippers,Golden State Warriors,-1400,825,0.765,0.235,,
+"Fri, Jan 10, 2020",Washington Wizards,Atlanta Hawks,100,-120,0.6479,0.3521,1,0
+"Fri, Jan 10, 2020",New York Knicks,New Orleans Pelicans,160,-180,0.5389,0.4611,0,1
+"Fri, Jan 10, 2020",Brooklyn Nets,Miami Heat,149,-169,0.5629,0.4371,1,0
+"Fri, Jan 10, 2020",Chicago Bulls,Indiana Pacers,130,-150,0.4775,0.5225,0,1
+"Fri, Jan 10, 2020",Memphis Grizzlies,San Antonio Spurs,-112,-108,0.4819,0.5181,1,0
+"Fri, Jan 10, 2020",Phoenix Suns,Orlando Magic,-160,140,0.5622,0.4378,1,0
+"Fri, Jan 10, 2020",Utah Jazz,Charlotte Hornets,-900,600,0.739,0.261,1,0
+"Fri, Jan 10, 2020",Dallas Mavericks,Los Angeles Lakers,-137,117,0.51,0.49,0,1
+"Fri, Jan 10, 2020",Sacramento Kings,Milwaukee Bucks,340,-425,0.2896,0.7104,0,1
+"Fri, Jan 10, 2020",Los Angeles Clippers,Golden State Warriors,-1400,825,0.765,0.235,1,0
+"Sat, Jan 11, 2020",Houston Rockets,Minnesota Timberwolves,-625,465,0.6637,0.3363,,
+"Sat, Jan 11, 2020",Boston Celtics,New Orleans Pelicans,-750,525,0.7255,0.2745,,
+"Sat, Jan 11, 2020",Detroit Pistons,Chicago Bulls,-165,145,0.5626,0.4374,,
+"Sat, Jan 11, 2020",Oklahoma City Thunder,Los Angeles Lakers,-107,-113,0.4656,0.5344,,
+"Sat, Jan 11, 2020",Dallas Mavericks,Philadelphia 76ers,-135,115,0.652,0.348,,
+"Sat, Jan 11, 2020",Denver Nuggets,Cleveland Cavaliers,-900,600,0.7779,0.2221,,
+"Sat, Jan 11, 2020",Portland Trail Blazers,Milwaukee Bucks,200,-240,0.3464,0.6536,,
