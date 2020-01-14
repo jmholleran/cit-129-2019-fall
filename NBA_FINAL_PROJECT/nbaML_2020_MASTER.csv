@@ -247,10 +247,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sun, Jan 12, 2020",Toronto Raptors,San Antonio Spurs,-180,160,0.6604,0.3396,0,1
 "Sun, Jan 12, 2020",Denver Nuggets,Los Angeles Clippers,-107,-113,0.5254,0.4746,1,0
 "Sun, Jan 12, 2020",Phoenix Suns,Charlotte Hornets,-365,295,0.6501,0.3499,1,0
-"Mon, Jan 13, 2020",Detroit Pistons,New Orleans Pelicans,-133,113,0.6154,0.3846,,
-"Mon, Jan 13, 2020",Indiana Pacers,Philadelphia 76ers,-130,110,0.6541,0.3459,,
-"Mon, Jan 13, 2020",Boston Celtics,Chicago Bulls,-500,395,0.7095,0.2905,,
-"Mon, Jan 13, 2020",Minnesota Timberwolves,Oklahoma City Thunder,140,-160,0.4732,0.5268,,
-"Mon, Jan 13, 2020",Portland Trail Blazers,Charlotte Hornets,-475,385,0.6462,0.3538,,
-"Mon, Jan 13, 2020",Sacramento Kings,Orlando Magic,-130,110,0.5124,0.4876,,
-"Mon, Jan 13, 2020",Los Angeles Lakers,Cleveland Cavaliers,-1200,750,0.7879,0.2121,,
+"Mon, Jan 13, 2020",Detroit Pistons,New Orleans Pelicans,-133,113,0.6154,0.3846,0,1
+"Mon, Jan 13, 2020",Indiana Pacers,Philadelphia 76ers,-130,110,0.6541,0.3459,1,0
+"Mon, Jan 13, 2020",Boston Celtics,Chicago Bulls,-500,395,0.7095,0.2905,1,0
+"Mon, Jan 13, 2020",Minnesota Timberwolves,Oklahoma City Thunder,140,-160,0.4732,0.5268,0,1
+"Mon, Jan 13, 2020",Portland Trail Blazers,Charlotte Hornets,-475,385,0.6462,0.3538,1,0
+"Mon, Jan 13, 2020",Sacramento Kings,Orlando Magic,-130,110,0.5124,0.4876,0,1
+"Mon, Jan 13, 2020",Los Angeles Lakers,Cleveland Cavaliers,-1200,750,0.7879,0.2121,1,0
+"Tue, Jan 14, 2020",Atlanta Hawks,Phoenix Suns,140,-160,0.4647,0.5353,,
+"Tue, Jan 14, 2020",Brooklyn Nets,Utah Jazz,132,-152,0.5094,0.4906,,
+"Tue, Jan 14, 2020",Memphis Grizzlies,Houston Rockets,165,-190,0.4463,0.5537,,
+"Tue, Jan 14, 2020",Milwaukee Bucks,New York Knicks,-2000,1000,0.8478,0.1522,,
+"Tue, Jan 14, 2020",Golden State Warriors,Dallas Mavericks,285,-340,0.3033,0.6967,,
+"Tue, Jan 14, 2020",Los Angeles Clippers,Cleveland Cavaliers,-1800,950,0.7585,0.2415,,
