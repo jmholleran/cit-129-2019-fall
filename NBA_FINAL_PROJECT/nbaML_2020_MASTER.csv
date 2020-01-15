@@ -254,9 +254,19 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Jan 13, 2020",Portland Trail Blazers,Charlotte Hornets,-475,385,0.6462,0.3538,1,0
 "Mon, Jan 13, 2020",Sacramento Kings,Orlando Magic,-130,110,0.5124,0.4876,0,1
 "Mon, Jan 13, 2020",Los Angeles Lakers,Cleveland Cavaliers,-1200,750,0.7879,0.2121,1,0
-"Tue, Jan 14, 2020",Atlanta Hawks,Phoenix Suns,140,-160,0.4647,0.5353,,
-"Tue, Jan 14, 2020",Brooklyn Nets,Utah Jazz,132,-152,0.5094,0.4906,,
-"Tue, Jan 14, 2020",Memphis Grizzlies,Houston Rockets,165,-190,0.4463,0.5537,,
-"Tue, Jan 14, 2020",Milwaukee Bucks,New York Knicks,-2000,1000,0.8478,0.1522,,
-"Tue, Jan 14, 2020",Golden State Warriors,Dallas Mavericks,285,-340,0.3033,0.6967,,
-"Tue, Jan 14, 2020",Los Angeles Clippers,Cleveland Cavaliers,-1800,950,0.7585,0.2415,,
+"Tue, Jan 14, 2020",Atlanta Hawks,Phoenix Suns,140,-160,0.4647,0.5353,1,0
+"Tue, Jan 14, 2020",Brooklyn Nets,Utah Jazz,132,-152,0.5094,0.4906,0,1
+"Tue, Jan 14, 2020",Memphis Grizzlies,Houston Rockets,165,-190,0.4463,0.5537,1,0
+"Tue, Jan 14, 2020",Milwaukee Bucks,New York Knicks,-2000,1000,0.8478,0.1522,1,0
+"Tue, Jan 14, 2020",Golden State Warriors,Dallas Mavericks,285,-340,0.3033,0.6967,0,1
+"Tue, Jan 14, 2020",Los Angeles Clippers,Cleveland Cavaliers,-1800,950,0.7585,0.2415,1,0
+"Wed, Jan 15, 2020",Boston Celtics,Detroit Pistons,-450,360,0.765,0.235,,
+"Wed, Jan 15, 2020",Philadelphia 76ers,Brooklyn Nets,-305,255,0.7507,0.2493,,
+"Wed, Jan 15, 2020",Miami Heat,San Antonio Spurs,-240,200,0.7379,0.2621,,
+"Wed, Jan 15, 2020",Chicago Bulls,Washington Wizards,-180,160,0.5869,0.4131,,
+"Wed, Jan 15, 2020",Minnesota Timberwolves,Indiana Pacers,130,-150,0.4216,0.5784,,
+"Wed, Jan 15, 2020",Oklahoma City Thunder,Toronto Raptors,-117,-103,0.5112,0.4888,,
+"Wed, Jan 15, 2020",Denver Nuggets,Charlotte Hornets,-700,520,0.7574,0.2426,,
+"Wed, Jan 15, 2020",Houston Rockets,Portland Trail Blazers,-380,310,0.7553,0.2447,,
+"Wed, Jan 15, 2020",Sacramento Kings,Dallas Mavericks,165,-190,0.2811,0.7189,,
+"Wed, Jan 15, 2020",Los Angeles Lakers,Orlando Magic,-550,430,0.7245,0.2755,,
