@@ -270,3 +270,8 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Jan 15, 2020",Houston Rockets,Portland Trail Blazers,-380,310,0.7553,0.2447,,
 "Wed, Jan 15, 2020",Sacramento Kings,Dallas Mavericks,165,-190,0.2811,0.7189,,
 "Wed, Jan 15, 2020",Los Angeles Lakers,Orlando Magic,-550,430,0.7245,0.2755,,
+"Thu, Jan 16, 2020",New York Knicks,Phoenix Suns,135,-155,0.4841,0.5159
+"Thu, Jan 16, 2020",Milwaukee Bucks,Boston Celtics,-700,520,0.6767,0.3233
+"Thu, Jan 16, 2020",New Orleans Pelicans,Utah Jazz,185,-215,0.4615,0.5385
+"Thu, Jan 16, 2020",Golden State Warriors,Denver Nuggets,140,-160,0.3739,0.6261
+"Thu, Jan 16, 2020",Los Angeles Clippers,Orlando Magic,-650,500,0.6882,0.3118
