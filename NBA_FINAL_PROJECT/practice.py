@@ -4,6 +4,7 @@ Created on Sat Jan 11 13:32:07 2020
 
 @author: joeyh
 """
+
 import pandas as pd
 
 date = 'Mon, Dec 9, 2019'
