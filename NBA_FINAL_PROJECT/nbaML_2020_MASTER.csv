@@ -282,14 +282,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Fri, Jan 17, 2020",Oklahoma City Thunder,Miami Heat,-120,100,0.6153,0.3847,0,1
 "Fri, Jan 17, 2020",San Antonio Spurs,Atlanta Hawks,-380,310,0.7198,0.2802,0,1
 "Fri, Jan 17, 2020",Dallas Mavericks,Portland Trail Blazers,-300,250,0.6913,0.3087,1,0
-"Sat, Jan 18, 2020",New Orleans Pelicans,Los Angeles Clippers,200,-240,0.4619,0.5381,,
-"Sat, Jan 18, 2020",Brooklyn Nets,Milwaukee Bucks,405,-510,0.3271,0.6729,,
-"Sat, Jan 18, 2020",Boston Celtics,Phoenix Suns,-250,210,0.687,0.313,,
-"Sat, Jan 18, 2020",Atlanta Hawks,Detroit Pistons,100,-120,0.5133,0.4867,,
-"Sat, Jan 18, 2020",New York Knicks,Philadelphia 76ers,153,-173,0.4493,0.5507,,
-"Sat, Jan 18, 2020",Chicago Bulls,Cleveland Cavaliers,-260,220,0.6609,0.3391,,
-"Sat, Jan 18, 2020",Minnesota Timberwolves,Toronto Raptors,187,-217,0.3684,0.6316,,
-"Sat, Jan 18, 2020",Golden State Warriors,Orlando Magic,200,-240,0.4632,0.5368,,
-"Sat, Jan 18, 2020",Houston Rockets,Los Angeles Lakers,-135,115,0.5309,0.4691,,
-"Sat, Jan 18, 2020",Oklahoma City Thunder,Portland Trail Blazers,-275,230,0.6287,0.3713,,
-"Sat, Jan 18, 2020",Utah Jazz,Sacramento Kings,-410,330,0.6749,0.3251,,
+"Sat, Jan 18, 2020",New Orleans Pelicans,Los Angeles Clippers,200,-240,0.4619,0.5381,0,1
+"Sat, Jan 18, 2020",Brooklyn Nets,Milwaukee Bucks,405,-510,0.3271,0.6729,0,1
+"Sat, Jan 18, 2020",Boston Celtics,Phoenix Suns,-250,210,0.687,0.313,0,1
+"Sat, Jan 18, 2020",Atlanta Hawks,Detroit Pistons,100,-120,0.5133,0.4867,0,1
+"Sat, Jan 18, 2020",New York Knicks,Philadelphia 76ers,153,-173,0.4493,0.5507,0,1
+"Sat, Jan 18, 2020",Chicago Bulls,Cleveland Cavaliers,-260,220,0.6609,0.3391,1,0
+"Sat, Jan 18, 2020",Minnesota Timberwolves,Toronto Raptors,187,-217,0.3684,0.6316,0,1
+"Sat, Jan 18, 2020",Golden State Warriors,Orlando Magic,200,-240,0.4632,0.5368,1,0
+"Sat, Jan 18, 2020",Houston Rockets,Los Angeles Lakers,-135,115,0.5309,0.4691,0,1
+"Sat, Jan 18, 2020",Oklahoma City Thunder,Portland Trail Blazers,-275,230,0.6287,0.3713,1,0
+"Sat, Jan 18, 2020",Utah Jazz,Sacramento Kings,-410,330,0.6749,0.3251,1,0
+"Sun, Jan 19, 2020",San Antonio Spurs,Miami Heat,-102,-118,0.5543,0.4457,1,0
+"Sun, Jan 19, 2020",Denver Nuggets,Indiana Pacers,-103,-117,0.6137,0.3863,0,1
