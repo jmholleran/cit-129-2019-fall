@@ -309,4 +309,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Jan 20, 2020",Phoenix Suns,San Antonio Spurs,-190,165,0.55,0.45,0,1
 "Mon, Jan 20, 2020",Utah Jazz,Indiana Pacers,-300,250,0.6287,0.3713,1,0
 "Mon, Jan 20, 2020",Portland Trail Blazers,Golden State Warriors,-255,215,0.6946,0.3054,1,0
-"Tue, Jan 21, 2020",Dallas Mavericks,Los Angeles Clippers,-130,110,0.5692,0.4308,,
+"Tue, Jan 21, 2020",Dallas Mavericks,Los Angeles Clippers,-130,110,0.5692,0.4308,0,1
+"Wed, Jan 22, 2020",Detroit Pistons,Sacramento Kings,-115,-105,0.5702,0.4298,,
+"Wed, Jan 22, 2020",Orlando Magic,Oklahoma City Thunder,-140,120,0.5545,0.4455,,
+"Wed, Jan 22, 2020",Toronto Raptors,Philadelphia 76ers,-260,220,0.6669,0.3331,,
+"Wed, Jan 22, 2020",Atlanta Hawks,Los Angeles Clippers,175,-205,0.3661,0.6339,,
+"Wed, Jan 22, 2020",Boston Celtics,Memphis Grizzlies,-290,245,0.7031,0.2969,,
+"Wed, Jan 22, 2020",Miami Heat,Washington Wizards,-500,395,0.8014,0.1986,,
+"Wed, Jan 22, 2020",New York Knicks,Los Angeles Lakers,605,-825,0.3087,0.6913,,
+"Wed, Jan 22, 2020",Chicago Bulls,Minnesota Timberwolves,-120,100,0.5228,0.4772,,
+"Wed, Jan 22, 2020",Houston Rockets,Denver Nuggets,-450,360,0.5741,0.4259,,
+"Wed, Jan 22, 2020",Phoenix Suns,Indiana Pacers,-102,-118,0.5223,0.4777,,
+"Wed, Jan 22, 2020",New Orleans Pelicans,San Antonio Spurs,-162,142,0.5403,0.4597,,
+"Wed, Jan 22, 2020",Golden State Warriors,Utah Jazz,345,-425,0.4113,0.5887,,
