@@ -341,11 +341,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sat, Jan 25, 2020",Cleveland Cavaliers,Chicago Bulls,-117,-103,0.4226,0.5774,0,1
 "Sat, Jan 25, 2020",Minnesota Timberwolves,Oklahoma City Thunder,-110,-110,0.4148,0.5852,0,1
 "Sat, Jan 25, 2020",Philadelphia 76ers,Los Angeles Lakers,160,-180,0.573,0.427,1,0
-"Sun, Jan 26, 2020",Denver Nuggets,Houston Rockets,-138,118,0.5681,0.4319,,
-"Sun, Jan 26, 2020",San Antonio Spurs,Toronto Raptors,145,-165,0.4256,0.5744,,
-"Sun, Jan 26, 2020",Atlanta Hawks,Washington Wizards,-118,-102,0.5405,0.4595,,
-"Sun, Jan 26, 2020",Memphis Grizzlies,Phoenix Suns,-138,118,0.4964,0.5036,,
-"Sun, Jan 26, 2020",New Orleans Pelicans,Boston Celtics,-120,100,0.4001,0.5999,,
-"Sun, Jan 26, 2020",New York Knicks,Brooklyn Nets,-135,115,0.4649,0.5351,,
-"Sun, Jan 26, 2020",Orlando Magic,Los Angeles Clippers,130,-150,0.4999,0.5001,,
-"Sun, Jan 26, 2020",Portland Trail Blazers,Indiana Pacers,-157,137,0.4877,0.5123,,
+"Sun, Jan 26, 2020",Denver Nuggets,Houston Rockets,-138,118,0.5681,0.4319,1,0
+"Sun, Jan 26, 2020",San Antonio Spurs,Toronto Raptors,145,-165,0.4256,0.5744,0,1
+"Sun, Jan 26, 2020",Atlanta Hawks,Washington Wizards,-118,-102,0.5405,0.4595,1,0
+"Sun, Jan 26, 2020",Memphis Grizzlies,Phoenix Suns,-138,118,0.4964,0.5036,1,0
+"Sun, Jan 26, 2020",New Orleans Pelicans,Boston Celtics,-120,100,0.4001,0.5999,1,0
+"Sun, Jan 26, 2020",New York Knicks,Brooklyn Nets,-135,115,0.4649,0.5351,1,0
+"Sun, Jan 26, 2020",Orlando Magic,Los Angeles Clippers,130,-150,0.4999,0.5001,0,1
+"Sun, Jan 26, 2020",Portland Trail Blazers,Indiana Pacers,-157,137,0.4877,0.5123,1,0
+"Mon, Jan 27, 2020",Detroit Pistons,Cleveland Cavaliers,-275,230,0.6806,0.3194,,
+"Mon, Jan 27, 2020",Miami Heat,Orlando Magic,-245,205,0.7433,0.2567,,
+"Mon, Jan 27, 2020",Chicago Bulls,San Antonio Spurs,-128,108,0.5151,0.4849,,
+"Mon, Jan 27, 2020",Minnesota Timberwolves,Sacramento Kings,-155,135,0.4834,0.5166,,
+"Mon, Jan 27, 2020",Oklahoma City Thunder,Dallas Mavericks,170,-195,0.4435,0.5565,,
+"Mon, Jan 27, 2020",Utah Jazz,Houston Rockets,-1500,870,0.6171,0.3829,,
