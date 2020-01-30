@@ -355,11 +355,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Jan 27, 2020",Minnesota Timberwolves,Sacramento Kings,-155,135,0.4834,0.5166,0,1
 "Mon, Jan 27, 2020",Oklahoma City Thunder,Dallas Mavericks,170,-195,0.4435,0.5565,0,1
 "Mon, Jan 27, 2020",Utah Jazz,Houston Rockets,-1500,870,0.6171,0.3829,0,1
-"Tue, Jan 28, 2020",Charlotte Hornets,New York Knicks,-114,-106,0.5952,0.4048,,
-"Tue, Jan 28, 2020",Philadelphia 76ers,Golden State Warriors,-1200,750,0.8398,0.1602,,
-"Tue, Jan 28, 2020",Cleveland Cavaliers,New Orleans Pelicans,315,-385,0.4768,0.5232,,
-"Tue, Jan 28, 2020",Toronto Raptors,Atlanta Hawks,-1100,700,0.8086,0.1914,,
-"Tue, Jan 28, 2020",Memphis Grizzlies,Denver Nuggets,-114,-106,0.4531,0.5469,,
-"Tue, Jan 28, 2020",Miami Heat,Boston Celtics,-123,103,0.624,0.376,,
-"Tue, Jan 28, 2020",Milwaukee Bucks,Washington Wizards,-850,615,0.8164,0.1836,,
-"Tue, Jan 28, 2020",Dallas Mavericks,Phoenix Suns,-290,245,0.6695,0.3305,,
+"Tue, Jan 28, 2020",Charlotte Hornets,New York Knicks,-114,-106,0.5952,0.4048,1,0
+"Tue, Jan 28, 2020",Philadelphia 76ers,Golden State Warriors,-1200,750,0.8398,0.1602,1,0
+"Tue, Jan 28, 2020",Cleveland Cavaliers,New Orleans Pelicans,315,-385,0.4768,0.5232,0,1
+"Tue, Jan 28, 2020",Toronto Raptors,Atlanta Hawks,-1100,700,0.8086,0.1914,1,0
+"Tue, Jan 28, 2020",Memphis Grizzlies,Denver Nuggets,-114,-106,0.4531,0.5469,1,0
+"Tue, Jan 28, 2020",Miami Heat,Boston Celtics,-123,103,0.624,0.376,0,1
+"Tue, Jan 28, 2020",Milwaukee Bucks,Washington Wizards,-850,615,0.8164,0.1836,1,0
+"Tue, Jan 28, 2020",Dallas Mavericks,Phoenix Suns,-290,245,0.6695,0.3305,0,1
+"Wed, Jan 29, 2020",Indiana Pacers,Chicago Bulls,-425,345,0.6628,0.3372,,
+"Wed, Jan 29, 2020",Brooklyn Nets,Detroit Pistons,-240,200,0.5479,0.4521,,
+"Wed, Jan 29, 2020",New York Knicks,Memphis Grizzlies,111,-131,0.4759,0.5241,,
+"Wed, Jan 29, 2020",San Antonio Spurs,Utah Jazz,-250,210,0.4462,0.5538,,
+"Wed, Jan 29, 2020",Portland Trail Blazers,Houston Rockets,153,-173,0.4772,0.5228,,
+"Wed, Jan 29, 2020",Sacramento Kings,Oklahoma City Thunder,128,-148,0.4409,0.5591,,
