@@ -383,12 +383,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Fri, Jan 31, 2020",Phoenix Suns,Oklahoma City Thunder,-115,-105,0.4632,0.5368,0,1
 "Fri, Jan 31, 2020",Los Angeles Lakers,Portland Trail Blazers,-1100,700,0.746,0.254,0,1
 "Sat, Feb 1, 2020",Los Angeles Clippers,Minnesota Timberwolves,-550,430,0.6712,0.3288,1,0
-"Sat, Feb 1, 2020",Indiana Pacers,New York Knicks,-650,500,0.7505,0.2495,,
-"Sat, Feb 1, 2020",Orlando Magic,Miami Heat,125,-145,0.5663,0.4337,,
-"Sat, Feb 1, 2020",Cleveland Cavaliers,Golden State Warriors,-120,100,0.5655,0.4345,,
-"Sat, Feb 1, 2020",Washington Wizards,Brooklyn Nets,110,-130,0.5522,0.4478,,
-"Sat, Feb 1, 2020",Boston Celtics,Philadelphia 76ers,105,-125,0.7234,0.2766,,
-"Sat, Feb 1, 2020",Dallas Mavericks,Atlanta Hawks,-190,165,0.7803,0.2197,,
-"Sat, Feb 1, 2020",San Antonio Spurs,Charlotte Hornets,-425,345,0.6727,0.3273,,
-"Sat, Feb 1, 2020",Sacramento Kings,Los Angeles Lakers,235,-280,0.3507,0.6493,,
-"Sat, Feb 1, 2020",Portland Trail Blazers,Utah Jazz,190,-220,0.4891,0.5109,,
+"Sat, Feb 1, 2020",Indiana Pacers,New York Knicks,-650,500,0.7505,0.2495,0,1
+"Sat, Feb 1, 2020",Orlando Magic,Miami Heat,125,-145,0.5663,0.4337,0,1
+"Sat, Feb 1, 2020",Cleveland Cavaliers,Golden State Warriors,-120,100,0.5655,0.4345,0,1
+"Sat, Feb 1, 2020",Washington Wizards,Brooklyn Nets,110,-130,0.5522,0.4478,1,0
+"Sat, Feb 1, 2020",Boston Celtics,Philadelphia 76ers,105,-125,0.7234,0.2766,1,0
+"Sat, Feb 1, 2020",Dallas Mavericks,Atlanta Hawks,-190,165,0.7803,0.2197,1,0
+"Sat, Feb 1, 2020",San Antonio Spurs,Charlotte Hornets,-425,345,0.6727,0.3273,1,0
+"Sat, Feb 1, 2020",Sacramento Kings,Los Angeles Lakers,235,-280,0.3507,0.6493,0,1
+"Sat, Feb 1, 2020",Portland Trail Blazers,Utah Jazz,190,-220,0.4891,0.5109,1,0
+"Sun, Feb 2, 2020",Detroit Pistons,Denver Nuggets,123,-143,0.4522,0.5478,,
+"Sun, Feb 2, 2020",Houston Rockets,New Orleans Pelicans,-195,170,0.7203,0.2797,,
+"Sun, Feb 2, 2020",Milwaukee Bucks,Phoenix Suns,-900,640,0.734,0.266,,
+"Sun, Feb 2, 2020",Toronto Raptors,Chicago Bulls,-525,420,0.7082,0.2918,,
