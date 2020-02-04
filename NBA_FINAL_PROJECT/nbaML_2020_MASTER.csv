@@ -392,7 +392,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sat, Feb 1, 2020",San Antonio Spurs,Charlotte Hornets,-425,345,0.6727,0.3273,1,0
 "Sat, Feb 1, 2020",Sacramento Kings,Los Angeles Lakers,235,-280,0.3507,0.6493,0,1
 "Sat, Feb 1, 2020",Portland Trail Blazers,Utah Jazz,190,-220,0.4891,0.5109,1,0
-"Sun, Feb 2, 2020",Detroit Pistons,Denver Nuggets,123,-143,0.4522,0.5478,,
-"Sun, Feb 2, 2020",Houston Rockets,New Orleans Pelicans,-195,170,0.7203,0.2797,,
-"Sun, Feb 2, 2020",Milwaukee Bucks,Phoenix Suns,-900,640,0.734,0.266,,
-"Sun, Feb 2, 2020",Toronto Raptors,Chicago Bulls,-525,420,0.7082,0.2918,,
+"Sun, Feb 2, 2020",Detroit Pistons,Denver Nuggets,123,-143,0.4522,0.5478,1,0
+"Sun, Feb 2, 2020",Houston Rockets,New Orleans Pelicans,-195,170,0.7203,0.2797,1,0
+"Sun, Feb 2, 2020",Milwaukee Bucks,Phoenix Suns,-900,640,0.734,0.266,1,0
+"Sun, Feb 2, 2020",Toronto Raptors,Chicago Bulls,-525,420,0.7082,0.2918,1,0
+"Mon, Feb 3, 2020",Charlotte Hornets,Orlando Magic,172,-197,0.4832,0.5168,,
+"Mon, Feb 3, 2020",Cleveland Cavaliers,New York Knicks,118,-138,0.5206,0.4794,,
+"Mon, Feb 3, 2020",Indiana Pacers,Dallas Mavericks,-205,175,0.4578,0.5422,,
+"Mon, Feb 3, 2020",Washington Wizards,Golden State Warriors,-275,230,0.636,0.364,,
+"Mon, Feb 3, 2020",Atlanta Hawks,Boston Celtics,200,-240,0.3746,0.6254,,
+"Mon, Feb 3, 2020",Brooklyn Nets,Phoenix Suns,-135,115,0.5251,0.4749,,
+"Mon, Feb 3, 2020",Miami Heat,Philadelphia 76ers,-143,123,0.7335,0.2665,,
+"Mon, Feb 3, 2020",Memphis Grizzlies,Detroit Pistons,-500,395,0.5587,0.4413,,
+"Mon, Feb 3, 2020",Sacramento Kings,Minnesota Timberwolves,-121,101,0.4818,0.5182,,
+"Mon, Feb 3, 2020",Los Angeles Clippers,San Antonio Spurs,-450,360,0.6704,0.3296,,
