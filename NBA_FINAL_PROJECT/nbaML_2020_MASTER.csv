@@ -419,3 +419,8 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Feb 5, 2020",Dallas Mavericks,Memphis Grizzlies,-195,170,0.6689,0.3311,,
 "Wed, Feb 5, 2020",Utah Jazz,Denver Nuggets,-460,370,0.5947,0.4053,,
 "Wed, Feb 5, 2020",Los Angeles Clippers,Miami Heat,-265,225,0.6565,0.3435,,
+"Thu, Feb 6, 2020",New York Knicks,Orlando Magic,138,-158,0.4683,0.5317,,
+"Thu, Feb 6, 2020",Chicago Bulls,New Orleans Pelicans,-113,-107,0.5689,0.4311,,
+"Thu, Feb 6, 2020",Milwaukee Bucks,Philadelphia 76ers,-460,370,0.7824,0.2176,,
+"Thu, Feb 6, 2020",Portland Trail Blazers,San Antonio Spurs,-156,136,0.5852,0.4148,,
+"Thu, Feb 6, 2020",Los Angeles Lakers,Houston Rockets,-265,225,0.6428,0.3572,,
