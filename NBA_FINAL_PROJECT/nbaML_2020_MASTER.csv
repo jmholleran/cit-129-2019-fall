@@ -441,10 +441,19 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sat, Feb 8, 2020",Golden State Warriors,Los Angeles Lakers,750,-1200,0.3209,0.6791,0,1
 "Sat, Feb 8, 2020",Phoenix Suns,Denver Nuggets,145,-165,0.4882,0.5118,0,1
 "Sat, Feb 8, 2020",Sacramento Kings,San Antonio Spurs,121,-141,0.5022,0.4978,1,0
-"Sun, Feb 9, 2020",Oklahoma City Thunder,Boston Celtics,103,-123,0.4973,0.5027,,
-"Sun, Feb 9, 2020",Atlanta Hawks,New York Knicks,-190,165,0.5684,0.4316,,
-"Sun, Feb 9, 2020",Philadelphia 76ers,Chicago Bulls,-650,500,0.7811,0.2189,,
-"Sun, Feb 9, 2020",Washington Wizards,Memphis Grizzlies,123,-143,0.5495,0.4505,,
-"Sun, Feb 9, 2020",Houston Rockets,Utah Jazz,-155,135,0.6251,0.3749,,
-"Sun, Feb 9, 2020",Cleveland Cavaliers,Los Angeles Clippers,200,-240,0.3386,0.6614,,
-"Sun, Feb 9, 2020",Portland Trail Blazers,Miami Heat,-205,175,0.5799,0.4201,,
+"Sun, Feb 9, 2020",Oklahoma City Thunder,Boston Celtics,103,-123,0.4973,0.5027,0,1
+"Sun, Feb 9, 2020",Atlanta Hawks,New York Knicks,-190,165,0.5684,0.4316,1,0
+"Sun, Feb 9, 2020",Philadelphia 76ers,Chicago Bulls,-650,500,0.7811,0.2189,1,0
+"Sun, Feb 9, 2020",Washington Wizards,Memphis Grizzlies,123,-143,0.5495,0.4505,0,1
+"Sun, Feb 9, 2020",Houston Rockets,Utah Jazz,-155,135,0.6251,0.3749,0,1
+"Sun, Feb 9, 2020",Cleveland Cavaliers,Los Angeles Clippers,200,-240,0.3386,0.6614,0,1
+"Sun, Feb 9, 2020",Portland Trail Blazers,Miami Heat,-205,175,0.5799,0.4201,1,0
+"Mon, Feb 10, 2020",Detroit Pistons,Charlotte Hornets,-161,141,0.6663,0.3337,,
+"Mon, Feb 10, 2020",Indiana Pacers,Brooklyn Nets,-275,230,0.6546,0.3454,,
+"Mon, Feb 10, 2020",Orlando Magic,Atlanta Hawks,-375,305,0.6945,0.3055,,
+"Mon, Feb 10, 2020",Toronto Raptors,Minnesota Timberwolves,-400,320,0.6993,0.3007,,
+"Mon, Feb 10, 2020",Milwaukee Bucks,Sacramento Kings,-525,420,0.7462,0.2538,,
+"Mon, Feb 10, 2020",Dallas Mavericks,Utah Jazz,-105,-115,0.5614,0.4386,,
+"Mon, Feb 10, 2020",Denver Nuggets,San Antonio Spurs,-285,240,0.6906,0.3094,,
+"Mon, Feb 10, 2020",Golden State Warriors,Miami Heat,180,-210,0.4482,0.5518,,
+"Mon, Feb 10, 2020",Los Angeles Lakers,Phoenix Suns,-800,580,0.6995,0.3005,,
