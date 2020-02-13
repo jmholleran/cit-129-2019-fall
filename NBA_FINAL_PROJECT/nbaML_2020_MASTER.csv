@@ -462,14 +462,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Feb 11, 2020",New Orleans Pelicans,Portland Trail Blazers,-145,125,0.6001,0.3999,1,0
 "Tue, Feb 11, 2020",Oklahoma City Thunder,San Antonio Spurs,-355,285,0.6401,0.3599,0,1
 "Tue, Feb 11, 2020",Houston Rockets,Boston Celtics,-134,114,0.5696,0.4304,1,0
-"Wed, Feb 12, 2020",Cleveland Cavaliers,Atlanta Hawks,129,-149,0.5692,0.4308,,
-"Wed, Feb 12, 2020",Orlando Magic,Detroit Pistons,-275,230,0.5776,0.4224,,
-"Wed, Feb 12, 2020",Brooklyn Nets,Toronto Raptors,150,-170,0.4574,0.5426,,
-"Wed, Feb 12, 2020",Indiana Pacers,Milwaukee Bucks,-125,105,0.352,0.648,,
-"Wed, Feb 12, 2020",New York Knicks,Washington Wizards,-139,119,0.5525,0.4475,,
-"Wed, Feb 12, 2020",Memphis Grizzlies,Portland Trail Blazers,-156,136,0.5895,0.4105,,
-"Wed, Feb 12, 2020",Minnesota Timberwolves,Charlotte Hornets,-250,210,0.5937,0.4063,,
-"Wed, Feb 12, 2020",Dallas Mavericks,Sacramento Kings,-370,300,0.6269,0.3731,,
-"Wed, Feb 12, 2020",Phoenix Suns,Golden State Warriors,-275,230,0.6782,0.3218,,
-"Wed, Feb 12, 2020",Utah Jazz,Miami Heat,-197,172,0.6695,0.3305,,
-"Wed, Feb 12, 2020",Denver Nuggets,Los Angeles Lakers,132,-152,0.5044,0.4956,,
+"Wed, Feb 12, 2020",Cleveland Cavaliers,Atlanta Hawks,129,-149,0.5692,0.4308,1,0
+"Wed, Feb 12, 2020",Orlando Magic,Detroit Pistons,-275,230,0.5776,0.4224,1,0
+"Wed, Feb 12, 2020",Brooklyn Nets,Toronto Raptors,150,-170,0.4574,0.5426,1,0
+"Wed, Feb 12, 2020",Indiana Pacers,Milwaukee Bucks,-125,105,0.352,0.648,1,0
+"Wed, Feb 12, 2020",New York Knicks,Washington Wizards,-139,119,0.5525,0.4475,0,1
+"Wed, Feb 12, 2020",Memphis Grizzlies,Portland Trail Blazers,-156,136,0.5895,0.4105,1,0
+"Wed, Feb 12, 2020",Minnesota Timberwolves,Charlotte Hornets,-250,210,0.5937,0.4063,0,1
+"Wed, Feb 12, 2020",Dallas Mavericks,Sacramento Kings,-370,300,0.6269,0.3731,1,0
+"Wed, Feb 12, 2020",Phoenix Suns,Golden State Warriors,-275,230,0.6782,0.3218,1,0
+"Wed, Feb 12, 2020",Utah Jazz,Miami Heat,-197,172,0.6695,0.3305,1,0
+"Wed, Feb 12, 2020",Denver Nuggets,Los Angeles Lakers,132,-152,0.5044,0.4956,0,1
+"Thu, Feb 13, 2020",Boston Celtics,Los Angeles Clippers,-131,111,0.6212,0.3788,,
+"Thu, Feb 13, 2020",New Orleans Pelicans,Oklahoma City Thunder,-165,145,0.5096,0.4904,,
