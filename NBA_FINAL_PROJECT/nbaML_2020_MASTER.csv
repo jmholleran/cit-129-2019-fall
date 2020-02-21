@@ -473,5 +473,11 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Feb 12, 2020",Phoenix Suns,Golden State Warriors,-275,230,0.6782,0.3218,1,0
 "Wed, Feb 12, 2020",Utah Jazz,Miami Heat,-197,172,0.6695,0.3305,1,0
 "Wed, Feb 12, 2020",Denver Nuggets,Los Angeles Lakers,132,-152,0.5044,0.4956,0,1
-"Thu, Feb 13, 2020",Boston Celtics,Los Angeles Clippers,-131,111,0.6212,0.3788,,
-"Thu, Feb 13, 2020",New Orleans Pelicans,Oklahoma City Thunder,-165,145,0.5096,0.4904,,
+"Thu, Feb 13, 2020",Boston Celtics,Los Angeles Clippers,-131,111,0.6212,0.3788,1,0
+"Thu, Feb 13, 2020",New Orleans Pelicans,Oklahoma City Thunder,-165,145,0.5096,0.4904,0,1
+"Thu, Feb 20, 2020",Detroit Pistons,Milwaukee Bucks,700,-1200,0.2964,0.7036
+"Thu, Feb 20, 2020",Atlanta Hawks,Miami Heat,215,-255,0.4838,0.5162
+"Thu, Feb 20, 2020",Chicago Bulls,Charlotte Hornets,-169,149,0.6134,0.3866
+"Thu, Feb 20, 2020",Philadelphia 76ers,Brooklyn Nets,-280,235,0.7725,0.2275
+"Thu, Feb 20, 2020",Sacramento Kings,Memphis Grizzlies,-105,-115,0.5134,0.4866
+"Thu, Feb 20, 2020",Golden State Warriors,Houston Rockets,400,-505,0.414,0.586
