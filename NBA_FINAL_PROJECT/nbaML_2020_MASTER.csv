@@ -481,12 +481,19 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Feb 20, 2020",Philadelphia 76ers,Brooklyn Nets,-280,235,0.7725,0.2275,1,0
 "Thu, Feb 20, 2020",Sacramento Kings,Memphis Grizzlies,-105,-115,0.5134,0.4866,1,0
 "Thu, Feb 20, 2020",Golden State Warriors,Houston Rockets,400,-505,0.414,0.586,0,1
-"Fri, Feb 21, 2020",Orlando Magic,Dallas Mavericks,159,-179,0.3994,0.6006,,
-"Fri, Feb 21, 2020",Washington Wizards,Cleveland Cavaliers,-255,215,0.6364,0.3636,,
-"Fri, Feb 21, 2020",New York Knicks,Indiana Pacers,240,-285,0.3813,0.6187,,
-"Fri, Feb 21, 2020",Toronto Raptors,Phoenix Suns,-350,280,0.7093,0.2907,,
-"Fri, Feb 21, 2020",Minnesota Timberwolves,Boston Celtics,290,-360,0.3767,0.6233,,
-"Fri, Feb 21, 2020",Oklahoma City Thunder,Denver Nuggets,-118,-102,0.5258,0.4742,,
-"Fri, Feb 21, 2020",Utah Jazz,San Antonio Spurs,-300,250,0.7036,0.2964,,
-"Fri, Feb 21, 2020",Los Angeles Lakers,Memphis Grizzlies,-600,460,0.7141,0.2859,,
-"Fri, Feb 21, 2020",Portland Trail Blazers,New Orleans Pelicans,175,-205,0.6229,0.3771,,
+"Fri, Feb 21, 2020",Orlando Magic,Dallas Mavericks,159,-179,0.3994,0.6006,0,1
+"Fri, Feb 21, 2020",Washington Wizards,Cleveland Cavaliers,-255,215,0.6364,0.3636,0,1
+"Fri, Feb 21, 2020",New York Knicks,Indiana Pacers,240,-285,0.3813,0.6187,0,1
+"Fri, Feb 21, 2020",Toronto Raptors,Phoenix Suns,-350,280,0.7093,0.2907,1,0
+"Fri, Feb 21, 2020",Minnesota Timberwolves,Boston Celtics,290,-360,0.3767,0.6233,0,1
+"Fri, Feb 21, 2020",Oklahoma City Thunder,Denver Nuggets,-118,-102,0.5258,0.4742,1,0
+"Fri, Feb 21, 2020",Utah Jazz,San Antonio Spurs,-300,250,0.7036,0.2964,0,1
+"Fri, Feb 21, 2020",Los Angeles Lakers,Memphis Grizzlies,-600,460,0.7141,0.2859,1,0
+"Fri, Feb 21, 2020",Portland Trail Blazers,New Orleans Pelicans,175,-205,0.6229,0.3771,0,1
+"Sat, Feb 22, 2020",Los Angeles Clippers,Sacramento Kings,-465,375,0.689,0.311
+"Sat, Feb 22, 2020",Charlotte Hornets,Brooklyn Nets,151,-171,0.4704,0.5296
+"Sat, Feb 22, 2020",Atlanta Hawks,Dallas Mavericks,210,-250,0.3344,0.6656
+"Sat, Feb 22, 2020",Chicago Bulls,Phoenix Suns,113,-133,0.5328,0.4672
+"Sat, Feb 22, 2020",Miami Heat,Cleveland Cavaliers,-1100,700,0.8068,0.1932
+"Sat, Feb 22, 2020",Milwaukee Bucks,Philadelphia 76ers,-420,340,0.7903,0.2097
+"Sat, Feb 22, 2020",Utah Jazz,Houston Rockets,-130,110,0.6044,0.3956
