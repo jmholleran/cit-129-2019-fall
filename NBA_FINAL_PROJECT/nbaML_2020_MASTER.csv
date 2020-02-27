@@ -519,12 +519,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Feb 25, 2020",Los Angeles Lakers,New Orleans Pelicans,-325,270,0.7152,0.2848,1,0
 "Tue, Feb 25, 2020",Portland Trail Blazers,Boston Celtics,237,-282,0.4601,0.5399,0,1
 "Tue, Feb 25, 2020",Golden State Warriors,Sacramento Kings,210,-250,0.433,0.567,0,1
-"Wed, Feb 26, 2020",Charlotte Hornets,New York Knicks,105,-125,0.5208,0.4792,,
-"Wed, Feb 26, 2020",Cleveland Cavaliers,Philadelphia 76ers,270,-325,0.4567,0.5433,,
-"Wed, Feb 26, 2020",Washington Wizards,Brooklyn Nets,105,-125,0.5345,0.4655,,
-"Wed, Feb 26, 2020",Atlanta Hawks,Orlando Magic,116,-136,0.5092,0.4908,,
-"Wed, Feb 26, 2020",Miami Heat,Minnesota Timberwolves,-800,580,0.7601,0.2399,,
-"Wed, Feb 26, 2020",Houston Rockets,Memphis Grizzlies,-900,640,0.7156,0.2844,,
-"Wed, Feb 26, 2020",San Antonio Spurs,Dallas Mavericks,160,-180,0.397,0.603,,
-"Wed, Feb 26, 2020",Phoenix Suns,Los Angeles Clippers,260,-310,0.4745,0.5255,,
-"Wed, Feb 26, 2020",Utah Jazz,Boston Celtics,-205,175,0.5283,0.4717,,
+"Wed, Feb 26, 2020",Charlotte Hornets,New York Knicks,105,-125,0.5208,0.4792,1,0
+"Wed, Feb 26, 2020",Cleveland Cavaliers,Philadelphia 76ers,270,-325,0.4567,0.5433,1,0
+"Wed, Feb 26, 2020",Washington Wizards,Brooklyn Nets,105,-125,0.5345,0.4655,1,0
+"Wed, Feb 26, 2020",Atlanta Hawks,Orlando Magic,116,-136,0.5092,0.4908,0,1
+"Wed, Feb 26, 2020",Miami Heat,Minnesota Timberwolves,-800,580,0.7601,0.2399,0,1
+"Wed, Feb 26, 2020",Houston Rockets,Memphis Grizzlies,-900,640,0.7156,0.2844,1,0
+"Wed, Feb 26, 2020",San Antonio Spurs,Dallas Mavericks,160,-180,0.397,0.603,0,1
+"Wed, Feb 26, 2020",Phoenix Suns,Los Angeles Clippers,260,-310,0.4745,0.5255,0,1
+"Wed, Feb 26, 2020",Utah Jazz,Boston Celtics,-205,175,0.5283,0.4717,0,1
+"Thu, Feb 27, 2020",Philadelphia 76ers,New York Knicks,-280,235,0.7731,0.2269,,
+"Thu, Feb 27, 2020",Indiana Pacers,Portland Trail Blazers,-505,400,0.6952,0.3048,,
+"Thu, Feb 27, 2020",Oklahoma City Thunder,Sacramento Kings,-320,270,0.616,0.384,,
+"Thu, Feb 27, 2020",Golden State Warriors,Los Angeles Lakers,445,-565,0.3017,0.6983,,
