@@ -528,7 +528,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Feb 26, 2020",San Antonio Spurs,Dallas Mavericks,160,-180,0.397,0.603,0,1
 "Wed, Feb 26, 2020",Phoenix Suns,Los Angeles Clippers,260,-310,0.4745,0.5255,0,1
 "Wed, Feb 26, 2020",Utah Jazz,Boston Celtics,-205,175,0.5283,0.4717,0,1
-"Thu, Feb 27, 2020",Philadelphia 76ers,New York Knicks,-280,235,0.7731,0.2269,,
-"Thu, Feb 27, 2020",Indiana Pacers,Portland Trail Blazers,-505,400,0.6952,0.3048,,
-"Thu, Feb 27, 2020",Oklahoma City Thunder,Sacramento Kings,-320,270,0.616,0.384,,
-"Thu, Feb 27, 2020",Golden State Warriors,Los Angeles Lakers,445,-565,0.3017,0.6983,,
+"Thu, Feb 27, 2020",Philadelphia 76ers,New York Knicks,-280,235,0.7731,0.2269,1,0
+"Thu, Feb 27, 2020",Indiana Pacers,Portland Trail Blazers,-505,400,0.6952,0.3048,1,0
+"Thu, Feb 27, 2020",Oklahoma City Thunder,Sacramento Kings,-320,270,0.616,0.384,1,0
+"Thu, Feb 27, 2020",Golden State Warriors,Los Angeles Lakers,445,-565,0.3017,0.6983,0,1
+"Fri, Feb 28, 2020",Orlando Magic,Minnesota Timberwolves,-325,270,0.5611,0.4389,,
+"Fri, Feb 28, 2020",Atlanta Hawks,Brooklyn Nets,129,-149,0.4979,0.5021,,
+"Fri, Feb 28, 2020",Toronto Raptors,Charlotte Hornets,-1500,870,0.7709,0.2291,,
+"Fri, Feb 28, 2020",Memphis Grizzlies,Sacramento Kings,-152,132,0.534,0.466,,
+"Fri, Feb 28, 2020",Miami Heat,Dallas Mavericks,-172,152,0.5625,0.4375,,
+"Fri, Feb 28, 2020",Milwaukee Bucks,Oklahoma City Thunder,-750,550,0.7009,0.2991,,
+"Fri, Feb 28, 2020",New Orleans Pelicans,Cleveland Cavaliers,-1000,660,0.6896,0.3104,,
+"Fri, Feb 28, 2020",Phoenix Suns,Detroit Pistons,-420,340,0.5823,0.4177,,
+"Fri, Feb 28, 2020",Utah Jazz,Washington Wizards,-530,425,0.6897,0.3103,,
+"Fri, Feb 28, 2020",Los Angeles Clippers,Denver Nuggets,-250,210,0.6186,0.3814,,
