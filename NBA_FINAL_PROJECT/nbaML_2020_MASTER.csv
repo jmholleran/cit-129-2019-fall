@@ -542,11 +542,18 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Fri, Feb 28, 2020",Phoenix Suns,Detroit Pistons,-420,340,0.5823,0.4177,0,1
 "Fri, Feb 28, 2020",Utah Jazz,Washington Wizards,-530,425,0.6897,0.3103,1,0
 "Fri, Feb 28, 2020",Los Angeles Clippers,Denver Nuggets,-250,210,0.6186,0.3814,1,0
-"Sat, Feb 29, 2020",New York Knicks,Chicago Bulls,-138,118,0.4777,0.5223,,
-"Sat, Feb 29, 2020",Atlanta Hawks,Portland Trail Blazers,-123,103,0.5502,0.4498,,
-"Sat, Feb 29, 2020",Miami Heat,Brooklyn Nets,-310,260,0.7351,0.2649,,
-"Sat, Feb 29, 2020",Cleveland Cavaliers,Indiana Pacers,320,-400,0.3921,0.6079,,
-"Sat, Feb 29, 2020",Memphis Grizzlies,Los Angeles Lakers,360,-450,0.3897,0.6103,,
-"Sat, Feb 29, 2020",Boston Celtics,Houston Rockets,-115,-105,0.6394,0.3606,,
-"Sat, Feb 29, 2020",San Antonio Spurs,Orlando Magic,-169,149,0.5695,0.4305,,
-"Sat, Feb 29, 2020",Phoenix Suns,Golden State Warriors,-370,300,0.6747,0.3253,,
+"Sat, Feb 29, 2020",New York Knicks,Chicago Bulls,-138,118,0.4777,0.5223,1,0
+"Sat, Feb 29, 2020",Atlanta Hawks,Portland Trail Blazers,-123,103,0.5502,0.4498,1,0
+"Sat, Feb 29, 2020",Miami Heat,Brooklyn Nets,-310,260,0.7351,0.2649,1,0
+"Sat, Feb 29, 2020",Cleveland Cavaliers,Indiana Pacers,320,-400,0.3921,0.6079,0,1
+"Sat, Feb 29, 2020",Memphis Grizzlies,Los Angeles Lakers,360,-450,0.3897,0.6103,1,0
+"Sat, Feb 29, 2020",Boston Celtics,Houston Rockets,-115,-105,0.6394,0.3606,0,1
+"Sat, Feb 29, 2020",San Antonio Spurs,Orlando Magic,-169,149,0.5695,0.4305,1,0
+"Sat, Feb 29, 2020",Phoenix Suns,Golden State Warriors,-370,300,0.6747,0.3253,0,1
+"Sun, Mar 1, 2020",Charlotte Hornets,Milwaukee Bucks,790,-1300,0.1937,0.8063,,
+"Sun, Mar 1, 2020",Los Angeles Clippers,Philadelphia 76ers,-1050,675,0.731,0.269,,
+"Sun, Mar 1, 2020",Minnesota Timberwolves,Dallas Mavericks,250,-300,0.327,0.673,,
+"Sun, Mar 1, 2020",Denver Nuggets,Toronto Raptors,-165,145,0.5401,0.4599,,
+"Sun, Mar 1, 2020",Sacramento Kings,Detroit Pistons,-330,275,0.5417,0.4583,,
+"Sun, Mar 1, 2020",New Orleans Pelicans,Los Angeles Lakers,-103,-117,0.4365,0.5635,,
+"Sun, Mar 1, 2020",Golden State Warriors,Washington Wizards,215,-255,0.4881,0.5119,,
