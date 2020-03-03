@@ -557,10 +557,18 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Sun, Mar 1, 2020",Sacramento Kings,Detroit Pistons,-330,275,0.5417,0.4583,1,0
 "Sun, Mar 1, 2020",New Orleans Pelicans,Los Angeles Lakers,-103,-117,0.4365,0.5635,0,1
 "Sun, Mar 1, 2020",Golden State Warriors,Washington Wizards,215,-255,0.4881,0.5119,0,1
-"Mon, Mar 2, 2020",Cleveland Cavaliers,Utah Jazz,430,-550,0.3613,0.6387,,
-"Mon, Mar 2, 2020",New York Knicks,Houston Rockets,420,-525,0.4017,0.5983,,
-"Mon, Mar 2, 2020",Orlando Magic,Portland Trail Blazers,-255,215,0.6087,0.3913,,
-"Mon, Mar 2, 2020",Atlanta Hawks,Memphis Grizzlies,-133,113,0.5544,0.4456,,
-"Mon, Mar 2, 2020",Miami Heat,Milwaukee Bucks,170,-195,0.4819,0.5181,,
-"Mon, Mar 2, 2020",Chicago Bulls,Dallas Mavericks,240,-285,0.3488,0.6512,,
-"Mon, Mar 2, 2020",San Antonio Spurs,Indiana Pacers,117,-137,0.5291,0.4709,,
+"Mon, Mar 2, 2020",Cleveland Cavaliers,Utah Jazz,430,-550,0.3613,0.6387,0,1
+"Mon, Mar 2, 2020",New York Knicks,Houston Rockets,420,-525,0.4017,0.5983,1,0
+"Mon, Mar 2, 2020",Orlando Magic,Portland Trail Blazers,-255,215,0.6087,0.3913,0,1
+"Mon, Mar 2, 2020",Atlanta Hawks,Memphis Grizzlies,-133,113,0.5544,0.4456,0,1
+"Mon, Mar 2, 2020",Miami Heat,Milwaukee Bucks,170,-195,0.4819,0.5181,1,0
+"Mon, Mar 2, 2020",Chicago Bulls,Dallas Mavericks,240,-285,0.3488,0.6512,1,0
+"Mon, Mar 2, 2020",San Antonio Spurs,Indiana Pacers,117,-137,0.5291,0.4709,0,1
+"Tue, Mar 3, 2020",Charlotte Hornets,San Antonio Spurs,-172,152,0.4613,0.5387,,
+"Tue, Mar 3, 2020",Boston Celtics,Brooklyn Nets,-260,220,0.7305,0.2695,,
+"Tue, Mar 3, 2020",New Orleans Pelicans,Minnesota Timberwolves,-650,500,0.6037,0.3963,,
+"Tue, Mar 3, 2020",Oklahoma City Thunder,Los Angeles Clippers,172,-197,0.5329,0.4671,,
+"Tue, Mar 3, 2020",Denver Nuggets,Golden State Warriors,-2100,850,0.77,0.23,,
+"Tue, Mar 3, 2020",Phoenix Suns,Toronto Raptors,170,-195,0.4314,0.5686,,
+"Tue, Mar 3, 2020",Los Angeles Lakers,Philadelphia 76ers,-900,640,0.7556,0.2444,,
+"Tue, Mar 3, 2020",Sacramento Kings,Washington Wizards,-215,185,0.594,0.406,,
