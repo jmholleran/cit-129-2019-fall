@@ -572,12 +572,16 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Mar 3, 2020",Phoenix Suns,Toronto Raptors,170,-195,0.4314,0.5686,0,1
 "Tue, Mar 3, 2020",Los Angeles Lakers,Philadelphia 76ers,-900,640,0.7556,0.2444,1,0
 "Tue, Mar 3, 2020",Sacramento Kings,Washington Wizards,-215,185,0.594,0.406,1,0
-"Wed, Mar 4, 2020",Cleveland Cavaliers,Boston Celtics,145,-165,0.2883,0.7117,,
-"Wed, Mar 4, 2020",Detroit Pistons,Oklahoma City Thunder,290,-360,0.466,0.534,,
-"Wed, Mar 4, 2020",Milwaukee Bucks,Indiana Pacers,-700,520,0.7475,0.2525,,
-"Wed, Mar 4, 2020",Brooklyn Nets,Memphis Grizzlies,-116,-104,0.6032,0.3968,,
-"Wed, Mar 4, 2020",Miami Heat,Orlando Magic,-305,255,0.7379,0.2621,,
-"Wed, Mar 4, 2020",New York Knicks,Utah Jazz,280,-350,0.3962,0.6038,,
-"Wed, Mar 4, 2020",Minnesota Timberwolves,Chicago Bulls,-125,105,0.5001,0.4999,,
-"Wed, Mar 4, 2020",Dallas Mavericks,New Orleans Pelicans,-240,200,0.6531,0.3469,,
-"Wed, Mar 4, 2020",Portland Trail Blazers,Washington Wizards,-350,280,0.6352,0.3648,,
+"Wed, Mar 4, 2020",Cleveland Cavaliers,Boston Celtics,145,-165,0.2883,0.7117,0,1
+"Wed, Mar 4, 2020",Detroit Pistons,Oklahoma City Thunder,290,-360,0.466,0.534,0,1
+"Wed, Mar 4, 2020",Milwaukee Bucks,Indiana Pacers,-700,520,0.7475,0.2525,1,0
+"Wed, Mar 4, 2020",Brooklyn Nets,Memphis Grizzlies,-116,-104,0.6032,0.3968,0,1
+"Wed, Mar 4, 2020",Miami Heat,Orlando Magic,-305,255,0.7379,0.2621,1,0
+"Wed, Mar 4, 2020",New York Knicks,Utah Jazz,280,-350,0.3962,0.6038,0,1
+"Wed, Mar 4, 2020",Minnesota Timberwolves,Chicago Bulls,-125,105,0.5001,0.4999,1,0
+"Wed, Mar 4, 2020",Dallas Mavericks,New Orleans Pelicans,-240,200,0.6531,0.3469,1,0
+"Wed, Mar 4, 2020",Portland Trail Blazers,Washington Wizards,-350,280,0.6352,0.3648,1,0
+"Thu, Mar 5, 2020",Charlotte Hornets,Denver Nuggets,400,-505,0.3813,0.6187,,
+"Thu, Mar 5, 2020",Houston Rockets,Los Angeles Clippers,106,-126,0.5948,0.4052,,
+"Thu, Mar 5, 2020",Sacramento Kings,Philadelphia 76ers,-210,180,0.5817,0.4183,,
+"Thu, Mar 5, 2020",Golden State Warriors,Toronto Raptors,325,-405,0.3045,0.6955,,
