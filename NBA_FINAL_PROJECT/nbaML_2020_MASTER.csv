@@ -581,7 +581,17 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Wed, Mar 4, 2020",Minnesota Timberwolves,Chicago Bulls,-125,105,0.5001,0.4999,1,0
 "Wed, Mar 4, 2020",Dallas Mavericks,New Orleans Pelicans,-240,200,0.6531,0.3469,1,0
 "Wed, Mar 4, 2020",Portland Trail Blazers,Washington Wizards,-350,280,0.6352,0.3648,1,0
-"Thu, Mar 5, 2020",Charlotte Hornets,Denver Nuggets,400,-505,0.3813,0.6187,,
-"Thu, Mar 5, 2020",Houston Rockets,Los Angeles Clippers,106,-126,0.5948,0.4052,,
-"Thu, Mar 5, 2020",Sacramento Kings,Philadelphia 76ers,-210,180,0.5817,0.4183,,
-"Thu, Mar 5, 2020",Golden State Warriors,Toronto Raptors,325,-405,0.3045,0.6955,,
+"Thu, Mar 5, 2020",Charlotte Hornets,Denver Nuggets,400,-505,0.3813,0.6187,0,1
+"Thu, Mar 5, 2020",Houston Rockets,Los Angeles Clippers,106,-126,0.5948,0.4052,0,1
+"Thu, Mar 5, 2020",Sacramento Kings,Philadelphia 76ers,-210,180,0.5817,0.4183,0,1
+"Thu, Mar 5, 2020",Golden State Warriors,Toronto Raptors,325,-405,0.3045,0.6955,0,1
+"Fri, Mar 6, 2020",Washington Wizards,Atlanta Hawks,-215,185,0.6793,0.3207,,
+"Fri, Mar 6, 2020",Brooklyn Nets,San Antonio Spurs,-142,122,0.5851,0.4149,,
+"Fri, Mar 6, 2020",New York Knicks,Oklahoma City Thunder,205,-245,0.404,0.596,,
+"Fri, Mar 6, 2020",Boston Celtics,Utah Jazz,-121,101,0.626,0.374,,
+"Fri, Mar 6, 2020",Chicago Bulls,Indiana Pacers,110,-130,0.4897,0.5103,,
+"Fri, Mar 6, 2020",Minnesota Timberwolves,Orlando Magic,125,-145,0.4802,0.5198,,
+"Fri, Mar 6, 2020",New Orleans Pelicans,Miami Heat,-121,101,0.5705,0.4295,,
+"Fri, Mar 6, 2020",Dallas Mavericks,Memphis Grizzlies,-300,250,0.6318,0.3682,,
+"Fri, Mar 6, 2020",Phoenix Suns,Portland Trail Blazers,146,-166,0.5771,0.4229,,
+"Fri, Mar 6, 2020",Los Angeles Lakers,Milwaukee Bucks,-122,102,0.4921,0.5079,,
