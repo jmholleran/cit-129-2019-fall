@@ -585,13 +585,19 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Thu, Mar 5, 2020",Houston Rockets,Los Angeles Clippers,106,-126,0.5948,0.4052,0,1
 "Thu, Mar 5, 2020",Sacramento Kings,Philadelphia 76ers,-210,180,0.5817,0.4183,0,1
 "Thu, Mar 5, 2020",Golden State Warriors,Toronto Raptors,325,-405,0.3045,0.6955,0,1
-"Fri, Mar 6, 2020",Washington Wizards,Atlanta Hawks,-215,185,0.6793,0.3207,,
-"Fri, Mar 6, 2020",Brooklyn Nets,San Antonio Spurs,-142,122,0.5851,0.4149,,
-"Fri, Mar 6, 2020",New York Knicks,Oklahoma City Thunder,205,-245,0.404,0.596,,
-"Fri, Mar 6, 2020",Boston Celtics,Utah Jazz,-121,101,0.626,0.374,,
-"Fri, Mar 6, 2020",Chicago Bulls,Indiana Pacers,110,-130,0.4897,0.5103,,
-"Fri, Mar 6, 2020",Minnesota Timberwolves,Orlando Magic,125,-145,0.4802,0.5198,,
-"Fri, Mar 6, 2020",New Orleans Pelicans,Miami Heat,-121,101,0.5705,0.4295,,
-"Fri, Mar 6, 2020",Dallas Mavericks,Memphis Grizzlies,-300,250,0.6318,0.3682,,
-"Fri, Mar 6, 2020",Phoenix Suns,Portland Trail Blazers,146,-166,0.5771,0.4229,,
-"Fri, Mar 6, 2020",Los Angeles Lakers,Milwaukee Bucks,-122,102,0.4921,0.5079,,
+"Fri, Mar 6, 2020",Washington Wizards,Atlanta Hawks,-215,185,0.6793,0.3207,1,0
+"Fri, Mar 6, 2020",Brooklyn Nets,San Antonio Spurs,-142,122,0.5851,0.4149,1,0
+"Fri, Mar 6, 2020",New York Knicks,Oklahoma City Thunder,205,-245,0.404,0.596,0,1
+"Fri, Mar 6, 2020",Boston Celtics,Utah Jazz,-121,101,0.626,0.374,0,1
+"Fri, Mar 6, 2020",Chicago Bulls,Indiana Pacers,110,-130,0.4897,0.5103,0,1
+"Fri, Mar 6, 2020",Minnesota Timberwolves,Orlando Magic,125,-145,0.4802,0.5198,0,1
+"Fri, Mar 6, 2020",New Orleans Pelicans,Miami Heat,-121,101,0.5705,0.4295,1,0
+"Fri, Mar 6, 2020",Dallas Mavericks,Memphis Grizzlies,-300,250,0.6318,0.3682,1,0
+"Fri, Mar 6, 2020",Phoenix Suns,Portland Trail Blazers,146,-166,0.5771,0.4229,1,0
+"Fri, Mar 6, 2020",Los Angeles Lakers,Milwaukee Bucks,-122,102,0.4921,0.5079,1,0
+"Sat, Mar 7, 2020",Charlotte Hornets,Houston Rockets,280,-350,0.3833,0.6167,,
+"Sat, Mar 7, 2020",Detroit Pistons,Utah Jazz,275,-330,0.4378,0.5622,,
+"Sat, Mar 7, 2020",Cleveland Cavaliers,Denver Nuggets,360,-450,0.3644,0.6356,,
+"Sat, Mar 7, 2020",Memphis Grizzlies,Atlanta Hawks,-265,225,0.7123,0.2877,,
+"Sat, Mar 7, 2020",Golden State Warriors,Philadelphia 76ers,-110,-110,0.4516,0.5484,,
+"Sat, Mar 7, 2020",Portland Trail Blazers,Sacramento Kings,-141,121,0.5733,0.4267,,
