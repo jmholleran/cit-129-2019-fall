@@ -595,9 +595,20 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Fri, Mar 6, 2020",Dallas Mavericks,Memphis Grizzlies,-300,250,0.6318,0.3682,1,0
 "Fri, Mar 6, 2020",Phoenix Suns,Portland Trail Blazers,146,-166,0.5771,0.4229,1,0
 "Fri, Mar 6, 2020",Los Angeles Lakers,Milwaukee Bucks,-122,102,0.4921,0.5079,1,0
-"Sat, Mar 7, 2020",Charlotte Hornets,Houston Rockets,280,-350,0.3833,0.6167,,
-"Sat, Mar 7, 2020",Detroit Pistons,Utah Jazz,275,-330,0.4378,0.5622,,
-"Sat, Mar 7, 2020",Cleveland Cavaliers,Denver Nuggets,360,-450,0.3644,0.6356,,
-"Sat, Mar 7, 2020",Memphis Grizzlies,Atlanta Hawks,-265,225,0.7123,0.2877,,
-"Sat, Mar 7, 2020",Golden State Warriors,Philadelphia 76ers,-110,-110,0.4516,0.5484,,
-"Sat, Mar 7, 2020",Portland Trail Blazers,Sacramento Kings,-141,121,0.5733,0.4267,,
+"Sat, Mar 7, 2020",Charlotte Hornets,Houston Rockets,280,-350,0.3833,0.6167,1,0
+"Sat, Mar 7, 2020",Detroit Pistons,Utah Jazz,275,-330,0.4378,0.5622,0,1
+"Sat, Mar 7, 2020",Cleveland Cavaliers,Denver Nuggets,360,-450,0.3644,0.6356,1,0
+"Sat, Mar 7, 2020",Memphis Grizzlies,Atlanta Hawks,-265,225,0.7123,0.2877,1,0
+"Sat, Mar 7, 2020",Golden State Warriors,Philadelphia 76ers,-110,-110,0.4516,0.5484,1,0
+"Sat, Mar 7, 2020",Portland Trail Blazers,Sacramento Kings,-141,121,0.5733,0.4267,0,1
+"Sun, Mar 8, 2020",Brooklyn Nets,Chicago Bulls,-255,215,0.6159,0.3841,,
+"Sun, Mar 8, 2020",Los Angeles Clippers,Los Angeles Lakers,-140,120,0.5621,0.4379,,
+"Sun, Mar 8, 2020",Minnesota Timberwolves,New Orleans Pelicans,245,-290,0.4823,0.5177,,
+"Sun, Mar 8, 2020",Boston Celtics,Oklahoma City Thunder,-260,220,0.6499,0.3501,,
+"Sun, Mar 8, 2020",Phoenix Suns,Milwaukee Bucks,225,-265,0.346,0.654,,
+"Sun, Mar 8, 2020",Dallas Mavericks,Indiana Pacers,-260,220,0.6173,0.3827,,
+"Sun, Mar 8, 2020",Houston Rockets,Orlando Magic,-350,280,0.7017,0.2983,,
+"Sun, Mar 8, 2020",Washington Wizards,Miami Heat,195,-225,0.5402,0.4598,,
+"Sun, Mar 8, 2020",Cleveland Cavaliers,San Antonio Spurs,150,-170,0.454,0.546,,
+"Sun, Mar 8, 2020",New York Knicks,Detroit Pistons,-225,195,0.4808,0.5192,,
+"Sun, Mar 8, 2020",Sacramento Kings,Toronto Raptors,170,-195,0.3923,0.6077,,
