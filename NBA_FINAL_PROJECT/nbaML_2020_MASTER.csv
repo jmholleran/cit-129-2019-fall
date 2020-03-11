@@ -615,12 +615,18 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Mon, Mar 9, 2020",Atlanta Hawks,Charlotte Hornets,-196,171,0.5904,0.4096,1,0
 "Mon, Mar 9, 2020",Denver Nuggets,Milwaukee Bucks,-225,195,0.4343,0.5657,1,0
 "Mon, Mar 9, 2020",Utah Jazz,Toronto Raptors,-215,185,0.5126,0.4874,0,1
-"Tue, Mar 10, 2020",Indiana Pacers,Boston Celtics,135,-155,0.5152,0.4848,,
-"Tue, Mar 10, 2020",Washington Wizards,New York Knicks,-205,175,0.6059,0.3941,,
-"Tue, Mar 10, 2020",Chicago Bulls,Cleveland Cavaliers,-175,155,0.6364,0.3636,,
-"Tue, Mar 10, 2020",Houston Rockets,Minnesota Timberwolves,-900,640,0.6946,0.3054,,
-"Tue, Mar 10, 2020",Memphis Grizzlies,Orlando Magic,-140,120,0.539,0.461,,
-"Tue, Mar 10, 2020",San Antonio Spurs,Dallas Mavericks,143,-163,0.3931,0.6069,,
-"Tue, Mar 10, 2020",Portland Trail Blazers,Phoenix Suns,-190,165,0.5822,0.4178,,
-"Tue, Mar 10, 2020",Golden State Warriors,Los Angeles Clippers,615,-850,0.3314,0.6686,,
-"Tue, Mar 10, 2020",Los Angeles Lakers,Brooklyn Nets,-750,550,0.726,0.274,,
+"Tue, Mar 10, 2020",Indiana Pacers,Boston Celtics,135,-155,0.5152,0.4848,0,1
+"Tue, Mar 10, 2020",Washington Wizards,New York Knicks,-205,175,0.6059,0.3941,1,0
+"Tue, Mar 10, 2020",Chicago Bulls,Cleveland Cavaliers,-175,155,0.6364,0.3636,1,0
+"Tue, Mar 10, 2020",Houston Rockets,Minnesota Timberwolves,-900,640,0.6946,0.3054,1,0
+"Tue, Mar 10, 2020",Memphis Grizzlies,Orlando Magic,-140,120,0.539,0.461,0,1
+"Tue, Mar 10, 2020",San Antonio Spurs,Dallas Mavericks,143,-163,0.3931,0.6069,1,0
+"Tue, Mar 10, 2020",Portland Trail Blazers,Phoenix Suns,-190,165,0.5822,0.4178,1,0
+"Tue, Mar 10, 2020",Golden State Warriors,Los Angeles Clippers,615,-850,0.3314,0.6686,0,1
+"Tue, Mar 10, 2020",Los Angeles Lakers,Brooklyn Nets,-750,550,0.726,0.274,0,1
+"Wed, Mar 11, 2020",Philadelphia 76ers,Detroit Pistons,-750,550,0.7801,0.2199,,
+"Wed, Mar 11, 2020",Atlanta Hawks,New York Knicks,-210,180,0.5779,0.4221,,
+"Wed, Mar 11, 2020",Miami Heat,Charlotte Hornets,-625,485,0.771,0.229,,
+"Wed, Mar 11, 2020",Dallas Mavericks,Denver Nuggets,125,-145,0.5914,0.4086,,
+"Wed, Mar 11, 2020",Oklahoma City Thunder,Utah Jazz,-205,175,0.5418,0.4582,,
+"Wed, Mar 11, 2020",Sacramento Kings,New Orleans Pelicans,102,-122,0.5041,0.4959,,
