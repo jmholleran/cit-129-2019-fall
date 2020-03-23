@@ -624,9 +624,9 @@ date,home_team,away_team,home_ML,away_ML,home_Sim_Prob,away_Sim_Prob,home_win,aw
 "Tue, Mar 10, 2020",Portland Trail Blazers,Phoenix Suns,-190,165,0.5822,0.4178,1,0
 "Tue, Mar 10, 2020",Golden State Warriors,Los Angeles Clippers,615,-850,0.3314,0.6686,0,1
 "Tue, Mar 10, 2020",Los Angeles Lakers,Brooklyn Nets,-750,550,0.726,0.274,0,1
-"Wed, Mar 11, 2020",Philadelphia 76ers,Detroit Pistons,-750,550,0.7801,0.2199,,
-"Wed, Mar 11, 2020",Atlanta Hawks,New York Knicks,-210,180,0.5779,0.4221,,
-"Wed, Mar 11, 2020",Miami Heat,Charlotte Hornets,-625,485,0.771,0.229,,
-"Wed, Mar 11, 2020",Dallas Mavericks,Denver Nuggets,125,-145,0.5914,0.4086,,
-"Wed, Mar 11, 2020",Oklahoma City Thunder,Utah Jazz,-205,175,0.5418,0.4582,,
-"Wed, Mar 11, 2020",Sacramento Kings,New Orleans Pelicans,102,-122,0.5041,0.4959,,
+"Wed, Mar 11, 2020",Philadelphia 76ers,Detroit Pistons,-750,550,0.7801,0.2199,1,0
+"Wed, Mar 11, 2020",Atlanta Hawks,New York Knicks,-210,180,0.5779,0.4221,0,1
+"Wed, Mar 11, 2020",Miami Heat,Charlotte Hornets,-625,485,0.771,0.229,0,1
+"Wed, Mar 11, 2020",Dallas Mavericks,Denver Nuggets,125,-145,0.5914,0.4086,1,0
+"Wed, Mar 11, 2020",Oklahoma City Thunder,Utah Jazz,-205,175,0.5418,0.4582,0,0
+"Wed, Mar 11, 2020",Sacramento Kings,New Orleans Pelicans,102,-122,0.5041,0.4959,0,0
